@@ -1,0 +1,376 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb, mathtools}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.1.9)},
+ pdflang={English}}
+
+% Commands
+\DeclareMathOperator{\VarRe}{Re}
+\DeclareMathOperator{\VarIm}{Im}
+
+\begin{document}
+
+\noindent\textbf{1.} Suppose $r+x$ is rational.
+Then there exists integers $m, n$ such that
+\begin{displaymath}
+  r + x = \frac{m}{n} \Rightarrow x = \frac{m}{n} - r.
+\end{displaymath}
+Since $\mathbb{Q}$ is closed under addition the RHS of the latter expression is rational.
+It follows then that $x$ is rational, which is a contradiciton.
+With the same line of reasoning it can be shown that $rx$ is irrational.
+
+\hfill$\square$\\
+
+\noindent\textbf{2.} We have that $\sqrt{12} = \sqrt{4 \cdot 3} = 2 \sqrt{3}$.
+Here $2$ is rational and $\sqrt{3}$ is irrational.
+Then by the proposition in exercise 1. $\sqrt{12}$ is irrational.
+
+\hfill$\square$\\
+
+\noindent\textbf{3.} We follow the procedure in the proof of 1.14.
+\begin{itemize}
+\item [a)] $y = \frac{xy}{x} = \frac{xz}{x} = z.$
+\item [b)] In a) choose $z=1$.
+\item [c)] In a) choose $z=1/x$.
+\item [d)] Since $1/x \cdot x = 1$, then according to c) with $1/x$ in place of $x$ gives us $x=1/(1/x)$.
+\end{itemize}
+
+\hfill$\square$\\
+
+\noindent\textbf{4.} Suppose not, then $\alpha > \beta$.
+We know that $x \geq \alpha$ and $x \leq \beta$, $\forall x \in E$.
+This is due to the fact that $\alpha$ is a lower-bound and $\beta$ is an upper-bound to $E$.
+Then
+\begin{displaymath}
+  x \geq \alpha > \beta,
+\end{displaymath}
+which is a contradiction.
+
+Alternatively we may use property (ii) of ordered sets.
+We have that $\alpha \leq x$ and $x \leq \beta$.
+Then it follows that $\alpha \leq \beta$.
+
+\hfill$\square$\\
+
+\noindent\textbf{5.} Let $l$ be a lower bound to $A$.
+Then $\forall x \in A$ it follows that $x \geq l$.
+Therefore we have $-x \leq -l$, which shows that $-A$ is bounded above by $-l$.
+The set of real numbers $\mathbb{R}$ has the least upper-bound property, thus $\beta = \sup{(-A)}$ exists.
+This means that $y \leq \beta, \forall y\in -A$.
+
+Now for any $x\in A$ we know that $-x \in -A$.
+Since $-A$ is bounded above we have $-x \leq \beta$ which implies $x \geq -\beta$.
+It follows that $-\beta$ is a lower-bound to $A$.
+
+Now suppose $\exists \gamma \in \mathbb{R}$ st. $\gamma > -\beta$ and $x \geq \gamma, \forall x \in A$.
+If this is the case then $-\beta$ cannot be $\inf{A}$.
+We have that $-\gamma < \beta$ and $-x \leq -\gamma.$
+Since $-x\in -A$ it means that $y \leq -\gamma, \forall y \in -A$.
+We have now found $-\gamma$ to be an upper-bound to $-A$ for which $-\gamma < \beta$ holds.
+But this is a contradiction since $\beta = \sup{(-A)}$, so no such $\gamma$ exists.
+Therefore $-\beta = \inf{A}$ and $\inf{A} = -\sup{(-A)}$.
+
+\hfill$\square$\\
+
+\noindent\textbf{6.} First note that if $x$ is real, then for any
+integers $n, m$
+\begin{align*}
+  {(x^n)}^m &= {(\underbrace{x\cdots x}_{n\text{ terms}})}^m =
+              \underbrace{\overbrace{(x\cdots x)}^{n \text{ terms}}\cdots (x\cdots x)}_{m\text{ terms}} \\
+            &= \underbrace{x\cdots x}_{nm\text{ terms}} =
+              \underbrace{\overbrace{(x\cdots x)}^{m \text{ terms}}\cdots (x\cdots x)}_{n\text{ terms}} \\
+            &= {(\underbrace{x\cdots x}_{m\text{ terms}})}^n = (x^m)^n,
+\end{align*}
+which means that $(x^n)^m = (x^m)^n$.
+\begin{itemize}
+\item [a)] Since $n$ is a positive integer and $b>1$ we know that
+  there is a number $\alpha$ such that $\alpha^n = b$ according to
+  Theorem 1.21. Therefore $b^m = (\alpha^n)^m =
+  (\alpha^m)^n$. Uniqueness of Theorem 1.21 gives us
+  $\alpha^m = (b^m)^{1/n}$. Now we write $b^p$ in terms of $\alpha$,
+  \begin{align*}
+    b^p &= (\alpha^n)^p = \underbrace{\alpha\cdots \alpha}_{np\text{ terms}}
+          = \underbrace{\alpha\cdots \alpha}_{mq\text{ terms}} = (\alpha^m)^q,
+  \end{align*}
+  where we used the assumption that $mq = np$. Applying Theorem 1.21
+  again gives us that $\alpha^m = (b^p)^{1/q}$. Thus,
+  $$ (b^m)^{1/n} = \alpha^m = (b^p)^{1/q}.$$
+  This completes the proof.
+
+\item [b)]
+  \begin{align*}
+    b^{r+s} &= {\underbrace{x\cdots x}_{r + s\text{ terms}}} = {\underbrace{x\cdots x}_{r\text{ terms}}}
+              \cdot {\underbrace{x\cdots x}_{s\text{ terms}}} = b^r b^s.
+  \end{align*}
+
+\item [c)] If $s < t$ and $b > 1$, then $b^s < b^t$ for any rationals
+  $s, t$. Therefore, $B(r)$ is bounded by $b^r$ since $b^t \in B(r)$
+  if $t\leq r$. By the least upper-bound property of $\mathbb{R}$ we
+  have that $\alpha = \sup{B(r)}$ exists. If we assume $b^r < \alpha$,
+  we get a contradiction since $b^r$ is an upper-bound to $B(r)$ and
+  $\alpha$ is supposed to be the \emph{least} upper-bound to $B$. If
+  we instead assume $\alpha < b^r$, then $\alpha$ cannot be an
+  upper-bound to $B(r)$ since $r\leq r \Rightarrow b^r\in B(r)$ yet
+  $\alpha < b^r$. Therefore, $\alpha = \sup{B(r)} = b^r$.
+\end{itemize}
+
+\noindent\textbf{7.} We follow the outline in the book.
+\begin{itemize}
+\item [a)] Proof by induction.
+  The case for $n=1$ is clearly true.
+  For $n+1$ we will use the fact that for a geometric series $\sum_{j=0}^{k-1} b^j = \frac{b^k-1}{b-1}$ is true for any $b>1$.
+  We have that
+  \begin{align*}
+    b^{n+1}-1 &= (b-1)\sum_{k=0}^n b^k = (b-1)\left(\sum_{k=0}^{n-1} b^k + b^n\right)\\
+              &= b^n - 1 + (b-1)b^n \geq n(b-1) + (b-1)b^n\\
+              &\geq n(b-1) + (b-1) = (n+1)(b-1),
+  \end{align*}
+  where we have used the induction step for the first inequality and $b>1 \Rightarrow b^n > 1$ for the second.
+\item [b)] In a) we choose $b^{1/n}$.
+  Then
+  \begin{displaymath}
+    (b^{1/n})^n - 1 \geq n(b^{1/n}-1)\ \Rightarrow\ b-1 \geq n(b^{1/n}-1).
+  \end{displaymath}
+\item [c)] The result in b) together with the fact that $n > (b-1)/(t-1)$ gives us
+  \begin{align*}
+    b-1 \geq n(b^{1/n} - 1) > \frac{b-1}{t-1}(b^{1/n} - 1) \Rightarrow\\
+    t - 1 > b^{1/n} - 1\ \Rightarrow\ b^{1/n} < t.
+  \end{align*}
+\item [d)] Since $b^w < y$ we have that $1 < y\cdot b^{-w} = t$.
+  Therefore we can use the result in c) for sufficently large $n$
+  \begin{align*}
+    b^{1/n} < t = y\cdot b^{-w} \Rightarrow b^{w + (1/n)} < y.
+  \end{align*}
+\item [e)] We assume $b^w > y$ which implies $t = y^{-1}\cdot b^w > 1$.
+  Now we can use c) for sufficently large $n$
+  \begin{align*}
+    b^{1/n} < t = y^{-1}\cdot b^w \Rightarrow y < b^{w - (1/n)}.
+  \end{align*}
+
+\item [f)] The set $A\subset \mathbb{R}$ is non-empty.
+  To see this notice that $y>0$.
+  We can make $b^w$ arbitrarily close to $0$ by choosing negative integers since $b>1$.
+  Therefore we can always find a $w$ for which $0 < b^w < y$.
+
+  Since $A$ is a non-empty set bounded above by $y$,
+  we can use the least upper-bound property of $\mathbb{R}$ to show that $x=\sup{A}$ exists.
+  Now $A$ is an ordered-set for which we know that only one relation ($<$, $>$, $=$) between $b^x$ and $y$ holds.
+
+  Assume $b^x < y$. Then according to the result in d) we have that
+  \begin{align*}
+    b^{x+(1/n)} < y.
+  \end{align*}
+  This means that $x\in A$ and $x + (1/n) \in A$.
+  Since $x < x + (1/n)$ we know that $x$ cannot be an upper-bound to $A$.
+  But this is a contradiction since $x=\sup{A}$.
+
+  Now we assume $b^{x} > y$. The result in e) gives us that
+  \begin{align*}
+    b^{x - (1/n)} > y.
+  \end{align*}
+  This means that $x - (1/n)$ is an upper-bound to $A$ where $x - (1/n) < x$.
+  But then $x$ cannot be the \emph{least} upper-bound to $A$, which is a contradiction since $x=\sup{A}$.
+
+  Thus $b^x = y$ must be true.
+
+\item [g)] Suppose not, then there exists numbers $x \neq x'$ such that $b^x = b^{x'}$.
+  We have that
+  \begin{align*}
+    1 = \frac{b^x}{b^{x'}} = b^{x-x'}.
+  \end{align*}
+  Since $b > 1$ the only way to get $b^{x - x'} = 1$ is if $x - x' = 0$.
+  But this is a contradiction since we assumed $x \neq x'$.
+  This completes the proof.
+\end{itemize}
+
+\hfill$\square$
+
+\noindent\textbf{8.} Consider any order that turns $\mathbb{C}$ into an ordered field.
+We have that $i^2 = -1$, which according to property 1.17 (ii) of ordered fields implies $i < 0$ since $i \neq 0$.
+Proposition 1.18 (a) implies that $-i > 0$.
+Applying 1.17 (ii), this time with $x = -i$ and $y = -i$, together with proposition 1.16 (d) gives us
+\begin{align*}
+  (-i) \cdot (-i) = i^2 = -1 < 0.
+\end{align*}
+But this is a contradiciton since we assumed $\mathbb{C}$ is an ordered field and the conditions of 1.17 (ii) was satisfied.
+
+\hfill$\square$
+
+\noindent\textbf{9.} We check that this order on $\mathbb{C}$ satisfies properties 1.5 (i) and (ii).
+Clearly (i) holds using the new order relation together with the structre of $\mathbb{R}$.
+Next, let $x = e + fi$ such that $z < w$ and $w < x$.
+Since $z < w$, then $a < c$ or $a = c$ and $b < d$.
+The same two cases holds for $w, x$ since $w < x$.
+\begin{itemize}
+\item If $z < w$ such that $a \leq c$ and $w < x$ such that $c < e$, then $a \leq c < e \Rightarrow z < x$.
+
+\item If $z < w$ such that $a < c$ and $w < x$ such that $c = e$, then $a < c = e \Rightarrow z < x$.
+
+\item If $z < w$ such that $a = c$, $b < d$ and $w < x$ such that $c = e$, $d < f$, then $b < d < f \Rightarrow z < x$.
+\end{itemize}
+
+Now suppose this ordered set has the least-upper-bound property.
+Let $E \subset \mathbb{C}$ be the set of all numbers $v$ such that $\VarRe(v) < \VarRe(z)$.
+It is clear that $E$ is non-empty and bounded above.
+Then $\alpha = \sup{E}$ exists.
+If $\alpha \in E$, then $\VarRe(\alpha) < \VarRe(z)$. Let $u$ be a complex number such that
+$\VarRe(u) = (\VarRe(\alpha) + \VarRe(z)) / 2$. Then
+\begin{align*}
+  \VarRe(\alpha) = \frac{2\VarRe(\alpha)}{2} < \frac{\VarRe(\alpha) + \VarRe(z)}{2} < \VarRe(z),
+\end{align*}
+which implies $u \in E$ yet $\alpha < u$.
+Since $\alpha$ is an upper-bound to $E$ this means that $\alpha \notin E$.
+In that case, $\forall v \in E$ it is true that $\VarRe(v) < \VarRe(\alpha)$.
+Now choose $\beta = \VarRe({\alpha}) + (\VarIm{(\alpha}) - 1)i$.
+Since $\VarRe(\beta) = \VarRe(\alpha)$, if $v\in E$ then $v < \beta$.
+Hence $\beta$ is an upper-bound to $E$.
+Because $\beta$ is chosen such that $\VarIm(\beta) < \VarIm(\alpha$), we  have that $\beta < \alpha$.
+But this is a contradiction since $\alpha$ is assumed to be the \emph{least} upper-bound to $E$.
+This shows that $\alpha$ cannot exist and hence the initial assumption of least upper-bound property is false.
+
+\hfill$\square$
+
+\noindent\textbf{10.} First note that $u \leq \sqrt{u^2} \leq \sqrt{u^2 + v^2} = |w|$ using Theorem 1.18 (d).
+Hence $|w|+u \geq 0$ and $|w| - u \geq 0$.
+Therefore, we may use the corollary to Theorem 1.21 in the simplification below
+\begin{align*}
+  2ab &= 2\Bigl( \frac{|w| + u}{2} \Bigr)^{1/2} \Bigl( \frac{|w| - u}{2} \Bigr)^{1/2} \\
+      &= \Bigl( (|w| + u)(|w| - u) \Bigr)^{1/2} = \Bigl( |w|^2 - u^2 \Bigr)^{1/2}\\
+      &= \Bigl( u^2 + v^2 - u^2 \Bigr)^{1/2} = |v|.
+\end{align*}
+We also have the following simplification,
+\begin{align*}
+  a^2 - b^2 &= \frac{|w| + u}{2} - \frac{|w| - u}{2} = u.
+\end{align*}
+Using the results above we have that
+\begin{align*}
+  z^2 &= a^2 + i2ab - b^2 = u + i|v| = w, \textrm{ if } v \geq 0 \\
+  (\bar{z})^2 &= a^2 - i2ab - b^2 = u - i|v| = w, \textrm{ if } v \leq 0.
+\end{align*}
+By proposition 1.16 (d) we have that for any $x\in \mathbb{C}$ it holds that $(-x)(-x) = (-x)^2 = x^2$.
+Hence we can conclude that for every complex number $w$, with exception for $0$, there exists two square roots.
+They are either $\pm z$ or $\pm\bar{z}$, depending on wheter $\VarIm(w)$ is positive or negative respectivly.
+
+\hfill$\square$
+
+\noindent\textbf{11.} If $z = 0$, then any $w \in \mathbb{C}$ such that $|w| = 1$ together with $r=0$ satisfies $z = rw$.
+For example, if $w$ equals $i$ or $1$, then $rw$ satisfy the condition.
+In this case $w$ is not uniquely determined by $z$, but $r$ is.
+
+Assume that $z \neq 0$.
+Put $r = |z|$ and $w = z\cdot 1/|z|$.
+Since the real number $1/|z|$ is the multiplicative inverse of the real number $|z|$, then clearly $|w| = 1$ by field axiom (M5) and Theorem 1.31 (b).
+Now we show that $z$ can be written as $rw$,
+\begin{align*}
+  z = z \cdot\frac{|z|}{|z|} = |z| \Biggl( z\cdot\frac{1}{|z|} \Biggr) = rw.
+\end{align*}
+We may do so because multiplication is commutative and $z\neq 0 \Rightarrow |z| > 0$ by Theorem 1.31 (d).
+
+We shall now demonstrate that whenever $z\neq 0$, then $r$ and $w$ are uniquely determined by $z$.
+Suppose not.
+Then there exists $q > 0$, $v\neq w$ such that $|v| = 1$ and $z = qv = rw$.
+It follows that $|z| = |rw| = |r||w| = r = |qv| = |q||v| = q$.
+Hence $r = q$ and since $z = rw = qv$,
+\begin{align*}
+  0 = rw - qu = r ( w - q ).
+\end{align*}
+Because $r > 0$ we have that $w = v$ and we get a contradiction since we assumed otherwise.
+
+\hfill$\square$
+
+
+\noindent\textbf{12.} We shall prove the statement using induction on $n$.
+The case $n=1$ is clearly true.
+Assume the statement holds for $n=k$.
+Recall that $w = \sum_{i=1}^k z_i$ is a complex number since $\mathbb{C}$ is closed under addition.
+Then we have that
+\begin{align*}
+  | z_1 + z_2 + \cdots + z_{k+1} | &= \Bigg| \sum_{i=1}^k z_i + z_{k+1} \Bigg| \\
+                                   &= | w + z_{k+1} | \\
+                                   &\leq | w | + | z_{k+1} | \\
+                                   &= | z_1 + z_2 + \cdots + z_k | + | z_{k+1} |\\
+                                   &\leq | z_1 | + | z_2 | + \cdots + | z_{k+1} |, \\
+\end{align*}
+where we have used Theorem 1.33 (e) for the first inequality and the induction hypothesis for the latter.
+
+\hfill$\square$
+
+\noindent\textbf{13.} For any complex numbers $z, w$ it holds that $\overline{z}w$ is the conjugate of $z\overline{w}$.
+Hence $z\overline{w} + \overline{z}w = \VarRe{(z\overline{w})}$ by Theorem 1.31.
+We have that
+\begin{align*}
+  \big| |x| - |y| \big|^2 & =    \big( |x| - |y|\big) \overline{ (|x| - |y| )}
+                            =    |x|^2 - 2|x||y| + |y|^2 \\
+                          & =    |x|^2 - 2|x||\overline{y}| + |y|^2
+                            =    |x|^2 - 2|x\overline{y}| + |y|^2\\
+                          & \leq |x|^2 - 2\VarRe{(x\overline{y}}) + |y|^2
+                            =    x\overline{x} - 2\VarRe{(x\overline{y})} + y\overline{y} \\
+                          & =    x\overline{x} - x\overline{y} - \overline{x}y + y\overline{y}
+                            =    (x - y)\overline{(x-y)} \\
+                          & =    | x - y |^2,
+\end{align*}
+where we used Theorem 1.33 for the following: $|\overline{z}| = |z|$, $|zw| = |z||w|$
+and $\VarRe{z} \leq |\VarRe{z}| \leq |z|$.
+
+\hfill$\square$
+
+
+\noindent\textbf{14.} We use Theorem 1.31 (a), and note that $1$ is its own conjugate, in the calculation
+below
+\begin{align*}
+  | 1 + z |^2 & = ( 1 + z ) ( 1 + \overline{z} ) = 1 + z + \overline{z} + z\overline{z} \\
+              & = 2 + 2\VarRe{(z)}.
+\end{align*}
+In the expression above put $-z$ in place of $z$ to get $| 1 - z |^2 = 2 - 2\VarRe{(z)}$.
+Hence $$| 1 + z |^2 + | 1 - z |^2 = 4.$$
+
+\hfill$\square$\\
+
+\noindent\textbf{17.} We can construct a  parallellogram with sides $\mathbf{|x|, |y|}$ and diagonals $\mathbf{|x+y|, |x-y|}$.
+It holds that
+\begin{align*}
+  \mathbf{|x+y|}^2 + |\mathbf{x-y}|^2 & = \mathbf{|x|}^2 + 2 \mathbf{x \cdot y} + \mathbf{|y|}^2
+                                        + \mathbf{|x|}^2 - 2 \mathbf{x \cdot y} + \mathbf{|y|}^2 \\
+                                      & = 2|\mathbf{x}|^2 + 2|\mathbf{y}|^2,
+\end{align*}
+meaning that the sum squared of the parallelogram's four sides equals the sum squared of its two diagonals.
+
+\hfill$\square$\\
+
+\noindent\textbf{18.} Suppose not.
+Then there does not exists $\mathbf{y \neq 0}$ such that $\mathbf{x \cdot y = 0}$ for $k \geq 2$.
+Let $\mathbf{e}_{i} = (0, \cdots, 1, 0, \cdots, 0)$ be the $k$-tuple with zeros at all coordinates except at $i$ where it is $1$.
+Since we assume the statement to be false, clearly $\mathbf{e}_{i} \cdot \mathbf{x} = x_i \neq 0$.
+Put $\mathbf{y} = \mathbf{e}_{1} + \alpha \mathbf{e}_{2}$ where $\alpha = -x_1/x_2$. We see that $|\mathbf{y}| = \sqrt{ 1 + \alpha^2 } \geq 1$ which implies $\mathbf{y \neq 0}$ by Theorem 1.37.
+It follows that
+\begin{align*}
+  \mathbf{y \cdot x} & = ( \mathbf{e}_{1} + \alpha\mathbf{e}_{2} ) \cdot \mathbf{x} = x_1 + \alpha x_2 = x_1 - \frac{x_1}{x_2}x_2
+                       = 0,
+\end{align*}
+which is a contradiction since $\mathbf{y \neq 0}$ yet $\mathbf{x \cdot y} = 0$.
+
+If $k = 1$, then the statement is false for $x \neq 0$.
+To see this recall that $\mathbb{R}$ is a field for which Proposition 1.16 holds.
+Since both $x \neq 0$ and $y \neq 0$, we have that $xy \neq 0$.
+
+\hfill$\square$\\
+
+\end{document}
