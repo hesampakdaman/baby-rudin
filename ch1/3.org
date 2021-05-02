@@ -1,0 +1,9 @@
+\noindent\textbf{3.} We follow the procedure in the proof of 1.14.
+\begin{itemize}
+\item [a)] $y = \frac{xy}{x} = \frac{xz}{x} = z.$
+\item [b)] In a) choose $z=1$.
+\item [c)] In a) choose $z=1/x$.
+\item [d)] Since $1/x \cdot x = 1$, then according to c) with $1/x$ in place of $x$ and $x$ instead of $y$ gives us $x=1/(1/x)$.
+\end{itemize}
+
+\hfill$\square$
