@@ -1,0 +1,22 @@
+\noindent\textbf{5.} Let $l$ be a lower bound to $A$.  Then $\forall x \in A$
+it follows that $l \leq x$.  Therefore we have $-x \leq -l$, which shows
+that $-A$ is bounded above by $-l$.  The set of real numbers
+$\mathbb{R}$ has the least upper-bound property, thus $$\beta =
+\sup{(-A)}.$$
+
+For any $x\in A$ we know that $-x \in -A$.  Since $-A$ is bounded
+above we have $-x \leq \beta$ which implies $-\beta \leq x$.  It follows that $-\beta$
+is a lower-bound to $A$. 
+
+Let us now show that $-\beta = \inf{A}$. Suppose there exists another
+lower-bound $\gamma$ to $A$ such that $-\beta < \gamma$. If this is the case then
+$-\beta$ cannot be $\inf{A}$.  Since $\gamma$ is a lower-bound to $A$ we know
+that $\gamma \leq x$ for any $x \in A$ which implies $-x \leq -\gamma$. Hence for any
+$-x\in -A$ we have that $-x \leq -\gamma$.  We have now found $-\gamma$ to be an
+upper-bound to $-A$. Because $-\beta < \gamma$ implies that $-\gamma < \beta$ holds, we
+have found that $\gamma$ is an upper-bound to $A$ which is smaller that
+$\beta$.  But this is a contradiction since $\beta = \sup{-A}$ and no such $\gamma$
+could exists.  Therefore $-\beta = \inf{A}$ and $$\inf{A} = -\sup{(-A)},$$ as
+desired.
+
+\hfill$\square$
