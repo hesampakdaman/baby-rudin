@@ -1,0 +1,10 @@
+\noindent\textbf{1} Suppose $r+x$ is rational.
+Then there exists integers $m, n$ such that
+\begin{displaymath}
+  r + x = \frac{m}{n} \Rightarrow x = \frac{m}{n} - r.
+\end{displaymath}
+Since $\mathbb{Q}$ is closed under addition the RHS of the latter expression is rational.
+It follows then that $x$ is rational, which is a contradiciton.
+With the same line of reasoning it can be shown that $rx$ is irrational.
+
+\hfill$\square$
