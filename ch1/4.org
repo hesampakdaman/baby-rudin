@@ -1,0 +1,7 @@
+\noindent\textbf{4.} Suppose not, then $\alpha > \beta$.  We know that $\alpha \leq x$
+and $x \leq \beta$, $\forall x \in E$.  This is due to the fact that $\alpha$ is a
+lower-bound and $\beta$ is an upper-bound to $E$.  Then
+\begin{displaymath}
+  x \geq \alpha > \beta,
+\end{displaymath}
+which is a contradiction.
