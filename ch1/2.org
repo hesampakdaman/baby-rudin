@@ -1,0 +1,5 @@
+\noindent\textbf{2.} We have that $\sqrt{12} = \sqrt{4 \cdot 3} = 2 \sqrt{3}$.
+Here $2$ is rational and $\sqrt{3}$ is irrational.
+Then by the proposition in ex. 1 $\sqrt{12}$ is irrational.
+
+\hfill$\square$
