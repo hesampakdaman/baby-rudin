@@ -1,0 +1,81 @@
+\noindent\textbf{6.} First note that if $x$ is real, then for any
+integers $n, m$
+\begin{align*}
+  {(x^n)}^m &= {(\underbrace{x\cdots x}_{n\text{ terms}})}^m =
+              \underbrace{\overbrace{(x\cdots x)}^{n \text{ terms}}\cdots (x\cdots x)}_{m\text{ terms}} \\
+            &= \underbrace{x\cdots x}_{nm\text{ terms}} =
+              \underbrace{\overbrace{(x\cdots x)}^{m \text{ terms}}\cdots (x\cdots x)}_{n\text{ terms}} \\
+            &= {(\underbrace{x\cdots x}_{m\text{ terms}})}^n = (x^m)^n,
+\end{align*}
+which means that $(x^n)^m = (x^m)^n$.
+\begin{itemize}
+\item [a)] Since $n$ is a positive integer and $b>1$ we know that
+  there is a number $\alpha$ such that $\alpha^n = b$ according to
+  Theorem 1.21. Therefore $b^m = (\alpha^n)^m =
+  (\alpha^m)^n$. Uniqueness of Theorem 1.21 gives us
+  $\alpha^m = (b^m)^{1/n}$. Now we write $b^p$ in terms of $\alpha$,
+  \begin{align*}
+    b^p &= (\alpha^n)^p = \underbrace{\alpha\cdots \alpha}_{np\text{ terms}}
+          = \underbrace{\alpha\cdots \alpha}_{mq\text{ terms}} = (\alpha^m)^q,
+  \end{align*}
+  where we used the assumption that $mq = np$. Applying Theorem 1.21
+  again gives us that $\alpha^m = (b^p)^{1/q}$. Thus,
+  $$ (b^m)^{1/n} = \alpha^m = (b^p)^{1/q}.$$
+  This completes the proof.
+
+\item [b)]
+  \begin{align*}
+    b^{r+s} &= {\underbrace{x\cdots x}_{r + s\text{ terms}}} = {\underbrace{x\cdots x}_{r\text{ terms}}}
+              \cdot {\underbrace{x\cdots x}_{s\text{ terms}}} = b^r b^s.
+  \end{align*}
+
+\item [c)] If $s < t$ and $1 < b$, then $b^s < b^t$ for any rationals
+  $s, t$. Therefore $B(r)$ is bounded by $b^r$ since $b^t \in B(r)$
+  if $t\leq r$. It is clear that $B(r)$ is non-empty.
+  By the least upper-bound property of $\mathbb{R}$ we
+  have that $\alpha = \sup{B(r)}$ exists. If we assume $b^r < \alpha$,
+  we get a contradiction since $b^r$ is an upper-bound to $B(r)$ and
+  $\alpha$ is supposed to be the \emph{least} upper-bound to $B$. If
+  we instead assume $\alpha < b^r$, then $\alpha$ cannot be an
+  upper-bound to $B(r)$ since $r\leq r \Rightarrow b^r\in B(r)$ yet
+  $\alpha < b^r$. Hence $$\alpha = \sup{B(r)} = b^r.$$
+
+\item [d)] Suppose not, then either $b^x b^y < b^{x+y}$ or $b^{x+y} < b^x b^y$.
+Assume $b^{x+y} < b^x b^y$. Let $A$ be the set which consists of all
+numbers $b^p b^q$ where $p, q$ are rationals and $p \leq x$, $q \leq y$
+holds. It is clear that $b^x b^y = \sup {A}$ because $b > 1$. Furthermore
+recall that $b^{x+y} = \sup B(x+y)$. Take any number $b^r b^s \in A$, this
+means $r \leq x$ and $s \leq y$ and we get that $r + s \leq x + y$. Because $r,
+s$ are rationals it follows that $$b^r b^s = b^{r+s } \in B(x+y).$$ But
+this leads to a contradiction because that would make $b^{x+y} = \sup {A}$.
+
+Now assume $b^x b^y < b^{x+y}$. Let $b^t \in B(x+y)$, then we know that
+$t \leq x + y$. For a rational $p$, $b^p \in B(x)$ if $p \leq x$ and the
+same is true for $B(y)$ mutatis mutandis. We now show that it is possible
+to find rationals $r, s$ such that $t \leq r + s \leq x + y$ where $r \leq x$ and 
+$s \leq y$. 
+
+Suppose $x < t$ and $y < t$ and WLOG $x \leq y$. Then $t \leq x + y \Rightarrow t - y \leq x$
+which means that we can find a rational $r$ such that $t - y \leq r \leq x$ by 
+Theorem 1.20 b). It follows that $s = t - r \leq y$. We know that $s$ is rational
+since both $t$ and $r$ are. Hence
+             $$t = r + t - r \leq r + s \leq x + y.$$
+
+In case the assumption that $x < t$ and $y < t$ is not true, then at least one
+of $x$ or $y$ is greater than or equal to $t$. WLOG $t \leq y$ and then by Theorem 1.20 b)
+there exists a rational $s$ such that $t \leq s \leq y$. We have that
+$t \leq x + y \Rightarrow t - y \leq x$ and by Theorem 1.20 b) we can find a rational $r$ such
+that $t - y \leq r \leq x$ which implies that $t - r \leq y$. Then 
+             $$ t = r + t - r \leq r + y \leq x + y.$$
+
+These are all the cases, which means that for any $t \leq x + y$ we can find two rationals
+$r, s$ such that $t \leq r + s \leq x + y$ for which $r \leq x$ and $s \leq y$. Therefore
+$b^r \in B(x)$ and $b^s \in B(y)$ such that $t \leq r + s$. Because $b >
+1$ we have $$ b^t \leq b^{r+s} = b^r b^s \leq b^x b^y.$$ This also leads to a
+contradiction because that would make $b^x b^y = \sup {B(x+y)}$ contrary to
+our assumption.
+
+The only alternative remaining is that $b^{x+y} = b^x b^y$ as desired.
+
+\end{itemize}
+
