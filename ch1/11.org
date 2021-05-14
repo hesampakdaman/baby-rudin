@@ -1,0 +1,27 @@
+\noindent\textbf{11.} If $z = 0$, then any $w \in \mathbb{C}$ such that
+$|w| = 1$ together with $r=0$ satisfies $z = rw$.  For example, if $w$
+equals $i$ or $1$, then $rw$ satisfy the condition.  In this case $w$
+is not uniquely determined by $z$, but $r$ is.
+
+Assume that $z \neq 0$.  Put $r = |z|$ and $w = z\cdot 1/|z|$.  Since the
+real number $1/|z|$ is the multiplicative inverse of the real number
+$|z|$, then clearly $|w| = 1$ by field axiom (M5) and Theorem 1.31
+(b).  Now we show that $z$ can be written as $rw$,
+\begin{align*}
+  z = z \cdot\frac{|z|}{|z|} = |z| \Biggl( z\cdot\frac{1}{|z|} \Biggr) = rw.
+\end{align*}
+We may do so because multiplication is commutative and $z\neq 0 \Rightarrow |z| >
+0$ by Theorem 1.31 (d).
+
+We shall now demonstrate that whenever $z\neq 0$, then $r$ and $w$ are
+uniquely determined by $z$.  Suppose not.  Then there exists $q > 0$,
+$v\neq w$ such that $|v| = 1$ and $z = qv = rw$.  It follows that $|z|
+= |rw| = |r||w| = r = |qv| = |q||v| = q$.  Hence $r = q$ and since $z
+= rw = qv$,
+\begin{align*}
+  0 = rw - qu = r ( w - q ).
+\end{align*}
+Because $r > 0$ we have that $w = v$ and we get a contradiction since
+we assumed otherwise.
+
+\hfill$\square$
