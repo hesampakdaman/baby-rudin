@@ -1,0 +1,68 @@
+\noindent\textbf{7.} We follow the outline in the book.
+\begin{itemize}
+\item [a)] Proof by induction.
+  The case for $n=1$ is clearly true.
+  For $n+1$ we will use the fact that for a geometric series $\sum_{j=0}^{k-1} b^j = \frac{b^k-1}{b-1}$ is true for any $b>1$.
+  We have that
+  \begin{align*}
+    b^{n+1}-1 &= (b-1)\sum_{k=0}^n b^k = (b-1)\left(\sum_{k=0}^{n-1} b^k + b^n\right)\\
+              &= b^n - 1 + (b-1)b^n \geq n(b-1) + (b-1)b^n\\
+              &\geq n(b-1) + (b-1) = (n+1)(b-1),
+  \end{align*}
+  where we have used the induction step for the first inequality and $b>1 \Rightarrow b^n > 1$ for the second.
+\item [b)] In a) we choose $b^{1/n}$.
+  Then
+  \begin{displaymath}
+    (b^{1/n})^n - 1 \geq n(b^{1/n}-1)\ \Rightarrow\ b-1 \geq n(b^{1/n}-1).
+  \end{displaymath}
+\item [c)] The result in b) together with the fact that $n > (b-1)/(t-1)$ gives us
+  \begin{align*}
+    b-1 \geq n(b^{1/n} - 1) > \frac{b-1}{t-1}(b^{1/n} - 1) \Rightarrow\\
+    t - 1 > b^{1/n} - 1\ \Rightarrow\ b^{1/n} < t.
+  \end{align*}
+\item [d)] Since $b^w < y$ we have that $1 < y\cdot b^{-w} = t$.
+  Therefore we can use the result in c) for sufficently large $n$
+  \begin{align*}
+    b^{1/n} < t = y\cdot b^{-w} \Rightarrow b^{w + (1/n)} < y.
+  \end{align*}
+\item [e)] We assume $b^w > y$ which implies $t = y^{-1}\cdot b^w > 1$.
+  Now we can use c) for sufficently large $n$
+  \begin{align*}
+    b^{1/n} < t = y^{-1}\cdot b^w \Rightarrow y < b^{w - (1/n)}.
+  \end{align*}
+
+\item [f)] The set $A\subset \mathbb{R}$ is non-empty.
+  To see this notice that $y>0$ so that
+  we can make $b^w$ arbitrarily close to $0$ by choosing $w$ to be negative integers since $b>1$.
+  Therefore we can always find a $w$ for which $0 < b^w < y$.
+
+  Since $A$ is a non-empty set bounded above by $y$,
+  we can use the least upper-bound property of $\mathbb{R}$ to show that $x=\sup{A}$ exists.
+  Now $A$ is an ordered-set for which we know that only one relation ($<$, $>$, $=$) between $b^x$ and $y$ holds.
+
+  Assume $b^x < y$. Then according to the result in d) we have that
+  \begin{align*}
+    b^{x+(1/n)} < y.
+  \end{align*}
+  This means that $x\in A$ and $x + (1/n) \in A$.
+  Since $x < x + (1/n)$ we know that $x$ cannot be an upper-bound to $A$.
+  But this is a contradiction since $x=\sup{A}$.
+
+  Now we assume $b^{x} > y$. The result in e) gives us that
+  \begin{align*}
+    b^{x - (1/n)} > y.
+  \end{align*}
+  This means that $x - (1/n)$ is an upper-bound to $A$ where $x - (1/n) < x$.
+  But then $x$ cannot be the \emph{least} upper-bound to $A$, which is a contradiction since $x=\sup{A}$.
+
+  Thus $b^x = y$ must be true.
+
+\item [g)] Suppose not, then there exists numbers $x \neq x'$ such that $b^x = b^{x'}$.
+  We have that
+  \begin{align*}
+    1 = \frac{b^x}{b^{x'}} = b^{x-x'}.
+  \end{align*}
+  Since $b > 1$ the only way to get $b^{x - x'} = 1$ is if $x - x' = 0$.
+  But this is a contradiction since we assumed $x \neq x'$.
+  This completes the proof.
+\end{itemize}
