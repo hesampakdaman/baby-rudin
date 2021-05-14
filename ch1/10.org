@@ -1,0 +1,28 @@
+\newcommand{\VarRe}{\mathrm R\mathrm e}
+\newcommand{\VarIm}{\mathrm I\mathrm m}
+
+
+\noindent\textbf{10.} First note that $u \leq \sqrt{u^2} \leq \sqrt{u^2 + v^2} = |w|$ using Theorem 1.18 (d).
+Hence $|w|+u \geq 0$ and $|w| - u \geq 0$.
+Therefore, we may use the corollary to Theorem 1.21 in the simplification below
+\begin{align*}
+  2ab &= 2\Bigl( \frac{|w| + u}{2} \Bigr)^{1/2} \Bigl( \frac{|w| - u}{2} \Bigr)^{1/2} \\
+      &= \Bigl( (|w| + u)(|w| - u) \Bigr)^{1/2} = \Bigl( |w|^2 - u^2 \Bigr)^{1/2}\\
+      &= \Bigl( u^2 + v^2 - u^2 \Bigr)^{1/2} = |v|.
+\end{align*}
+We also have the following simplification,
+\begin{align*}
+  a^2 - b^2 &= \frac{|w| + u}{2} - \frac{|w| - u}{2} = u.
+\end{align*}
+Using the results above we have that
+\begin{align*}
+  z^2 &= a^2 + i2ab - b^2 = u + i|v| = w, \textrm{ if } v \geq 0 \\
+  (\bar{z})^2 &= a^2 - i2ab - b^2 = u - i|v| = w, \textrm{ if } v \leq 0.
+\end{align*}
+By proposition 1.16 (d) we have that for any $x\in \mathbb{C}$ it holds
+that $(-x)(-x) = (-x)^2 = x^2$.  Hence we can conclude that for every
+complex number $w$, with exception for $0$, there exists two square
+roots.  They are either $\pm z$ or $\pm\bar{z}$, depending on wheter
+$\VarIm(w)$ is positive or negative, respectivly.
+
+\hfill$\square$
