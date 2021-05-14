@@ -1,0 +1,14 @@
+\newcommand{\VarRe}{\mathrm R\mathrm e}
+\newcommand{\VarIm}{\mathrm I\mathrm m}
+
+
+\noindent\textbf{14.} We use Theorem 1.31 (a), and note that $1$ is
+its own conjugate, in the calculation below
+\begin{align*}
+  | 1 + z |^2 & = ( 1 + z ) ( 1 + \overline{z} ) = 1 + z + \overline{z} + z\overline{z} \\
+              & = 2 + 2\VarRe{(z)}.
+\end{align*}
+In the expression above put $-z$ in place of $z$ to get $| 1 - z |^2 =
+2 - 2\VarRe{(z)}$.  Hence $$| 1 + z |^2 + | 1 - z |^2 = 4.$$
+
+\hfill$\square$
