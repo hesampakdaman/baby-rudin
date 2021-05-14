@@ -1,0 +1,19 @@
+\newcommand{\VarRe}{\mathrm R\mathrm e}
+\newcommand{\VarIm}{\mathrm I\mathrm m}
+
+
+\noindent\textbf{12.} We shall prove the statement using induction on
+$n$.  The case $n=1$ is clearly true.  Assume the statement holds for
+$n=k$.  Recall that $w = \sum_{i=1}^k z_i$ is a complex number since
+$\mathbb{C}$ is closed under addition.  Then we have that
+\begin{align*}
+  | z_1 + z_2 + \cdots + z_{k+1} | &= \Bigg| \sum_{i=1}^k z_i + z_{k+1} \Bigg| \\
+                                   &= | w + z_{k+1} | \\
+                                   &\leq | w | + | z_{k+1} | \\
+                                   &= | z_1 + z_2 + \cdots + z_k | + | z_{k+1} |\\
+                                   &\leq | z_1 | + | z_2 | + \cdots + | z_k | + | z_{k+1} |, \\
+\end{align*}
+where we have used Theorem 1.33 (e) for the first inequality and the
+induction hypothesis for the latter.
+
+\hfill$\square$
