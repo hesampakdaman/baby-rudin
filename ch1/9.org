@@ -1,0 +1,40 @@
+\newcommand{\VarRe}{\mathrm R\mathrm e}
+\newcommand{\VarIm}{\mathrm I\mathrm m}
+
+
+\noindent\textbf{9.} We check that this order on $\mathbb{C}$ satisfies properties 1.5 (i) and (ii).
+Clearly (i) holds using the new order relation together with the structre of $\mathbb{R}$.
+Suppose $z < w$ and let $x = e + fi$ such that $w < x$.
+Since $z < w$, then $a < c$ or $a = c$ and $b < d$.
+The same two cases holds for $w, x$ since $w < x$.
+\begin{itemize}
+\item If $z < w$ such that $a \leq c$ and $w < x$ such that $c < e$, then $a \leq c < e \Rightarrow z < x$.
+
+\item If $z < w$ such that $a < c$ and $w < x$ such that $c = e$, then $a < c = e \Rightarrow z < x$.
+
+\item If $z < w$ such that $a = c$, $b < d$ and $w < x$ such that $c = e$, $d < f$, then $b < d < f \Rightarrow z < x$.
+\end{itemize}
+
+Now suppose this ordered set has the least-upper-bound property.
+Let $E \subset \mathbb{C}$ be the set of all numbers $v$ such that $\VarRe(v) < \VarRe(z)$.
+It is clear that $E$ is non-empty and bounded above.
+Then $\alpha = \sup{E}$ exists.
+
+If $\alpha \in E$, then $\VarRe(\alpha) < \VarRe(z)$. Let $u$ be a complex number such that
+$\VarRe(u) = (\VarRe(\alpha) + \VarRe(z)) / 2$. Then
+\begin{align*}
+  \VarRe(\alpha) = \frac{\VarRe(\alpha) + \VarRe(\alpha)}{2} < \frac{\VarRe(\alpha) + \VarRe(z)}{2} < \VarRe(z),
+\end{align*}
+which implies $u \in E$ yet $\alpha < u$.  Since $\alpha$ is an upper-bound to $E$
+this means that $\alpha \notin E$.
+
+In that case, $\forall v \in E$ it is true that $\VarRe(v) < \VarRe(\alpha)$.  Now
+choose $\beta = \VarRe({\alpha}) + i(\VarIm{(\alpha}) - 1)$.  Since $\VarRe(\beta) =
+\VarRe(\alpha)$, if $v\in E$ then $v < \beta$.  Hence $\beta$ is an upper-bound to
+$E$.  Because $\beta$ is chosen such that $\VarRe(\beta) = \VarRe(\alpha)$ while
+$\VarIm(\beta) < \VarIm(\alpha$), we have that $\beta < \alpha$.  But this is a
+contradiction since $\alpha$ is assumed to be the \emph{least} upper-bound
+to $E$.  This shows that $\alpha$ cannot exist and hence the initial
+assumption of least upper-bound property is false.
+
+\hfill$\square$
