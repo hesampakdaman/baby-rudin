@@ -1,0 +1,13 @@
+\noindent\textbf{8.} Consider any order that turns $\mathbb{C}$ into
+an ordered field.  We have that $i^2 = -1$, which according to property
+1.17 (ii) of ordered fields implies $i < 0$ since $i \neq 0$.
+Proposition 1.18 (a) implies that $-i > 0$.  Applying 1.17 (ii), this
+time with $x = -i$ and $y = -i$, together with proposition 1.16 (d)
+gives us
+\begin{align*}
+  (-i) \cdot (-i) = i^2 = -1 < 0.
+\end{align*}
+But this is a contradiciton since we assumed $\mathbb{C}$ is an
+ordered field where the condition of 1.17 (ii) must be satisfied.
+
+\hfill$\square$
