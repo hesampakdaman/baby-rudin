@@ -1,0 +1,22 @@
+\newcommand{\VarRe}{\mathrm R\mathrm e}
+
+
+\noindent\textbf{13.} For any complex numbers $z, w$ it holds that
+$\overline{z}w$ is the conjugate of $z\overline{w}$.  Hence
+$z\overline{w} + \overline{z}w = 2\VarRe{(z\overline{w})}$ by Theorem
+1.31.  We have that
+\begin{align*}
+  \big| |x| - |y| \big|^2 & =    \big( |x| - |y|\big) \overline{ (|x| - |y| )}
+                            =    |x|^2 - 2|x||y| + |y|^2 \\
+                          & =    |x|^2 - 2|x||\overline{y}| + |y|^2
+                            =    |x|^2 - 2|x\overline{y}| + |y|^2\\
+                          & \leq |x|^2 - 2\VarRe{(x\overline{y}}) + |y|^2
+                            =    x\overline{x} - 2\VarRe{(x\overline{y})} + y\overline{y} \\
+                          & =    x\overline{x} - x\overline{y} - \overline{x}y + y\overline{y}
+                            =    (x - y)\overline{(x-y)} \\
+                          & =    | x - y |^2,
+\end{align*}
+where we used Theorem 1.33 for the following: $|\overline{z}| = |z|$,
+$|zw| = |z||w|$ and $\VarRe{z} \leq |\VarRe{z}| \leq |z|$.
+
+\hfill$\square$
