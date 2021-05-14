@@ -1,0 +1,12 @@
+\noindent\textbf{17.} We can construct a parallellogram with sides
+$\mathbf{|x|, |y|}$ and diagonals $\mathbf{|x+y|, |x-y|}$.  It holds
+that
+\begin{align*}
+  \mathbf{|x+y|}^2 + |\mathbf{x-y}|^2 & = \mathbf{|x|}^2 + 2 \mathbf{x \cdot y} + \mathbf{|y|}^2
+                                        + \mathbf{|x|}^2 - 2 \mathbf{x \cdot y} + \mathbf{|y|}^2 \\
+                                      & = 2|\mathbf{x}|^2 + 2|\mathbf{y}|^2,
+\end{align*}
+meaning that the sum squared of the parallelogram's four sides equals
+two times the sum squared of its two diagonals.
+
+\hfill$\square$
