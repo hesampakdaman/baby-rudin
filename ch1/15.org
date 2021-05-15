@@ -1,0 +1,16 @@
+\noindent\textbf{15.} We use the same notation as in the proof of the
+Schwarz inequality Theorem 1.35. We already know from the proof that
+$$ \sum |Ba_j - Cb_j|^2 = B(AB - |C|^2) \geq 0. $$ Equality only holds if the
+expression above equals to $0$. If $B = 0$ the solution is trivial and
+therefore we assume $B > 0$. 
+
+The sum $\sum |Ba_j - Cb_j|^2$ consists of non-negative terms and can only
+equal $0$ if $|Ba_j - Cb_j|^2 = 0$ for any $1 \leq j \leq n$. The absolute
+value of any complex number can only equal to $0$ if that complex
+number is $0$ by Theorem 1.31 (d). Hence 
+
+\begin{displaymath}
+        Ba_j - Cb_j = 0 \quad \Rightarrow \quad a_j = \frac{C}{B} b_j.
+\end{displaymath}
+We can see here that if $a_j$ satisfy the relation above, then equality
+holds in Schwarz inequality.
