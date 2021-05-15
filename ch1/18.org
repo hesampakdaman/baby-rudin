@@ -1,0 +1,18 @@
+\noindent\textbf{18.} Suppose not.  Then there does not exists any
+$\mathbf{y \neq 0}$ such that $\mathbf{x \cdot y = 0}$ for $k \geq 2$.  Let
+$\mathbf{e}_{i} = (0, \cdots, 1, 0, \cdots, 0)$ be the $k$ tuple with zeros at all
+coordinates except at $i$ where it is $1$.  Since we assume the
+statement to be false, clearly $\mathbf{e}_{i} \cdot \mathbf{x} = x_i \neq
+0$ since $\mathbf{e}_i \neq \mathbf{0}$.  Put $\mathbf{y} =
+\mathbf{e}_{1} + \alpha \mathbf{e}_{2}$ where $\alpha = -x_1/x_2$. We see that
+$|\mathbf{y}| = \sqrt{ 1 + \alpha^2 } \geq 1$ which implies $\mathbf{y \neq 0}$ by
+Theorem 1.37.  It follows that
+\begin{align*}
+  \mathbf{y \cdot x} & = ( \mathbf{e}_{1} + \alpha\mathbf{e}_{2} ) \cdot \mathbf{x} = x_1 + \alpha x_2 = x_1 - \frac{x_1}{x_2}x_2
+                       = 0,
+\end{align*}
+which is a contradiction since $\mathbf{y \neq 0}$ yet $\mathbf{x \cdot y} = 0$.
+
+If $k = 1$, then the statement is false for $x \neq 0$.  To see this
+recall that $\mathbb{R}$ is a field for which Proposition 1.16 holds.
+Since both $x \neq 0$ and $y \neq 0$, we have that $xy \neq 0$.
