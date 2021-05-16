@@ -1,0 +1,18 @@
+\newcommand{\reals}{\mathbb R}
+\newcommand{\rationals}{\mathbb Q}
+\newcommand{\irrationals}{\mathbb I}
+
+\noindent\textbf{4.} Denote the set of irrational numbers by
+$\irrationals$. According to Theorem 2.13 $\rationals$ is
+countable. Now suppose $\irrationals$ is countable. We already know
+that
+\begin{align*}
+       \reals = \rationals \cup \irrationals,
+\end{align*}
+which means that $\reals$ is countable by Theorem 2.12. But this is a
+contradiction since by Theorem 2.43 the set of real numbers $\reals$
+is uncountable. If $\irrationals$ is assumed to be finite, then that
+still would make $\reals$ countable. Hence $\irrationals$ must be
+uncountable.
+
+\hfill$\square$
