@@ -1,0 +1,12 @@
+\newcommand{\algebraicset}{\mathcal A}
+\newcommand{\reals}{\mathbb R}
+
+\noindent\textbf{3.} Suppose not. Let $\algebraicset$ be the set of
+all algebraic numbers. Since we assume the opposite any real number is
+algebraic and it follows that $\reals \subset \algebraicset$. By exercise
+2.2 we know that $\algebraicset$ is countable. Theorem 2.8 shows that
+$\reals$ is countable since it is an infinite subset of
+$\algebraicset$ which is countable. But this is a contradiction since
+Theorem 2.43 shows that $\reals$ is uncountable. Hence our assumption
+is false and there exists real numbers $x \in \reals$ such that $x \notin
+\algebraicset$.
