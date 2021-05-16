@@ -1,0 +1,7 @@
+\noindent\textbf{1.} Let $A$ be any set and denote the empty set by
+$\emptyset$. Assume the opposite. Then there exists at least one element $x \in
+\emptyset$ such that $x \notin A$. But the empty set does not contain any elements
+and no such $x$ can therefore be found. This is a contradiction and
+hence $\emptyset \subset A$ must be true.
+
+\hfill$\square$
