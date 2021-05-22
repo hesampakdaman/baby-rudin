@@ -1,0 +1,57 @@
+\newcommand{\algebraicset}{\mathcal A}
+\newcommand{\reals}{\mathbb R}
+\newcommand{\naturals}{\mathbb N}
+\newcommand{\rationals}{\mathbb Q}
+\newcommand{\integers}{\mathbb Z}
+
+
+\noindent\textbf{2.} Let $\alpha = (a_0, \ldots, a_n) \in B_{n+1}_{}$ be an n+1-tuple
+of integers. Example 2.5 shows that the set of all integers
+$\integers$ is countable. Using Theorem 2.13 with $A = \integers$
+shows that the set of n+1-tuples $B_{n+1}$ is countable.
+
+For particular choice of integers $a_0, \ldots, a_n$ we may construct an
+equation of the form
+
+                   $$ a_0 z^n + \cdots + a_{n-1} z + a_n = 0.$$
+
+\noindent This polynomial has at most $n$ solutions. Let $E_\alpha$ be
+the set of all complex numbers $z$ that is a solution to that
+polynomial. Hence $E_\alpha$ is a finite subset of $\algebraicset$ with
+at most $n$ elements. If $S_{n}$ is a set such that
+
+                   $$S_n =\bigcup_{\alpha \in B_{n}} E_\alpha $$
+
+\noindent then it is the union of a countable collection of finite
+sets. It follows from Theorem 2.12 that $S_{n}_{}$ is at most
+countable. Since the union of a countable collection of at most
+countable sets is at most countable (follows from Theorem 2.12 again),
+the union
+
+                      $$ S = \bigcup_{n=1}^{\infty} S_n, $$
+
+\noindent is at most countable.
+
+We shall show that $\algebraicset \subset S$. For any $z \in \algebraicset$
+there exist integers $a_0, \ldots, a_k$ such that $a_0 z^k + \cdots + a_{k-1} z +
+a_k = 0$. For these integers there is a k+1-tuple $\alpha = (a_0, \ldots,
+a_k)$ which is associated with exactly one set, $E_\alpha$. Hence there
+exists at least one $\alpha$ for which $z \in E_{\alpha}$ and therefore it
+follows that $\algebraicset \subset S$. This means that $\algebraicset$ is
+at most countable since it is a subset of $S$.
+
+Lastly we need to show that $\algebraicset$ is infinite. The set of
+rational numbers $\rationals$ is countable by the Corollary to Theorem
+2.13. For any $q \in \rationals$ there are integers $m, n$ such that $q
+= n/m$. Now choose $a_0 = m$ and $a_1 = -n$, then 
+
+                    $$ a_0 q + a_1 = m \frac{n}{m} - n = 0,$$
+
+\noindent which means that $q$ is algebraic. Since $q$ is arbitrary it
+follows that $\rationals \subset \algebraicset$. This shows that
+$\algebraicset$ has an infinite subset and must therefore itself be
+infinite.  $\algebraicset$ is an infinite set that is at most
+countable, hence it is countable as desired.
+
+\hfill$\square$
+
