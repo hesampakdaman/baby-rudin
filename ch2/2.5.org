@@ -1,0 +1,61 @@
+\noindent\textbf{5.} Let $k$ be a natural number and consider the set
+$E_k$ of numbers $k + \frac{1}{n}$, where ($n = 1, 2, 3, \ldots$). Clearly $E_k
+\subset (k, k+1]$ and is therefore bounded.
+
+We need to show that $E_k$ does not contain any limit points. For any
+natural numbers $n, m$ we have that
+\begin{align*}
+        d\Big(k+\frac{1}{n}, k+\frac{1}{m}\Big) =
+         \Big| k + \frac{1}{n} - \Big( k + \frac{1}{m} \Big) \Big| 
+        = \Big| \frac{1}{n} - \frac{1}{m} \Big| = d\Big(\frac{1}{n}, \frac{1}{m}\Big).
+\end{align*}
+For a fixed $n$ we want to show that
+\begin{align*}
+        d\Big(\frac{1}{n}, \frac{1}{m}\Big) \geq d\Big(\frac{1}{n}, \frac{1}{n+1}\Big),
+\end{align*}
+holds with any natural number $m \neq n$. Suppose $m \geq n+1$ then
+\begin{align*}
+        d\Big(\frac{1}{n}, \frac{1}{m}\Big) & 
+        = \Big| \frac{1}{n} - \frac{1}{m} \Big| 
+        = \frac{1}{n} - \frac{1}{m}
+        \geq \frac{1}{n} - \frac{1}{n+1} \\
+        & = \Big| \frac{1}{n} - \frac{1}{n+1} \Big|
+        = d\Big(\frac{1}{n}, \frac{1}{n+1}\Big).
+\end{align*}
+On the other hand if $m \leq n - 1$ then
+\begin{align*}
+           d\Big(\frac{1}{n}, \frac{1}{m}\Big) & 
+        =  \Big| \frac{1}{n} - \frac{1}{m} \Big|
+        =  \frac{1}{m} - \frac{1}{n} 
+        \geq \frac{1}{n-1} - \frac{1}{n} \\
+        &=  \frac{1}{n(n-1)} 
+        > \frac{1}{n(n+1)}
+        =  \frac{1}{n} - \frac{1}{n+1}
+        = \Big| \frac{1}{n} - \frac{1}{n+1} \Big| \\
+        &=  d\Big(\frac{1}{n}, \frac{1}{n+1}\Big),
+\end{align*}
+which gives us the result. Hence any neighborhood $N_r(k+\frac{1}{n})$
+with radius $0 < r < \big|\frac{1}{n} - \frac{1}{n+1}\big| =
+\frac{1}{n(n+1)}$ will be empty, which means that $k+\frac{1}{n}$
+cannot be a limit point to $E_k$.
+
+We now show that $k$ is a limit point to $E_k$. For any radius $r >
+0$ we can find a natural number $N$ such that $\frac{1}{N} < r$ by
+using the Archemdian property of $\mathbb{R}$ (Thm. 1.20). Therefore
+\begin{align*}
+        d \Big( k, k+\frac{1}{N} \Big)
+        &= \Big|k - (k + \frac{1}{N}) \Big|
+        = \frac{1}{N} 
+        < r,
+\end{align*}
+which means that $k+1/N \in N_r(k)$.
+
+The desire is to construct a set that is bounded with exactly three
+limit points. We accomplish this by choosing the set $E$ such that 
+\begin{align*}
+        E = \bigcup^2_{k=0} E_k.
+\end{align*}
+More specifically, the limit points to $E$ are $0, 1, 2$ and $E_1, E_2,
+E_3$ are all bounded which makes $E$ bounded as well.
+
+$\hfill\square$
