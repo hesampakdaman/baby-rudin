@@ -1,0 +1,64 @@
+\noindent\textbf{7.} a) We first need to show that for any sets $A$
+and $B$ it is true that $(A \cup B)' = A' \cup B'$. 
+
+If $x \in (A \cup B)'$, then for every neighborhood $N_r(x)$ with a radius
+$r > 0$ there exists at least one point $p \in N_r(x)$ such that $p \in (A
+\cup B)$. Thus $p \in A$ or $p \in B$ which implies that $x \in A'$ or $x \in B'$
+so that $x \in A' \cup B'$.
+
+Suppose now that $x \in A' \cup B'$. Then for any neighborhood $N_r(x)$ with
+a radius $r > 0$ there is a point $p \in N_r(x)$ such that $p \in A$ or $p
+\in B$. This means that $p \in A \cup B$ and it follows that $x \in (A \cup B)'$.
+
+We turn now to the question at hand. This will be a proof by
+induction. The base case for $n=1$ is clearly true. Assume the
+statement holds for $n$, then
+\begin{align*}
+        \bar{B}_{n+1} 
+        =& \overline{\bigcup_{i=1}^{n+1} A_i}
+        = \overline{\bigcup_{i=1}^{n} A_i \cup A_{n+1}}
+        = \overline{B_n \cup A_{n+1}} \\
+        =& B_n \cup A_{n+1} \cup (B_n \cup A_{n+1})' \\
+        =& B_n \cup B_n'  \cup A_{n+1} \cup A_{n+1}' \\
+        =& \bar{B}_n \cup \bar{A}_{n+1}
+        = \bigcup_{i=1}^{n} \bar{A}_i \cup \bar{A}_{n+1}\\
+        =& \bigcup_{i=1}^{n+1} \bar{A}_i, 
+\end{align*}
+where we have used the induction hypothesis in the penultimate
+equality. \\
+
+
+
+\noindent b) If $x \in \bigcup_{i=1}^\infty \overline{A}_i$ then there is an $n \in
+\mathbb{N}$ such that $x \in \overline{A}_n$. We have that
+\begin{align*}
+        \overline{B} &=
+        \overline{\bigcup_{i=1}^\infty A_i} \supset 
+        \overline{\bigcup_{i=1}^n A_i} =
+        \bigcup_{i=1}^n \overline{A}_i \supset 
+        \overline{A}_n,
+\end{align*}
+where we used the result in a) to get the second equality. This
+implies that $x \in \overline{B}$ and since $x$ is arbitrary it follows
+that $$\overline{B} \supset \bigcup_{i=1}^\infty \overline{A}_i,$$ as desired.
+
+We shall conclude by showing that this subset can indeed be a
+proper. Let $A_i = \{1/2, 1/3, \dots, 1/i\}$ and note that there exists no
+$n \in \mathbb{N}$ such that $0 \in A_i$. Thus $0 \notin \bigcup_{i=1}^\infty
+A_i$. The set of limit points to $A_i$ is the empty set which is why
+$\overline{A}_i = A_i$ and therefore $\bigcup_{i=1}^\infty \overline{A}_i =
+\bigcup_{i=1}^\infty A_i$. It follows then that $0 \notin \bigcup_{i=1}^\infty
+\overline{A_i}$. Now let's consider $\overline{B}$
+\begin{align*}
+        \overline{B} &=
+        \overline{\bigcup_{i=1}^\infty A_i} =
+        \overline{ \{ 1/2, 1/3, \dots \} } =
+        \{ 0, 1/2, 1/3, \dots \},
+\end{align*}
+which implies that $0 \in \overline{B}$. Since $0 \notin \bigcup_{i=1}^\infty
+\overline{A_i}$ we've shown that the inclusion can be proper.
+
+\hfill$\square$
+
+
+
