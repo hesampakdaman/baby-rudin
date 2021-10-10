@@ -1,0 +1,33 @@
+\noindent\textbf{6.} We first prove that $E'$ is closed. Suppose not,
+then there exists a limit point $x$ to $E'$ such that $x \notin E'$. For
+any neighborhood $N_r(x)$ with radius $r > 0$ there is a $y \in E'$ such
+that $y \in N_r(x)$. Since $y \in E'$ we know that $y$ is a limit point to
+$E$. Hence we can find a $z \in E$ such that $z \in N_{r-h}(y)$ with $r > h >
+0$. We have that
+\begin{align*}
+    d(z, x) \leq d(z, y) + d(y, x) < r - h + h = r,
+\end{align*}
+which means that $z \in N_r(x)$. Since $r > 0$ is arbitrary it follows
+that $x$ is a limit point to $E$. But this is a contradiction since it
+would imply $x \in E'$. Therefore our assumption is wrong and $E'$ must
+be closed.
+
+Next we show that $\overline{E}$ and $E$ has the same limit points. If
+$x$ is a limit point to $\overline{E}$, then since $\overline{E} = E'
+\cup E$ it must be the case that $x$ is either a limit point to $E'$ or
+$E$. Assuming $x$ is a limit point to $E$ leaves us with nothing to
+prove. So we suppose that $x$ is a limit point to $E'$ alone. We
+already have established that $E'$ is closed and therefore $x \in
+E'$. This in turn directly implies that $x$ is a limit point to $E$
+because the members of $E'$ are all limit points to $E$. Conversely,
+if $y$ is a limit point to $E$ then we know that $y \in E'$. Since
+$\overline{E} = E' \cup E$ it follows that $y \in \overline{E}$ and is a
+limit point to $\overline{E}$.
+
+Lastly we show that $E$ and $E'$ do not always have the same limit
+points. Let $E = \{ 1/2, 1/3, \dots \}$ and note $0$ is the only limit
+point which means that $E' = \{ 0 \}$. It is evident that $E'$ has no
+limit points which shows the result by example.
+
+
+
