@@ -1,0 +1,26 @@
+\noindent\textbf{8.} We first show that every point in every open set
+in $R^2$ is a limit point to $E$. Suppose not. Then there exists an
+open set $E \subset R^2$ with a point $x \in E$ that is not a limit
+point to $E$. It follows that there exists an $r > 0$ such that the
+neighborhood $N_r(x)$ contains no point of $E$. Since $E$ is an open
+set we know that $x$ must be an interior point. Hence there is a
+neighborhood with radius $s$ such that $N_s(x) \subset
+E$. Neighborhoods in $R^2$ are non-empty interiors of circles, which
+makes $N_s$ and $N_r$ circles centered at $x$.
+
+If $r > s$ then $N_s$ is a circle inscribed in a bigger circle $N_r$
+which means that $N_s \subset N_r$. It follows that there exists
+points $y \in N_r$ where $y \neq x$ and are in $E$ which is impossible
+due to our assumption. Therefore $r \leq s$ must be true and thus
+$N_r$ is inscribed in $N_s$. Since $N_s \subset E$ that would make
+$N_r \subset E$ which is also impossible. Since none of the relations
+$r < s$, $r = s$ and $r > s$ can be true and no such $r$ exists. Hence
+we've reached a contradiction.
+
+Now we show that the case does not hold true in general for closed
+sets. For consider the set of all integers $\mathbb{Z} \subset
+R^2$. This set is closed yet every point in this set is not a limit
+point to it.
+
+\hfill$\square$
+
