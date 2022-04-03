@@ -1,0 +1,102 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\author{Hesam Pakdaman}
+\date{\today}
+\title{}
+
+\newcommand{\interior}[1]{{\kern0pt#1}^{\mathrm{o}}}
+
+\begin{document}
+
+\begin{itemize}
+
+\item[\noindent\textbf{9.} (a)] If $p \in \interior{E}$ then $p$ is an
+  interior point of $E$ which means that there exists some
+  neighborhood $N$ with $r > 0$ such that $N \subset E$. By Theorem
+  2.19 $N$ is an open set so that every point in $N$ are interior
+  points of $E$. This implies that $N \subset \interior{E}$ and
+  therefore $\interior{E}$ is an open set.
+
+\item[(b)] If $E$ is open then for every point $x \in E$ we can find a
+  neighborhood $N(x)$ with $r > 0$ such that $N \subset E$. This
+  implies that every point $x \in E$ is an interior point of $E$ and
+  it is therefore true that $x \in \interior{E}$. This shows that
+  $E \subset \interior{E}$. Since by construction
+  $\interior{E} \subset E$ we have that $\interior{E} = E$.
+
+  If $\interior{E} = E$ then all points in $E$ are interior points of
+  $E$. This is clearly true since $\interior{E}$ is the set of all
+  interior points of $E$. Then by definition 2.18 (f) $E$ is an open
+  set.
+
+\item[(c)] If $G$ is open then we know that for every point $p \in G$
+  we can find a neighborhood $N$ with $r > 0$ such that $N \subset
+  G$. Since $G \subset E$ we have that $N \subset G \subset E$ which
+  shows that $p$ is an interior point of $E$. Hence
+  $p \in \interior{E}$ and therefore we have that
+  $G \subset \interior{E}$ since $p$ was arbitrary chosen from $G$.
+
+\item[(d)] First we show that
+  $(\interior{E})^c \subset \overline{E}^c$. Suppose that
+  $x \notin E$, then
+
+  $$ x \in E^c \subset E^c \cup E^{c'} = \overline{E}^c.$$
+
+  Now let $x \in E$. Since $x$ is in the complement to $\interior{E}$
+  we know that $x$ is not an interior point to $E$. Therefore for
+  every neighborhood $N(x)$ with radius $r > 0$ we have that
+  $N \not\subset E$. This means that $N$ always have points in
+  $E^c$ which makes $x$ a limit point to $E^c$.  We get that
+  $x \in E^{c'} \subset \overline{E}^c$ which shows that
+  $(\interior{E})^c \subset \overline{E}^c$. \\
+
+  Conversely, let $p \in \overline{E}^c = E^c \cup E^{c'}$. Then it is
+  clear that either $p \in E^c$ or $p \in E^{c'}$. Assume $p \in E^c$,
+  then we know that $p$ is not an interior point to $E$ so that
+  $p \not\in \interior{E}$ which implies that
+  $p \in (\interior{E})^c$. If $p \in E^{c'}$ then it is a limit point
+  to $E^c$ and therefore every neighborhood $N(p)$ with radius $r > 0$
+  have points (other than $p$) from $E^c$. Hence there is no
+  neighborhood such that $N(p) \not\subset E$ which means that $p$
+  cannot be an interior point to $E$. We therefore must get that
+  $p \in (\interior{E})^c$ and have now shown that
+  $\overline{E}^c \subset (\interior{E})^c$. This concludes the proof.
+
+\item[(e)] We shall show that the answer is yes. By (a) we know that
+  $\interior{E}$ is always open. Since
+  $\interior{E} \subset E \subset \overline{E}$ we can use (c) with
+  $G = \interior{E}$ and $E = \overline{E}$ to show that
+  $\interior{E} \subset \interior{\overline{E}}$. \\
+
+  Conversely, suppose $x \in \interior{\overline{E}}$ but
+  $x \not\in \interior{E}$. This means that $x \in (\interior{E})^c$
+  and by (d) we have that
+
+  $$ x \in (\interior{E})^c \Rightarrow x \in \overline{E}^c,$$
+
+  which contradicts our assumption that
+  $x \in \interior{\overline{E}}$ since
+  $\interior{\overline{E}} \subset \overline{E}$. Hence
+  $x \in \interior{\overline{E}}$ implies that $x\in \interior{E}$ and
+  we have shown that $\interior{\overline{E}} \subset
+  \interior{E}$. This concludes the proof.
+
+\item[(f)] No, and we provide an example. Consider the set
+  $E = \{ \frac{1}{n} \}$ with $n = 1, 2, 3, \dots$ in the metric
+  space $R^2$. Since $0$ is the only limit point to $E$ we have that
+  its closure is $\overline{E} = E \cup \{ 0 \}$. However, none of the
+  points in $E$ are interior points and therefore
+  $\interior{E} = \emptyset$ which means that
+  $\overline{\interior{E}} = \emptyset$. We have shown that
+  $\overline{E} \neq \overline{\interior{E}}$ as desired.
+
+\end{itemize}
+
+\hfill $\square$
+
+\end{document}
