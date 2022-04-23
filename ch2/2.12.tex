@@ -1,0 +1,52 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\author{Hesam Pakdaman}
+\date{\today}
+\title{}
+
+\newcommand{\collection}[2]{\{{#1}_{#2}\}}
+
+\begin{document}
+
+\noindent\textbf{12.} Let $\collection{G}{\alpha}$ be any open cover
+of $K$. Then we know that there is an index $\alpha_0$ such that
+$0 \in G_{\alpha_0}$. Since $G_{\alpha_0}$ is an open set we know that
+there exists a neighborhood $N_r(0)$ with radius $r > 0$ such that
+$N \subset G_{\alpha_0}$.
+
+By archimedean property of $R$ we can find positive integers $n$ such
+that $r \leq 1/n$. Since $0$ is the only limit point to $E$ and
+$r > 0$ there exists a first integer\footnote{We can show that there
+  exists such a first integer. If $1 > r > 0$ then $n > 1/r$ by the
+  archimedean property. Simply decrement $n$ until the inequality does
+  not hold. The previous number in this process is then the first
+  integer. Similarly can be done with $r>1$.} $m$ such that
+$r \leq 1/m$. It follows that if $n > m$ then $r > 1/n$ so that
+$1/n \in G_{\alpha_0}$. This shows that there are $m$ points in $E$
+that are not in $N_r$
+
+
+$$\frac{1}{m}, \frac{1}{m-1}, \dots, \frac{1}{2}, 1.$$
+
+
+\noindent Let $G_{\alpha_k}$ denote an open set in the collection
+$\collection{G}{\alpha}$ such that $1/k \in G_{\alpha_k}$
+$(k = 1, 2, 3, \dots)$.  Each of the $m$ points above can be
+associated this way to at least one index in the collection
+$\collection{G}{\alpha}$ because it is an open cover of $K$ and
+therefore
+
+
+$$ K \subset G_{\alpha_m} \cup \cdots \cup G_{\alpha_0}.$$
+
+
+\noindent We have shown that any open cover of $K$ has a finite sub cover which
+implies that $K$ is compact as desired.
+
+\hfill$\square$
+
+\end{document}
