@@ -1,0 +1,106 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\author{Hesam Pakdaman}
+\date{\today}
+\title{}
+
+
+\newcommand{\dist}[3]{d_#1(#2, #3)}
+\newcommand{\distfive}[2]{\frac{|#1|}{1 + |#2|}}
+\newcommand{\distfivenoabs}[2]{\frac{#1}{1 + #2}}
+
+\begin{document}
+
+\begin{itemize}
+\item[\noindent\textbf{11.} $\dist{1}{x}{y}$] This is not a metric
+  since 2.15 (c) is not satisfied. We give an example
+  $\dist{1}{10}{0} = 100$, $\dist{1}{10}{4} = 36$, and
+  $\dist{1}{4}{0} = 16$ so that
+  \begin{align*}
+    \dist{1}{10}{0} > \dist{1}{10}{4} + \dist{1}{4}{0}.
+  \end{align*}
+
+\item[$\dist{2}{x}{y}$] Both 2.15 (a) and (b) are clearly true. We
+  show that (c) is also satisfied. Assume not, then there exists
+  points $x$, $y$ and $r$ such that
+  \begin{align*}
+    \dist{2}{x}{y} > \dist{2}{x}{r} + \dist{2}{r}{y},
+  \end{align*}
+  which in this particular case is
+  \begin{align*}
+    \sqrt{|x-y|} > \sqrt{|(x-r)|} + \sqrt{|r-y|}.
+  \end{align*}
+  If $p > q > 0$ then $p^2 > q^2$ for any $p,q \in R$ so that
+    \begin{align*}
+      |x-y| &> (\sqrt{|(x-r)|} + \sqrt{|r-y|})^2 \\
+            &= |x-r| + 2\sqrt{|x-r| |r-y|} + |r-y| \\
+            &\geq |x-r| + |r-y|,
+  \end{align*}
+  where the last inequality comes from the fact that
+  $\sqrt{|x-r| |r-y|} \geq~0$. The above shows that $d(p,q) = |p - q|$
+  cannot be a metric. But that is a contradiction since Theorem 1.37
+  shows that $|p-q|$ satisfies 2.15 (c).
+
+\item[$\dist{3}{x}{y}$] Conditions 2.15 (a), (b) are true and we show
+  that (c) is satisfied. For any $r \in R$ we have that
+  \begin{align*}
+    \dist{3}{x}{y} &= |x^2 - y^2| = |(x^2-r^2) + (r^2-y^2)| \\
+                   &\leq |x^2-r^2| + |r^2-y^2| \\
+                   &= \dist{3}{x}{r} + \dist{3}{r}{y},
+  \end{align*}
+  where we have used Theorem 1.37 to get the inequality. This shows
+  that $\dist{3}{x}{y}$ is a metric.
+
+\item[$\dist{4}{x}{y}$] We show that this is not a metric since
+  condition (a) of Definition 2.15 is not satisfied. If $x \neq 0$
+  then
+  \begin{align*}
+    \dist{4}{x}{x} = |x - 2x| = |x| > 0.
+  \end{align*}
+
+\item[$\dist{5}{x}{y}$] Conditions in (a), (b) are satisfied so we
+  focus on (c). Throughout this exercise WLOG assume $x \leq y$.
+
+  Suppose $x \leq r \leq y$, we have that
+  \begin{align*}
+    \dist{5}{x}{y} &= \distfive{x-y}{x-y} = \distfive{x-r+r-y}{x-y} \\
+                   &\leq \distfive{x-r}{x-y} + \distfive{r-y}{x-y} \\
+                   &\leq \distfive{x-r}{x-r} + \distfive{r-y}{r-y},
+  \end{align*}
+  where we used Theorem 1.37 in the first inequality. Since
+  $x \leq r \leq y$ we know that $|x-r| \leq |x-y|$ and
+  $|r-y| \leq |x-y|$, both of which we used to get the second
+  inequality.
+
+  Now assume $x \leq y < r$. First we show that for any
+  $\varepsilon > 0$
+  $$\distfive{w}{w} < \distfive{w+\varepsilon}{w+\varepsilon},$$
+  holds. The statement is clearly true for $w=0$. If $|w| > 0$ then we
+  can write
+  \begin{align} \label{eq:bigger}
+    \distfive{w}{w} = \distfivenoabs{1}{\frac{1}{|w|}}
+                    < \distfivenoabs{1}{\frac{1}{|w+\varepsilon|}} 
+                    = \distfive{w+\varepsilon}{w+\varepsilon},
+  \end{align}
+  where we get the first inequality since it is true for denominator
+  that $ 1+ \frac{1}{|w+\varepsilon|} < 1 + \frac{1}{|w|}$. Since
+  $x \leq y < r$ we have that $|x-y| < |x - r|$ which means we can use
+  \eqref{eq:bigger} to get the first inequality below
+  \begin{align*}
+    \distfive{x-y}{x-y} < \distfive{x-r}{x-r} \leq \distfive{x-r}{x-r} + \distfive{r-y}{r-y}.
+  \end{align*}
+  The last inequality is due to the last term being
+  non-negative. Similar argument can be made for $r < x \leq y$
+  because $|x-y| < |r-y|$ which allows us to use \eqref{eq:bigger}
+  again. This shows that $\dist{5}{x}{y}$ is a metric.
+
+
+\end{itemize}
+
+
+
+\end{document}
