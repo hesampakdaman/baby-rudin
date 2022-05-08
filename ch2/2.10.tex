@@ -1,0 +1,68 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\author{Hesam Pakdaman}
+\date{\today}
+\title{}
+
+
+\newcommand{\dist}[2]{d(#1, #2)}
+
+\begin{document}
+
+\noindent\textbf{10.} Conditions 2.15 (a) and (b) are clearly
+satisfied. We show (c) also is true. Suppose $p\neq q$ so that
+$\dist{p}{q} = 1$. For any $r \in X$ we have two cases, either $r$
+equals one of $p$, $q$ or neither. We only need to check that $r = p$,
+since $r=q$ is handled in the same way. Therefore WLOG assume
+$r=p$. In this case we have that $\dist{p}{r} = 0$ and
+$\dist{r}{q} = 1$. It follows that
+\begin{align*}
+  \underbrace{\dist{p}{q}}_{=1} \leq \underbrace{\dist{p}{r}}_{=0} + \underbrace{\dist{r}{q}}_{=1}
+\end{align*}
+Now let $r \neq p \neq q$ be true. Here we know that
+$\dist{p}{r} = \dist{r}{q} = 1$,
+\begin{align*}
+  \underbrace{\dist{p}{q}}_{=1} < \underbrace{\dist{p}{r}}_{=1} + \underbrace{\dist{r}{q}}_{=1}
+\end{align*}
+Lastly if $p=q$ then $\dist{p}{q} = 0$ and any point $r \in X$ will
+satisfy (c) since the distance function is non-negative. This shows
+that $X$ is a metric with distance function $d$.
+
+We shall now show that any subset $E \subset X$ is open. Let $p \in E$
+and $N_r(p)$ be a neighborhood with radius $r =1$. This neighborhood
+contains all points $q \in X$ for which $\dist{p}{q} < 1$. The only
+point that satisfies this condition is $p$ itself so that
+$N_r(p) \subset E$. Hence every point in $E$ is an interior point which
+makes $E$ open.
+
+We turn our attention now to showing that every subset in $X$ is also
+closed. Suppose not, then there exist some set $E \subset X$ which has
+a limit point $x$ such that $x \not\in E$. Since $x$ is a limit point
+to $E$ we know that for every neighborhood $N_r(x)$ with radius
+$r > 0$ we can find points $p \in E$ other than $x$ such that
+$p \in N_r(x)$. Let $r = 1$ and recall that the resulting neighborhood
+contains only the point $x$ which is not in $E$. Hence
+$N_r(x) \cap E = \emptyset$ which is a contradiction as $x$ is assumed
+to be a limit point to $E$.
+
+Lastly we show that only finite sets of $X$ are compact (which by
+definition they are, see Definition 2.32). Suppose not, then we have a
+compact set $K \subset X$ that is infinite. For every $p\in K$ let
+$G_p$ be the open neighborhood around $p$ with radius $r = 1$. Since
+by construction any $p \in K$ is associated with an open set $G_p$ the
+collection $\{G_p\}$ is an open cover of $K$. Since $K$ is compact
+there exists finite number of indices such that
+\begin{align*}
+  K \subset G_{p_1} \cup \cdots \cup G_{p_m}.
+\end{align*}
+Any set $G_{p_n}, 1\leq n \leq m$ is an open neighborhood around $p_n$
+with radius $1$. From before we know that these sets contain only a
+single point, namely $p_n$. But that is absurd since it would make $K$
+finite which contradicts our assumption about $K$ being infinite.
+
+\end{document}
