@@ -1,0 +1,10 @@
+#+STARTUP: overview
+#+LaTeX_header: \setcounter{secnumdepth}{0} \usepackage{amsthm}
+
+* Chapter 2
+** 1. Prove that the empty set is a subset of every set.
+Let \( A \) be any set, \( \emptyset \) be the empty set and assume
+the opposite. Then there exists at least one element \( x \in
+\emptyset \) such that \( x \notin A \). But the empty set does not
+contain any elements and no such $x$ can therefore be found. This is a
+contradiction and hence $\emptyset \subset A$ must be true. \qed
