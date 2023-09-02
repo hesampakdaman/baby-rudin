@@ -5,11 +5,12 @@
 
 * Chapter 2
 ** 1. Prove that the empty set is a subset of every set.
-Let $ A $ be any set, \( \emptyset \) be the empty set and assume
+Let \( A \) be any set, \( \emptyset \) be the empty set and assume
 the opposite. Then there exists at least one element \( x \in
 \emptyset \) such that \( x \notin A \). But the empty set does not
-contain any elements and no such $x$ can therefore be found. This is a
-contradiction and hence $\emptyset \subset A$ must be true. \qed
+contain any elements and no such \(x \) can therefore be found. This
+is a contradiction and hence \( \emptyset \subset A \) must be true.
+\qed
 
 ** 2. Prove that the set of all algebraic numbers is countable.
 :PROPERTIES:
@@ -19,15 +20,15 @@ contradiction and hence $\emptyset \subset A$ must be true. \qed
 #+LaTeX_header: \newcommand{\rationals}{\mathbb Q}
 #+LaTeX_header: \newcommand{\integers}{\mathbb Z}
 :END:
-Let \( \alpha = (a_0, \ldots, a_n) \in B_{n+1}_{} \) be an n+1-tuple
+Let \( \alpha = (a_0, \ldots, a_n) \in B_{n+1} \) be an n+1-tuple
 of integers. Example 2.5 shows that the set of all integers \(
 \integers \) is countable. Using Theorem 2.13 with \( A = \integers \)
-shows that the set of n+1-tuples $B_{n+1}$ is countable.
+shows that the set of n+1-tuples \( B_{n+1} \) is countable.
 
 For particular choice of integers \( a_0, \ldots, a_n \) we may
 construct an equation of the form
 
-              $$ a_n z^n + \cdots + a_1 z + a_0 = 0. $$
+              \[ a_n z^n + \cdots + a_1 z + a_0 = 0. \]
 
 \noindent This polynomial has at most \( n \) solutions. Let \(
 E_\alpha \) be the set of all complex numbers \( z \) that is a
