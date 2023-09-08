@@ -10,6 +10,7 @@
 #+LaTeX_header: \newcommand{\naturals}{\mathbb N}
 #+LaTeX_header: \newcommand{\rationals}{\mathbb Q}
 #+LaTeX_header: \newcommand{\integers}{\mathbb Z}
+#+LaTeX_header: \newcommand{\irrationals}{\mathbb I}
 :END:
 ** 1. Prove that the empty set is a subset of every set.
 Let \( A \) be any set, \( \emptyset \) be the empty set and assume
@@ -81,3 +82,16 @@ of a countable set. But this is a contradiction since Theorem 2.43
 shows that \( \reals \) is uncountable. Hence our assumption is false
 and there exists real numbers \( x \in \reals \) such that \( x \notin
 \algebraicset \). \qed
+
+** 4. Is the set of all irrational real numbers countable?
+Denote the set of irrational numbers by \( \irrationals \). According
+to Theorem 2.13 \( \rationals \) is countable. Now suppose \(
+\irrationals \) is countable. We already know that
+
+             \[ \reals = \rationals \cup \irrationals, \]
+
+\noindent which means that \( \reals \) is countable by Theorem 2.12. But this
+is a contradiction since by Theorem 2.43 the set of real numbers \(
+\reals \) is uncountable. If \( \irrationals \) is assumed to be
+finite, then that still would make \( \reals \) countable. Hence \(
+\irrationals \) must be uncountable. \qed
