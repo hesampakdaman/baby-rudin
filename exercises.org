@@ -4,6 +4,13 @@
 
 
 * Chapter 2
+:PROPERTIES:
+#+LaTeX_header: \newcommand{\algebraicset}{\mathcal A}
+#+LaTeX_header: \newcommand{\reals}{\mathbb R}
+#+LaTeX_header: \newcommand{\naturals}{\mathbb N}
+#+LaTeX_header: \newcommand{\rationals}{\mathbb Q}
+#+LaTeX_header: \newcommand{\integers}{\mathbb Z}
+:END:
 ** 1. Prove that the empty set is a subset of every set.
 Let \( A \) be any set, \( \emptyset \) be the empty set and assume
 the opposite. Then there exists at least one element \( x \in
@@ -13,13 +20,6 @@ is a contradiction and hence \( \emptyset \subset A \) must be true.
 \qed
 
 ** 2. Prove that the set of all algebraic numbers is countable.
-:PROPERTIES:
-#+LaTeX_header: \newcommand{\algebraicset}{\mathcal A}
-#+LaTeX_header: \newcommand{\reals}{\mathbb R}
-#+LaTeX_header: \newcommand{\naturals}{\mathbb N}
-#+LaTeX_header: \newcommand{\rationals}{\mathbb Q}
-#+LaTeX_header: \newcommand{\integers}{\mathbb Z}
-:END:
 Let \( \alpha = (a_0, \ldots, a_n) \in B_{n+1} \) be an n+1-tuple
 of integers. Example 2.5 shows that the set of all integers \(
 \integers \) is countable. Using Theorem 2.13 with \( A = \integers \)
@@ -70,3 +70,14 @@ shows that \( \algebraicset \) has an infinite subset and must
 therefore itself be infinite. \( \algebraicset \) is an infinite set
 that is at most countable and therefore it is countable as desired.
 \qed
+
+** 3. Prove that there are real numbers which are not algebraic.
+Suppose not. Let \( \algebraicset \) be the set of all algebraic
+numbers. Since we assume the opposite any real number is algebraic and
+it follows that \( \reals \subset \algebraicset \). By exercise 2.2 we
+know that \( \algebraicset \) is countable. By Theorem 2.8 this would
+entail that \( \reals \) is countable, since it is an infinite subset
+of a countable set. But this is a contradiction since Theorem 2.43
+shows that \( \reals \) is uncountable. Hence our assumption is false
+and there exists real numbers \( x \in \reals \) such that \( x \notin
+\algebraicset \). \qed
