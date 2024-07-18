@@ -399,11 +399,11 @@ The last inequality is due to the last term being non-negative. Similar argument
 
 Let ${G_alpha}$ be any open cover of $K$. Then we know that there is an index $alpha_0$ such that $0 in G_(alpha_0)$. Since $G_(alpha_0)$ is an open set, we know that there exists a neighborhood $N_r (0)$ with radius $r > 0$ where $N_r subset G_(alpha_0)$.
 
-If $r lt.eq 1$, then $G_(alpha_0)$ covers $K$ and there is nothing to prove. Assume therefore that $0 < r < 1$. By Archimedean property of $reals$ we can find positive integers $p$ such that $1 slash p lt.eq r$. Let $m$ be the smallest integer such that $1 slash m lt r$. It follows that if $q$ is an integer where $m < q$, then $1 slash q < r$ so that $1 slash q in N_r (0)$. This shows that there are at most $m-1$ points in $E$ that are not in $N_r$,
+If $r gt.eq 1$, then $G_(alpha_0)$ covers $K$ and there is nothing to prove. Assume therefore that $r < 1$. By Archimedean property of $reals$ we can find positive integers $p$ such that $r gt.eq 1 slash p$. Let $m$ be the smallest integer such that $r gt 1 slash m$. It follows that if $q$ is an integer where $q > m$, then $r > 1 slash q$ so that $1 slash q in N_r (0)$. This shows that there are at most $m-1$ points in $E$ that are not in $N_r$,
 
 $ 1/(m-1), 1/(m-2), dots, 1/2, 1. $ \
 
-Let $G_(alpha_k)$ denote an open set in the collection ${G_alpha}$ such that $1/k in G_(alpha_k)$ $(k = 1, 2, 3, dots)$. Because ${G_alpha}$ is an open cover of $K$, each of the above $m-1$ points can be associated this way to at least one index (not necessarily distinct) in the collection. Therefore
+Let $G_(alpha_k)$ denote an open set in the collection ${G_alpha}$ such that $1 slash k in G_(alpha_k)$ $(k = 1, 2, 3, dots)$. Because ${G_alpha}$ is an open cover of $K$, each of the above $m-1$ points can be associated this way to at least one index (not necessarily distinct) in the collection. Therefore
 
 $ K subset G_(alpha_0) union G_1 union dots union G_(alpha_(m-1)). $
 
