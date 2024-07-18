@@ -259,7 +259,7 @@ Conversely, let $p in overline(E^c) = E^c union E^c'$ . Then it is clear that ei
 
 
 
-(e) Let $E = (0, 1) union (1, 2)$ be a set consisting of line segments in $reals$. Since $E$ is open we have that $interior(E) = E$ by (b). The set of limit points of $E$ are ${0, 1, 2}$, so the closure $overline(E)$ is the closed interval $[0, 2]$. From here we can see that $(overline(E))^circle.small = (0, 2)$, which shows that $ interior(E) eq.not (overline(E))^circle.small$. Therefore, $E$ and $overline(E)$ do not always have the same interiors. \ \
+(e) Let $E = (0, 1) union (1, 2)$ be a set consisting of line segments in $reals$. Since $E$ is open we have that $interior(E) = E$ by (b). The set of limit points of $E$ are ${0, 1, 2}$, so the closure $overline(E)$ is the closed interval $[0, 2]$. From here we can see that $interior((overline(E))) = (0, 2)$, which shows that $ interior(E) eq.not interior((overline(E)))$. Therefore, $E$ and $overline(E)$ do not always have the same interiors. \ \
 
 
 
