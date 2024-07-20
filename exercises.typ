@@ -440,6 +440,6 @@ $ S' = {0} union union.big_(n=1)^infinity E' = {0, 1, 1/2, 1/3, dots}, $
 
 which is countable. Furthermore, because $E' subset E$ and $0 in S$ we see that $S' subset S$ so that $S$ is closed. Since $S$ is a subset of the compact interval $[0, 1]$, by Theorem 2.35 $S$ is compact.
 
-We have now constructed a compact set $S$ of real numbers whose limit points $S'$ form a countable set. This concludes the proof.
+We have constructed a compact set $S$ of real numbers whose limit points $S'$ form a countable set. This concludes the proof.
 
 #qed
