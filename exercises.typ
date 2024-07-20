@@ -403,7 +403,7 @@ If $r gt.eq 1$, then $G_(alpha_0)$ covers $K$ and there is nothing to prove. Ass
 
 $ 1/(m-1), 1/(m-2), dots, 1/2, 1. $ \
 
-Let $G_(alpha_k)$ denote an open set in the collection ${G_alpha}$ such that $1 slash k in G_(alpha_k)$ $(k = 1, 2, 3, dots)$. Because ${G_alpha}$ is an open cover of $K$, each of the above $m-1$ points can be associated this way to at least one index (not necessarily distinct) in the collection. Therefore
+Let $G_(alpha_k)$ denote an open set in the collection ${G_alpha}$ such that $1 slash k in G_(alpha_k)$ $(k = 1, 2, 3, dots)$. Because ${G_alpha}$ is an open cover of $K$, each of the above $m-1$ points can be associated this way to at least one index in the collection. Therefore
 
 $ K subset G_(alpha_0) union G_1 union dots.c union G_(alpha_(m-1)). $
 
