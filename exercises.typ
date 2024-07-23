@@ -349,7 +349,7 @@ $ We have found $x eq.not y$ such that $d_3(x, y) = 0$. This shows that $d_3(x, 
 
 $d_4$ We show that $d_4$ is not a metric since condition (a) of Definition 2.15 is not satisfied. If $x eq.not 0$ then
 
-               $ d_4(x, y) = |x - 2x| = |x| > 0. $ \
+               $ d_4(x, x) = |x - 2x| = |x| > 0. $ \
 
 #let distfive(x, y) = $abs(#x)/(1 + abs(#y))$
 #let distfivenoabs(x, y) = $#x/(1 + #y)$
@@ -440,6 +440,6 @@ $ S' = {0} union union.big_(n=1)^infinity E' = {0, 1, 1/2, 1/3, dots}, $
 
 which is countable. Furthermore, because $E' subset E$ and $0 in S$ we see that $S' subset S$ so that $S$ is closed. Since $S$ is a subset of the compact interval $[0, 1]$, by Theorem 2.35 $S$ is compact.
 
-We have constructed a compact set $S$ of real numbers whose limit points $S'$ form a countable set. This concludes the proof.
+As desired, we have constructed a compact set $S$ of real numbers whose limit points $S'$ form a countable set.
 
 #qed
