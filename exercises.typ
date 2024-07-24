@@ -457,7 +457,7 @@ Choose finitely many indices $n_1, n_2, dots, n_m$ and let $p$ be the largest in
 
 $ x = (0 + 1/p) / 2 < (2 dot.c 1/p) / 2 = 1/p, $
 
-which shows that $x in.not G_p = (1 slash p, 1)$. Since $G_(n_k) subset G_p$ (for $k=1,2, dots m$), we see that
+which means that $x in.not G_p = (1 slash p, 1)$. Since $G_(n_k) subset G_p$ (for $k=1,2, dots m$), we see that
 
 $ x in.not G_(n_1) union G_(n_2) union dots.c union G_(n_m). $
 
