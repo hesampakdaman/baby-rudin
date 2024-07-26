@@ -212,7 +212,7 @@ Consider the cases for $r$ and $x$:
 
 + If $r > s$ then $N_s$ is a circle inscribed in a larger circle $N_r$. This imples $N_s subset N_r$. Consequently, there exists points $y in N_s subset N_r subset E$ where $y eq.not x$. However, this contradicts our assumption that $N_r (x)$ contains no points of $E$ other than $x$.
 
-+ If $r lt.eq s$, then $N_r$ is inscribed in $N_s$. Given that $N_s$​ is non-empty circle such that $N_s subset E$, it follows that $N_s$ contains points of $E$ arbitrarily close to its center point $x$. In particular, for any distance $0 < d < r$, there are points $y in E$ where $y eq.not x$ such that $y in N_s$. Since $N_r subset N_r$, these $y$ must be a point of $N_r$ because $d < r$. This contradicts our assumption that $x$ is not a limit point of $E$.
++ If $r lt.eq s$, then $N_r$ is inscribed in $N_s$. Given that $N_s$​ is non-empty circle such that $N_s subset E$, it follows that $N_s$ contains points of $E$ arbitrarily close to its center point $x$. In particular, for any distance $0 < d < r$, there are points $y in E$ where $y eq.not x$ such that $y in N_s$. Since $N_r subset N_s$, these $y$ must be a point of $N_r$ because $d < r$. This contradicts our assumption that $x$ is not a limit point of $E$.
 
 
 Since none of the relations $r < s$, $r = s$ and $r > s$ can be true, such an $r$ cannot exists. We've reached a contradiction and the assumption is wrong. Hence, each point of $E$ is a limit point of $E$.
