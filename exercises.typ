@@ -464,3 +464,26 @@ $ x in.not G_(n_1) union G_(n_2) union dots.c union G_(n_m). $
 This shows that the union constructed with indices $n_k$ ($k=1, 2, dots, n_m)$ cannot be a sub-cover of $(0, 1)$ since $x in (0, 1)$. The choice of indices $n_k$ was arbitrary, therefore there does not exist a finite sub-cover of $(0, 1)$ using the open cover ${G_n}$.
 
 #qed
+
+
+=== Exercise 15
+#quote(block:true)[Show that Theorem 2.36 and its Corollary become false (in $reals$, for example) if the word "compact" is replaced by "closed" or by "bounded."]
+
+We first show that "compact" cannot be replaced by closed. Consider the set of natural numbers starting from the positive integer $n$
+
+$ E_n = {n, n+1, n+2, dots}. $
+
+Each set in the collection ${E_n}$ is closed relative to $reals$ and is unbounded. Since we have that $E_n supset E_(n+1)$ any finite sub-collection of ${E_n}$ is non-empty. However, the countable intersection
+
+$ E = sect.big_(n=1)^infinity E_n, $
+
+is empty. To see this, note that for any natural number $m$ we have that $m in.not E_n$ whenever $m < n$. Hence, there exists no natural number $m$ which belongs to all sets in the collection ${E_n}$ and it follows that the intersection is empty.
+
+
+Now we show that the word "compact" cannot be replaced by "bounded." Let $A_n$ be set that consists of numbers ${ 1/n , 1/(n+1), 1/(n+2), dots }.$ This set is bounded by $1$ and is not closed since it does not contain its limit point $0$. We also have that $A_n supset A_(n+1)$ (for $n=1, 2, 3, dots$) and hence any finite sub-collection will be non-empty. The countable intersection
+
+$ A = sect.big_(n=1)^infinity A_n, $
+
+is, however, empty. This can be proven with similar argument as for why the intersection $E$ is empty. We have shown that the word "compact" cannot be replaced by "bounded."
+
+#qed
