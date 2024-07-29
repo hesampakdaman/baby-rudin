@@ -449,19 +449,19 @@ As desired, we have constructed a compact set $S$ of real numbers whose limit po
 === Exercise 14
 #quote(block: true)[Give an example of an open cover of the segment $(0, 1)$ which has no finite sub-cover.]
 
-Let $G_n$ be the open set on the form $(1 slash n, 1)$ for any natural number $n>0$. The collection ${G_n}$ is an open cover of $(0, 1)$,
+Let $G_n$ be the open set on the form $(1 slash n, 1)$ for any natural number $n>0$. The collection ${G_n}$ is an open cover of $(0, 1)$
 
-$ union.big_(n=1)^infinity G_n = union.big_(n=1)^infinity (1 / n, 1) = (0, 1). $
+$ union.big_(n=1)^infinity G_n = union.big_(n=1)^infinity (1 slash n, 1) = (0, 1). $
 
 Choose finitely many indices $n_1, n_2, dots, n_m$ and let $p$ be the largest index among them. If $x$ is the midpoint between $0$ and $1/p$, then
 
 $ x = (0 + 1/p) / 2 < (2 dot.c 1/p) / 2 = 1/p, $
 
-which means that $x in.not G_p = (1 slash p, 1)$. Since $G_(n_k) subset G_p$ (for $k=1,2, dots m$), we see that
+which means that $x in.not G_p = (1 slash p, 1)$. Since $G_(n_k) subset G_p$ for $k=1,2, dots m$, we see that
 
 $ x in.not G_(n_1) union G_(n_2) union dots.c union G_(n_m). $
 
-This shows that the union constructed with indices $n_k$ ($k=1, 2, dots, n_m)$ cannot be a sub-cover of $(0, 1)$ since $x in (0, 1)$. The choice of indices $n_k$ was arbitrary, therefore there does not exist a finite sub-cover of $(0, 1)$ using the open cover ${G_n}$.
+Since $x in (0, 1)$ this shows that the union constructed with indices $n_k$ ($k=1, 2, dots, m)$ cannot be a sub-cover of $(0, 1)$. The choice of indices were arbitrary, therefore there does not exist a finite sub-cover of $(0, 1)$ using the open cover ${G_n}$.
 
 #qed
 
