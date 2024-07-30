@@ -133,11 +133,11 @@ Specifically, the limit points to $E$ are $1, 2, 3$ and $E_1, E_2, E_3$ are all 
 #quote(block: true)[Prove that $E'$ is closed. Prove that $E$ and $overline(E)$ have the same limit points. Do $E$ and $E'$ always have the same limit points?
 ]
 
-We first prove that $E'$ is closed. Suppose not, then there exists a limit point $x$ of $E'$ such that $x in.not E'$. For any neighborhood $N_r (x)$ with radius $r > 0$ there is a $y in E'$ such that $y in N_r (x)$. Since $y in E'$ we know that $y$ is a limit point of $E$. Hence, we can find a $z in E$ such that $z in N_(r-h) (y)$ with $0 < h < r$. We have that
+We first prove that $E'$ is closed. If $x$ is a limit point of $E'$ then for any neighborhood $N_r (x)$ with radius $r > 0$ there exists a $y in E'$ such that $y in N_r (x)$. Since $y in E'$ we know that $y$ is a limit point of $E$. Hence, we can find a $z in E$ such that $z in N_(r-h) (y)$ with $0 < h < r$. We have that
 
 $ d(z, x) lt.eq d(z, y) + d(y, x) < r - h + h = r, $
 
-which means that $z in N_r (x)$. Since $r > 0$ is arbitrary it follows that $x$ is a limit point to $E$. But this is a contradiction since it would imply $x in E'$. Therefore our assumption is wrong and $E'$ must be closed.
+which means that $z in N_r (x)$ so that $x in E'$.
 
 Next we show that $overline(E)$ and $E$ have the same limit points. If $x$ is a limit point of $overline(E)$, then since $overline(E) = E' union E$, it must be the case that $x$ is a limit point of $E'$ or $E$. Assuming $x$ is a limit point of $E$ leaves us with nothing to prove. So we suppose that $x$ is a limit point of $E'$ alone. We already have established that $E'$ is closed, and therefore $x in E'$. This in turn directly implies that $x$ is a limit point of $E$ because the members of $E'$ are all limit points of $E$.
 
