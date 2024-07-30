@@ -465,7 +465,7 @@ yet clearly $x in (0, 1)$. This shows that the union constructed with indices $n
 === Exercise 15
 #quote(block:true)[Show that Theorem 2.36 and its Corollary become false (in $reals$, for example) if the word "compact" is replaced by "closed" or by "bounded."]
 
-We first show that "compact" cannot be replaced by closed. Consider the set of all natural numbers starting from the positive integer $n$
+We first show that "compact" cannot be replaced by closed. Consider the set of natural numbers starting from the positive integer $n$ and beyond
 
 $ E_n = {n, n+1, n+2, dots}. $
 
