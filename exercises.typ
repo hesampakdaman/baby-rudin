@@ -476,7 +476,11 @@ $ E = sect.big_(n=1)^infinity E_n, $
 is empty. To see this, note that for any natural number $m$ we have that $m in.not E_n$ whenever $m < n$. Hence, there exists no natural number $m$ which belongs to all sets in the collection ${E_n}$ and it follows that the intersection is empty.
 
 
-Now we show that the word "compact" cannot be replaced by "bounded." Let $A_n$ be the set that consists of numbers ${ 1/n , 1/(n+1), 1/(n+2), dots }.$ This set is bounded by $1$ and is not closed since it does not contain its limit point $0$. We also have that $A_n supset A_(n+1)$ for $n=1, 2, 3, dots$ and hence any finite sub-collection will be non-empty. The countable intersection
+Now we show that the word "compact" cannot be replaced by "bounded." Let $A_n$ be the set that consists of numbers
+
+$ A_n = { 1/n , 1/(n+1), 1/(n+2), dots }. $
+
+This set is bounded by $1$ and is not closed since it does not contain its limit point $0$. We also have that $A_n supset A_(n+1)$ for $n=1, 2, 3, dots$ and hence any finite sub-collection will be non-empty. The countable intersection
 
 $ A = sect.big_(n=1)^infinity A_n, $
 
