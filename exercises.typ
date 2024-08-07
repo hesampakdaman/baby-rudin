@@ -515,3 +515,5 @@ Similarly, it follows that any neighborhood around $q$ with radius $abs(q^2 - 3)
 To prove that $E$ is not compact in $rationals$, it suffices by Theorem 2.33 to show that $E$ is not compact in $reals$. First, note that $E$ is not closed in $reals$ because it does not contain all its limit points. For example, $sqrt(2)$ is an irrational number that is a limit point of $E$ but not a member of the set. Therefore, by Heine-Borel's theorem (Theorem 2.41) $E$ cannot be compact in $reals$.
 
 Lastly, we answer the question if $E$ is open in $rationals$. Consider the open intervals $A = (-sqrt(3), -sqrt(2))$ and $B = (sqrt(2), sqrt(3))$ in $reals$. Put $G = A union B$ and note that by Theorem 2.24 $G$ is open in $reals$. Since $E = rationals sect G$, it follows by Theorem 2.30 that $E$ is open in $rationals$.
+
+#qed
