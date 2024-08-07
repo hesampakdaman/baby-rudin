@@ -487,3 +487,31 @@ $ A = sect.big_(n=1)^infinity A_n, $
 is, however, empty. This can be proven with similar argument as for why the intersection $E$ is empty. We have shown that the word "compact" cannot be replaced by "bounded."
 
 #qed
+
+
+=== Exercise 16
+#quote(block: true)[Regard $rationals$, the set of all rational numbers, as a metric space, with $d(p,q) = |p - q|$. Let $E$ be the set of all $p in rationals$ such that $2 < p^2 < 3$. Show that $E$ is closed and bounded in $rationals$, but that $E$ is not compact. Is $E$ open in $rationals$?]
+
+If $2 < p^2 < 3$, then $1 < abs(p) < 2$ and we see that $E$ is bounded.
+
+To show that $E$ is closed, consider any $q in.not E$. If $q^2 < 2$ then for any $p in E$
+
+$
+    abs(q^2-2) &< abs(p^2 - q^2) = abs((p+q)(p-q)) \
+        &lt.eq abs(p+q) abs(p-q) lt.eq (abs(p) + abs(q)) abs(p-q) \
+        &lt 4 abs(p-q),
+$
+
+which shows that $ 0 < abs(q^2 - 2) / 4 lt abs(p-q)$. Hence, any neighborhood with radius $abs(q^2 - 2) / 4$ would contain no point of $E$. If $q^2 > 3$ then
+
+$
+    abs(q^2 - 3) &< abs(q^2 - p^2) = abs((q+p)(q-p)) \
+        &lt.eq (abs(p) + abs(q)) abs(p-q) \
+        &lt 2abs(q) abs(p-q).
+$
+
+Similarly, it follows that any neighborhood around $q$ with radius $abs(q^2 - 3) / (2 abs(q))$ contains no point of $E$. This shows that any $q in.not E$ cannot be a limit point of $E$ and hence $E$ must be closed.
+
+To prove that $E$ is not compact in $rationals$, it suffices by Theorem 2.33 to show that $E$ is not compact in $reals$. First, note that $E$ is not closed in $reals$ because it does not contain all its limit points. For example, $sqrt(2)$ is an irrational number that is a limit point of $E$ but not a member of the set. Therefore, by Heine-Borel's theorem (Theorem 2.41) $E$ cannot be compact in $reals$.
+
+Lastly, we answer the question if $E$ is open in $rationals$. Consider the open intervals $A = (-sqrt(3), -sqrt(2))$ and $B = (sqrt(2), sqrt(3))$ in $reals$. Put $G = A union B$ and note that by Theorem 2.24 $G$ is open in $reals$. Since $E = rationals sect G$, it follows by Theorem 2.30 that $E$ is open in $rationals$.
