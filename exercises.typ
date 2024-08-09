@@ -208,9 +208,9 @@ We first show that every point in every open set $E subset reals^2$ is a limit p
 
 Since $E$ is an open set, $x$ must be an interior point. Hence, there is a neighborhood with radius $s > 0$ such that $N_s (x) subset E$. Neighborhoods in $reals^2$ are non-empty interiors of circles, which means that $N_r$ is circle centered at $x$.
 
-Consider the cases for $r$ and $x$:
+Consider the cases for $r$ and $s$:
 
-+ If $r > s$ then $N_s$ is a circle inscribed in a larger circle $N_r$. This imples $N_s subset N_r$. Consequently, there exists points $y in N_s subset N_r subset E$ where $y eq.not x$. However, this contradicts our assumption that $N_r (x)$ contains no points of $E$ other than $x$.
++ If $r > s$ then $N_s$ is a circle inscribed in a larger circle $N_r$. This implies $N_s subset N_r$. Consequently, there exists points $y in N_s subset N_r subset E$ where $y eq.not x$. However, this contradicts our assumption that $N_r (x)$ contains no points of $E$ other than $x$.
 
 + If $r lt.eq s$, then $N_r$ is inscribed in $N_s$. Given that $N_s$​ is non-empty circle such that $N_s subset E$, it follows that $N_s$ contains points of $E$ arbitrarily close to its center point $x$. In particular, for any distance $0 < d < r$, there are points $y in E$ where $y eq.not x$ such that $y in N_s$. Since $N_r subset N_s$, these $y$ must be a point of $N_r$ because $d < r$. This contradicts our assumption that $x$ is not a limit point of $E$.
 
