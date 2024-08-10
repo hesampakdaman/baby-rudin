@@ -533,7 +533,7 @@ Recall that $x_0$ is the largest integer such that $x_0 lt.eq x$. Then there exi
 
 $ p = 0.p_1 p_2 p_3 dots  $
 
-Hence, $p_k = x_k$ for $k = 1, 2, dots, n - 1$ and $abs(x_n - p_n) gt.eq 1$. Now choose the rest of the decimals $p_i$ for $i gt.eq n$ so as to minimise the distance to $x$. We do so by choosing $p_i$ to be either $4$ or $7$, whichever is the closest to $x_i$.
+Hence, $p_k = x_k$ for $k = 1, 2, dots, n - 1$ and $abs(x_n - p_n) gt.eq 1$. Now choose the rest of the decimals $p_i$ for $i gt.eq n$ so as to minimize the distance to $x$. We do so by choosing $p_i$ to be either $4$ or $7$, whichever is the closest to $x_i$.
 
 Having done so, we claim that the distance
 
