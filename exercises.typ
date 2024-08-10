@@ -404,7 +404,7 @@ If $r gt.eq 1$, then $G_(alpha_0)$ covers $K$ and there is nothing to prove. Ass
 
 $ 1/(m-1), 1/(m-2), dots, 1/2, 1. $ \
 
-Let $G_(alpha_k)$ denote an open set in the collection ${G_alpha}$ such that $1 slash k in G_(alpha_k)$ $(k = 1, 2, 3, dots)$. Because ${G_alpha}$ is an open cover of $K$, each of the above $m-1$ points can be associated this way to at least one index in the collection. Therefore
+Let $G_(alpha_k)$ denote an open set in the collection ${G_alpha}$ such that $1 slash k in G_(alpha_k)$ $(k = 1, 2, 3, dots)$. Because ${G_alpha}$ is an open cover of $K$, each of the above $m-1$ points can be associated this way to at least one index (not necessarily distinct) in the collection. Therefore
 
 $ K subset G_(alpha_0) union G_1 union dots.c union G_(alpha_(m-1)). $
 
@@ -537,7 +537,7 @@ $ d = abs(x - p), $
 
 cannot be less than $2 dot.c 10^(n+1)$. For if $abs(x_n - p_n) = 1$ and we borrow from it to complete the subtraction, then we see that $abs(x_(n+1) - p_(n+1)) gt.eq 3$. Which in turn if we borrow again from gives us that the decimal place of $d$ at $n+1$ would be greater than or equal to $2$, i.e. $d_(n+1) gt.eq 2$. Any neighborhood $N(x)$ with radius $r = 10^(n+1) < d$ would contain no point of $E$. Hence, $E$ must be closed and it follows by Theorem 2.35 that $E$ is compact.
 
-Now we prove that $E$ is indeed perfect. Since we already have shown that $E$ is closed, we need only to show that no point of $E$ is isolated. For any $q in E$ let $N(q)$ be some neighborhood with radius $r >0$. Choose an integer $k$ such that $10^k < r$. Suppose $p$ is a number with the exact same decimal expansion as $q$ except at the decimal place $k+1$, for which we choose either $4$, or $7$ such that $p_(k+1) eq.not q_(k+1)$. Clearly, $p in E$ and we have that
+Now we prove that $E$ is indeed perfect. Since we already have shown that $E$ is closed, we need only to show that no point of $E$ is isolated. For any $q in E$ let $N(q)$ be some neighborhood with radius $r >0$. Choose any integer $k$ such that $10^k < r$. Suppose $p$ is a number with the exact same decimal expansion as $q$ except at the decimal place $k+1$, for which we choose either $4$, or $7$ such that $p_(k+1) eq.not q_(k+1)$. Clearly, $p in E$ and we have that
 
 $ abs(p - q) & = abs(p_(k+1) - q_(k+1)) dot.c 10^(k+1) \
     &= 3 dot.c 10^(k+1) = 3 / 10 dot.c 10^k \ &< 3 / 10 dot.c r, $
