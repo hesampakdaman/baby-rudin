@@ -541,10 +541,9 @@ $ d = abs(x - p), $
 
 cannot be less than $2 dot.c 1 / 10^(n+1)$. For if $abs(x_n - p_n) = 1$ and we borrow from it to complete the subtraction, then we see that $abs(x_(n+1) - p_(n+1)) gt.eq 3$. Which in turn if we borrow again from gives us that the decimal place of $d$ at $n+1$ would be greater than or equal to $2$, that is $d_(n+1) gt.eq 2$. Any neighborhood $N(x)$ with radius $r = 1 / 10^(n+1) < d$ would contain no point of $E$. Hence, $E$ must be closed and it follows by Theorem 2.35 that $E$ is compact.
 
-Now we prove that $E$ is indeed perfect. Since we already have shown that $E$ is closed, we need only to show that no point of $E$ is isolated. For any $q in E$ let $N(q)$ be some neighborhood with radius $r >0$. Choose any integer $k > 0$ such that $10^(-k) < r$. Suppose $p$ is a number with the exact same decimal expansion as $q$ except at the decimal place $k+1$, for which we choose either $4$, or $7$ such that $p_(k+1) eq.not q_(k+1)$. Clearly, $p in E$ and we have that
+Now we prove that $E$ is indeed perfect. Since we already have shown that $E$ is closed, we need only to show that no point of $E$ is isolated. For any $q in E$ let $N(q)$ be some neighborhood around $q$ with radius $r >0$. Choose any integer $k > 0$ such that $3 dot.c 10^(-k) < r$. Suppose $p$ is a number with the exact same decimal expansion as $q$ except at decimal place $k$, for which we choose either $4$, or $7$ such that $p_k eq.not q_k$. Clearly, $p in E$ and we have that
 
-$ abs(p - q) & = abs(p_(k+1) - q_(k+1)) dot.c 1 / 10^(k+1) \
-    &= 3 dot.c 1 / 10^(k+1) = 3 / 10 dot.c 10^(-k) \ &< 3 / 10 dot.c r. $
+$ abs(p - q) & = abs(p_k - q_k) dot.c 10^(-k) = 3 dot.c 10^(-k) < r. $
 
 Thus, $p$ is a limit point of $E$ and we have shown that $E$ is perfect.
 
