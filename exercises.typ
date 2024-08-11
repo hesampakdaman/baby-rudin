@@ -527,19 +527,24 @@ $E$ is not dense in $[0, 1]$ since $0$ is neither a limit point of $E$, nor a po
 
 Since $E subset [0, 1]$ we know it is a subset of a compact set by Theorem 2.40. According to Theorem 2.35, it suffices to show that $E$ is closed to prove that $E$ is compact. Suppose $x in.not E$ and write the decimal expansion of $x$ using the notation from Section 1.22,
 
-$ x_0 dot x_1x_2x_3 dots $
+$ x_0 dot x_1 x_2 x_3 dots $
 
-Recall that $x_0$ is the largest integer such that $x_0 lt.eq x$. Then there exists a first integer $n$ such that $x_n$ is neither $4$, nor $7$. Let $p$ be a point of $E$ that has the same decimal expansion as $x$ up to $n$,
+Recall that $x_0$ is the largest integer such that $x_0 lt.eq x$. Then there exists a first integer $n$ such that $x_n$ is neither $4$, nor $7$. Let $p$ be a point of $E$ that has the same decimal expansion as $x$ up to $n$
 
-$ p = 0.p_1 p_2 p_3 dots  $
+$ p = 0 dot p_1 p_2 p_3 dots, $
 
-Hence, $p_k = x_k$ for $k = 1, 2, dots, n - 1$ and $abs(x_n - p_n) gt.eq 1$. Now choose the rest of the decimals $p_i$ for $i gt.eq n$ so as to minimize the distance to $x$. We do so by choosing $p_i$ to be either $4$ or $7$, whichever is the closest to $x_i$.
+so that $p_k = x_k$ for $k = 1, 2, dots, n - 1$ and $abs(x_n - p_n) gt.eq 1$. It is clear that any other choice of decimals up to $n$ for $p$ would make the distance to $x$ larger.
 
-Having done so, we claim that the distance
+We claim that, no matter how we choose the rest of the decimals $p_i$, where $i > n$, the distance $d = abs(x - p)$ cannot be less than $2 dot.c 1 / 10^(n+1)$. For if $abs(x_n - p_n) = 1$ and we borrow from it when calculating $d$, then we see that
 
-$ d = abs(x - p), $
+$ abs(min(x_(n+1), p_(n+1)) + 10 - max(x_(n+1), p_(n+1))) gt.eq 3. $
 
-cannot be less than $2 dot.c 1 / 10^(n+1)$. For if $abs(x_n - p_n) = 1$ and we borrow from it to complete the subtraction, then we see that $abs(x_(n+1) - p_(n+1)) gt.eq 3$. Which in turn if we borrow again from gives us that the decimal place of $d$ at $n+1$ would be greater than or equal to $2$, that is $d_(n+1) gt.eq 2$. Any neighborhood $N(x)$ with radius $r = 1 / 10^(n+1) < d$ would contain no point of $E$. Hence, $E$ must be closed and it follows by Theorem 2.35 that $E$ is compact.
+If we would need to borrow from decimal n+1:th place during further calculations of $d$, then the n+1:th decimal place of $d$ would be $2$. Thus, for any $q in E$
+
+$ d = abs(x - q) gt.eq 2 dot.c 1 / 10^(n+1). $ \
+
+
+For any neighborhood $N(x)$ with radius $r = 1 / 10^(n+1) < d$ would contain no point of $E$. Hence, $E$ must be closed and it follows by Theorem 2.35 that $E$ is compact.
 
 Now we prove that $E$ is indeed perfect. Since we already have shown that $E$ is closed, we need only to show that no point of $E$ is isolated. For any $q in E$ let $N(q)$ be some neighborhood around $q$ with radius $r >0$. Choose any integer $k > 0$ such that $3 dot.c 10^(-k) < r$. Suppose $p$ is a number with the exact same decimal expansion as $q$ except at decimal place $k$, for which we choose either $4$, or $7$ such that $p_k eq.not q_k$. Clearly, $p in E$ and we have that
 
