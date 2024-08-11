@@ -539,12 +539,11 @@ We claim that, no matter how we choose the rest of the decimals $p_i$, where $i 
 
 $ abs(min(x_(n+1), p_(n+1)) + 10 - max(x_(n+1), p_(n+1))) gt.eq 3. $
 
-If we would need to borrow from decimal n+1:th place during further calculations of $d$, then the n+1:th decimal place of $d$ would be $2$. Thus, for any $q in E$
+If we would need to borrow from decimal n+1:th place at some later point during our calculations of $d$, then the n+1:th decimal place of $d$ would be decremented to $2$. Since we can borrow at most once from any decimal place when calculating $d$, we have that
 
-$ d = abs(x - q) gt.eq 2 dot.c 1 / 10^(n+1). $ \
+$ d = abs(x - q) gt.eq 2 dot.c 1 / 10^(n+1) $
 
-
-For any neighborhood $N(x)$ with radius $r = 1 / 10^(n+1) < d$ would contain no point of $E$. Hence, $E$ must be closed and it follows by Theorem 2.35 that $E$ is compact.
+for any $q in E$. Therefore, any neighborhood $N(x)$ with radius $r = 1 / 10^(n+1) < d$ would contain no point of $E$. Hence, $E$ must be closed and it follows by Theorem 2.35 that $E$ is compact.
 
 Now we prove that $E$ is indeed perfect. Since we already have shown that $E$ is closed, we need only to show that no point of $E$ is isolated. For any $q in E$ let $N(q)$ be some neighborhood around $q$ with radius $r >0$. Choose any integer $k > 0$ such that $3 dot.c 10^(-k) < r$. Suppose $p$ is a number with the exact same decimal expansion as $q$ except at decimal place $k$, for which we choose either $4$, or $7$ such that $p_k eq.not q_k$. Clearly, $p in E$ and we have that
 
