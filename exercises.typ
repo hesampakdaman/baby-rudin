@@ -355,7 +355,7 @@ $d_4$ We show that $d_4$ is not a metric since condition (a) of Definition 2.15 
 
 #let distfive(x, y) = $abs(#x)/(1 + abs(#y))$
 #let distfivenoabs(x, y) = $#x/(1 + #y)$
-$d_5$) Conditions in (a), (b) are clearly satisfied so we focus on (c). Throughout this exercise WLOG assume $x lt.eq y$. Suppose $x lt.eq r lt.eq y$, we have that
+$d_5$ Conditions in (a), (b) are clearly satisfied so we focus on (c). Throughout this exercise WLOG assume $x lt.eq y$. Suppose $x lt.eq r lt.eq y$, we have that
 
 $
     d_5(x, y) &= distfive(x-y, x-y) = distfive(x-r + r-y, x-y) \
