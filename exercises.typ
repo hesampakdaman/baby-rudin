@@ -260,11 +260,12 @@ Conversely, let $p in overline(E^c) = E^c union E^c'$ . Then it is clear that ei
 
 
 
-(e) Let $E = (0, 1) union (1, 2)$ be a set consisting of line segments in $reals$. Since $E$ is open we have that $interior(E) = E$ by (b). The set of limit points of $E$ are ${0, 1, 2}$, so the closure $overline(E)$ is the closed interval $[0, 2]$. From here we can see that $interior((overline(E))) = (0, 2)$, which shows that $ interior(E) eq.not interior((overline(E)))$. Therefore, $E$ and $overline(E)$ do not always have the same interiors. \ \
+(e) Let $E = (0, 1) union (1, 2)$ be a set consisting of line segments in $reals$. Since $E$ is open we have that $interior(E) = E$ by (b). The set of limit points $E'$ is the closed interval $[0, 2]$, so the closure is $overline(E) = E union E' = [0, 2]$. From here we can see that $interior((overline(E))) = (0, 2)$, which shows that $ interior(E) eq.not interior((overline(E)))$. Therefore, $E$ and $overline(E)$ do not always have the same interiors. \ \
 
 
 
-(f) Consider the set $E = {1/n | n = 1, 2, 3, dots}$ as subset of $reals$. Since $0$ is the only limit point of $E$, we have that its closure is $overline(E) = E union {0}$. However, none of the points in $E$ are interior points, and therefore $interior(E) = emptyset$. This means that $overline(interior(E)) = emptyset$. We have shown that $overline(E) eq.not overline(interior(E))$ as desired.
+(f) Consider the set $E = {1/n | n = 1, 2, 3, dots}$ as subset of $reals$. Since $0$ is the only limit point of $E$, we have that its closure is $overline(E) = E union {0}$. However, none of the points in $E$ are interior points, and therefore $interior(E) = emptyset$. This means that $overline(interior(E)) = emptyset$ so that $overline(E) eq.not overline(interior(E))$. We have shown that $E$ and $interior(E)$ do not always have the same closures.
+
 
 #qed
 
