@@ -552,6 +552,6 @@ Now we prove that $E$ is perfect. Since we already have shown that $E$ is closed
 
 $ abs(p - q) & = abs(p_k - q_k) dot.c 10^(-k) = 3 dot.c 10^(-k) < r. $
 
-Thus, $p$ is a limit point of $E$ and we have shown that $E$ is perfect.
+Thus, $q$ is a limit point of $E$ and we have shown that $E$ is perfect.
 
 #qed
