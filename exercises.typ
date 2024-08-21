@@ -242,7 +242,7 @@ Now we show that the case does not hold true in general for closed sets. Conside
 
 (b) If $E$ is open then for every point $x in E$ we can find a neighborhood $N(x)$ with $r > 0$ such that $N subset E$. This implies that every point $x in E$ is an interior point of $E$ and it is therefore true that $x in interior(E)$. This shows that $E subset interior(E)$. Since by construction $interior(E) subset E$ we have that $interior(E) = E$.
 
-Conversely, if $interior(E) = E$ then all points in $E$ are interior points of $E$. This is true since $interior(E)$ is the set of all interior points of $E$. Thus, by definition 2.18 (f), $E$ is an open set. \ \
+Conversely, if $interior(E) = E$ then it follows from (a) that $E$ is open. \ \
 
 
 
