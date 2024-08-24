@@ -567,35 +567,37 @@ $ P = { x + y | x in E} $
 is perfect. This is due to the fact that the relationships between any points in $E$ are preserved after having moved them all by the same amount $y$.
 
 
-We construct a number $y= 0 dot y_1 y_2y_3 dots $ using only the digits $0$ and $1$. Here we use the notation as defined in Section 1.22. The decimals are chosen to be $1$s that are spaced increasingly by $0$s. Specifically, starting with one space of $0$ between the first and second $1$, then two $0$s between the second and third $1$, and so on. Below we write the first few digits of the infinite decimal expansion for this number
+We construct a number $y= 0 dot y_1 y_2y_3 dots $ using only the digits $0$ and $1$. Here we use the notation defined in Section 1.22. The decimals are chosen to be $1$s that are spaced by $0$s. Specifically, starting with one space of $0$ between the first and second $1$, then two $0$s between the second and third $1$, and so on. Below we write the first few digits of the infinite decimal expansion for this number
 
    $ y = 0.101001000100001000001000000100000001000000001000 dots $
 
-Intuitively, it can be seen that this number is irrational since it is a non-terminating decimal number that does not contain any repetitions.
+Intuitively, this number is irrational since it is a non-terminating decimal number that does not contain any repetitions.
 
-We can prove this more formally. Suppose that $y$ is rational. Since $y$ has infinite decimals it must be a repeating decimal. Let $i$ be the first index of the decimal where reposition starts and let $rho$ be the length of the repetition. Hence, for any natural number $k gt.eq i$ it must be true that $x_k = x_(k+m rho)$ for any multiple $m$ of $rho$, otherwise the decimals would not be repeating.
+We can prove this more formally. Suppose that $y$ is rational. Since $y$ has infinite decimals it must be a repeating decimal. Let $i$ be the first index of the decimal where repetition starts and let $rho$ be the length of the period. Hence, for any natural number $k gt.eq i$ it must be true that $x_k = x_(k+m rho)$ for any positive multiple integer $m$ of $rho$, otherwise the decimals would not be repeating.
 
 Since $1$ is in the decimal expansion of $y$, we know that there exists some natural number $j gt.eq n$ such that $x_j = 1$. We have that
 
-                 $ x_j = x_(j+rho) = x_(j + 2rho). $
+                 $ x_j = x_(j+rho) = x_(j + 2rho) = 1. $
 
-But this would mean that the spacing between $1$ is constant $rho$, which contradicts the assumption about $y$. Hence, $y$ is irrational.
+This means that the spacing between $1$ is constant $rho$, which contradicts the assumption about $y$ and hence $y$ is irrational.
 
-Now that we have shown that our $y$ is irrational, we need only to prove that for any $x in E$ the number $x + y$ is also irrational. There are two cases we need to verify, whether $x$ is rational or not. If we assume that $x$ is rational, then by Exercise $1.1$ the sum $x + y$ is irrational. Assume therefore that $x$ is irrational.
+Now that we have shown that our $y$ is irrational, we need only to prove that for any $x in E$ the number $z = x + y$ is also irrational. Since both $x$ and $y$ are irrational, and cannot be added in such a way to get a terminating decimal expansion, we see that the decimals of $z$ are infinite.
 
-Suppose, to get a contradiction, that the sum $z = x + y$ is rational. Since both $x$ and $y$ are irrational, and cannot be added in such a way to get a terminating decimal expansion, we see that the decimals of $z$, that is $z_1 z_2 z_3 dots$, are infinite. Because we assume $z$ is rational, it follows that $z$ has a repeating decimal. Let $rho$ be the length of the repitition and $z_i$ the first decimal where the repitition starts.
+There are two cases we need to verify, whether $x$ is rational or not. If we assume that $x$ is rational, then by Exercise $1.1$ the sum $x + y$ is irrational. Assume therefore that $x$ is irrational.
 
-Let $k gt.eq i$ be a natural number such that $y_k = 1$. Since the number of zeros between the $1$s in $y$ is increasing, we know that we can find a multiple $m$ such that $y_(k + m rho) = 0$. Now we use the fact that $z$ repeats after the $i$-th place
+Suppose, to get a contradiction, that the sum $z = x + y$ is rational.  Since $z$ is rational with an infinite decimal expansion, it follows that $z$ has a repeating decimal. Let $sigma$ be the length of the repetition and $z_i$ the first decimal where the repetition starts.
 
-$ z_k = x_k + y_k = x_(k + m rho) + y_(k + m rho). $
+Take any natural number $k gt.eq i$ such that $y_k = 1$. Since the number of zeros between the $1$s in $y$ are increasing, we know that we can find a natural number $b$ such that $y_(k + b sigma) = 0$. Now we use the fact that $z$ repeats after the $i$-th place
 
-Plugging in the values for $y_k$ and $y_(k + m rho)$ we get the following expression that must be satisfied
+         $ z_k = x_k + y_k = x_(k + b sigma) + y_(k + b sigma). $
+
+Plugging in the values for $y_k$ and $y_(k + b sigma)$ we get the following expression that must be satisfied
 
 #math.equation(block: true, numbering: "(1)")[
-    $ x_k + 1 = x_(k + m rho). $
+    $ x_k + 1 = x_(k + b sigma). $
 ] <2.17-rel>
 
-Since $x in E$ we know that each decimal of $x$ is either $4$ or $7$. But there is no way to satisfy @2.17-rel using only these digits. This contradicts our assumption that $z$ is a repeating decimal. Therefore, the sum $x + y$ is irrational for every $x in E$.
+Since $x in E$ we know that each decimal of $x$ is either $4$ or $7$. However, the relation @2.17-rel cannot be satisfied using any combination of these two digits, and therefore $z$ cannot be a repeating decimal. This contradicts our assumption about $z$ and the sum $z = x + y$ is thus irrational for every $x in E$.
 
 We have shown that $P$ is a nonempty set of irrational numbers that is perfect as desired.
 
