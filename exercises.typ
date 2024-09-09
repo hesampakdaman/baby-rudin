@@ -619,13 +619,15 @@ We have shown that $P$ is a nonempty set of irrational numbers that is perfect a
 $ A sect overline(B) = overline(A) sect B = A sect B = emptyset, $
 
 since $A$ and $B$ are disjoint. \ \
-(b) We prove that the set $A sect overline(B)$ is empty. If $p in B'$, then for every radius $r > 0$ the neighborhood $N_r (p)$ contains points from $B$. Hence, $N(p) subset.not A$ and $p$ is not an interior point of $A$. Because $A$ is open, by definition 2.18 (f) every point of $A$ is an interior point. It follows that $p in.not A$ and therefore, $A sect overline(B) = emptyset$. With the same argument we can establish that $A sect overline(B) = emptyset$. This show that $A$ and $B$ are separated. \ \
+(b) We prove that the set $A sect overline(B)$ is empty. If $p in B'$, then for every radius $r > 0$ the neighborhood $N_r (p)$ contains points from $B$. Hence, $N(p) subset.not A$ and $p$ is not an interior point of $A$. Because $A$ is open, by definition 2.18 (f) every point of $A$ is an interior point. It follows that $p in.not A$ and therefore $A sect B' = emptyset$. Since $A$ and $B$ are disjoint we have that $A sect overline(B) = emptyset$. With the same argument we can establish that $overline(A) sect B = emptyset$. This show that $A$ and $B$ are separated. \ \
 (c) By definition 2.18 (a) and Theorem 2.19 $A$ is open. Now consider the complement of $B$. This set $B^c$ contains all numbers $q$ such that $d(p, q) lt.eq delta$. But this is exactly the closure of $A$, that is $B^c = overline(A)$. The complement to $B$ is therefore closed and by Theorem 2.23 $B$ is open.
 
 The sets $A$ and $B$ are disjoint. For otherwise there exists some point $q in A sect B$ such that $d(p, q) < delta$ and $d(p, q) > delta$, which is absurd.
 
-We have shown that $A$ and $B$ are disjoint open sets, hence they are separable by using the result in (b). \ \
-(d) We prove the contrapositive. Let $X$ be at most countable and arrange the elements in a sequence ${q_n}$. Fix any $p in X$ enumerate all distances from this point.
+We have shown that $A$ and $B$ are disjoint open sets, hence they are separated using the result in (b). \ \
+(d) We prove the contrapositive. Let $X$ be at most countable and arrange the elements in a sequence ${q_n}$.  If $X$ has less than two points, then $X$ is not seperable since at least one of the sets $A$ or $B$ will be empty. Hence, assume $X$ has two or more points.
+
+Fix any $p in X$ and enumerate all distances from this point.
 
 #figure(
     table(
@@ -639,7 +641,7 @@ We have shown that $A$ and $B$ are disjoint open sets, hence they are separable 
 
 Using Cantor's diagonal process we can construct a real number $delta > 0$ such that $d(q_n, p) eq.not delta$ for all $n in naturals$. We do so in the following manner. Let the $n$-th decimal of $delta$ be the $n$-th decimal of $q_n$ that we increment by $1$ if $q_n$'s decimal is less than $9$, otherwise we decrement by $1$. Lastly, we set the integer part of $delta$ to $1$.
 
-This procedure will create a positive non-zero real number $delta$ that is different to distance $d_k$ in the $k$-th decimal. Hence, there are no points $q$ in $X$ such that $d(q, p) = delta$. Due to this we can write $X$ in terms of the sets $A = {q in X | d(q, p) < delta}$ and $B = {q in X | d(q, p) > delta}$,
+This procedure will create a non-negative real number $delta > 0$ that is different to distance $d_k$ in the $k$-th decimal. Hence, there are no points $q in X$ such that $d(q, p) = delta$. Due to this we can write $X$ in terms of the sets $A = {q in X | d(q, p) < delta}$ and $B = {q in X | d(q, p) > delta}$,
 
 $ X = A union B. $
 
