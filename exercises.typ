@@ -470,7 +470,7 @@ We first show that "compact" cannot be replaced by closed. Consider the set of n
 
 $ E_n = {n, n+1, n+2, dots}. $
 
-Each set in the collection ${E_n}$ is closed relative to $reals$ and is unbounded. Since we have that $E_n supset E_(n+1)$ ($n = 1, 2, 3, dots$) any finite sub-collection of ${E_n}$ is non-empty. However, the countable intersection
+Each set in the collection ${E_n}$ is closed relative to $reals$ and is unbounded. Since we have that $E_n supset E_(n+1)$ ($n = 1, 2, 3, dots$) any intersection of a finite sub-collection of ${E_n}$ is non-empty. However, the countable intersection
 
 $ E = sect.big_(n=1)^infinity E_n, $
 
@@ -481,7 +481,7 @@ Now we show that the word "compact" cannot be replaced by "bounded." Let $A_n$ b
 
 $ A_n = { 1/n , 1/(n+1), 1/(n+2), dots }. $
 
-This set is bounded by $1$ and is not closed since it does not contain its limit point $0$. We also have that $A_n supset A_(n+1)$ for $n=1, 2, 3, dots$ and hence any finite sub-collection will be non-empty. The countable intersection
+This set is bounded by $1$ and is not closed since it does not contain its limit point $0$. We also have that $A_n supset A_(n+1)$ for $n=1, 2, 3, dots$ and hence any intersection of a finite sub-collection will be non-empty. The countable intersection
 
 $ A = sect.big_(n=1)^infinity A_n, $
 
