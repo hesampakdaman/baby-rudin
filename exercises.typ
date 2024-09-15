@@ -26,6 +26,7 @@
 #let qed = [#h(1fr) $qed$]
 #let rationals = $bb(Q)$
 #let reals = $bb(R)$
+#let closure(X) = $overline(#X)$
 
 == Chapter 2
 === Exercise 1
@@ -646,5 +647,25 @@ This procedure will create a non-negative real number $delta > 0$ that is differ
 $ X = A union B. $
 
 By the result in (c) we have that $A$ and $B$ are separated. It follows therefore that $X$ is separable.
+
+#qed
+
+=== Exercise 20
+
+#quote(block: true)[Are closures and interiors of connected sets always connected? (Look at subsets of $reals^2$.)]
+
+We prove that closures of connected sets are always connected. Let $E$ be a connected subset of a metric space $X$. If $E$ is closed, then by Theorem 2.27 we have that $closure(E) = E$ and it follows that $closure(E)$ is connected. Assume therefore that $E$ is not closed.
+
+Suppose, for the sake of getting a contradiction, the opposite. Then there exists non-empty separated sets $A$ and $B$ such that $closure(E) = A union B$. Since $E$ is connected, one of the intersections $E sect A$ or $E sect B$ must be empty. For otherwise either $A sect closure(B)$ or $closure(A) sect B$ would be non-empty, because each of these sets would contain parts of the connected set $E$. And this would contradict the fact that $closure(E)$ is separable. Without loss of generalization assume that $E subset A$.
+
+Now consider the non-empty set $B$. Since $E subset A$ and is disjoint with $B$, there exists at least one point $p$ such that $p in E' sect B$. Because $E' subset closure(A)$ this would mean that $p in closure(A) sect B$ so that this intersection is non-empty. But this is a contradiction since we assume that $closure(E)$ is separable. Hence, closures of connected sets are always connected.
+
+We now turn our attention interiors of connected sets and by example that they are not always connected. Let $A = {(x, y) in R^2 | x > 0}$ and $B = {(x, y) in R^2 | x < 0}$. These are disjoint open sets and are separable by Exercise 19 (b).
+
+If $E = A union B union {bold(0)}$, then $E$ is connected. To see this, note that any partition of $E$ into two subsets $F$ and $G$ would contain points from $A$. The only way to make sure the intersections $F sect closure(G)$ and $closure(F) sect G$ are non-empty would be to ensure that $A sect F$ or $A sect G$ is empty. This is because $A$ is connected (the same applies for $B$). Therefore, assume without loss of generalization that $A subset F$ and $B subset G$.
+
+Finally, because $bold(0)$ is a limit point to both $A$ and $B$, no matter where we put this point in $F$ or $G$, we see that exactly one of the intersections $F sect closure(G)$ or $closure(F) sect G$ would be non-empty. And so, $E$ is connected.
+
+Now consider the interior of $E$. The point $bold(0)$ is not an interior point of $E$ and so $interior(E) = A union B$. As we know from before $A$ and $B$ are separated. Therefore, interiors of connected sets are not always connected.
 
 #qed
