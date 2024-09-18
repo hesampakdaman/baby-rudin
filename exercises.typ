@@ -626,7 +626,7 @@ since $A$ and $B$ are disjoint. \ \
 The sets $A$ and $B$ are disjoint. For otherwise there exists some point $q in A sect B$ such that $d(p, q) < delta$ and $d(p, q) > delta$, which is absurd.
 
 We have shown that $A$ and $B$ are disjoint open sets, hence they are separated using the result in (b). \ \
-(d) We prove the contrapositive. Let $X$ be at most countable and arrange the elements in a sequence ${q_n}$.  If $X$ has less than two points, then $X$ is not seperable since at least one of the sets $A$ or $B$ will be empty. Hence, assume $X$ has two or more points.
+(d) We prove the contrapositive. Let $X$ be at most countable and arrange the elements in a sequence ${q_n}$.  If $X$ has less than two points, then $X$ is connected since at least one of the sets $A$ or $B$ will be empty. Hence, assume $X$ has two or more points.
 
 Fix any $p in X$ and enumerate all distances from this point.
 
@@ -646,7 +646,7 @@ This procedure will create a non-negative real number $delta > 0$ that is differ
 
 $ X = A union B. $
 
-By the result in (c) we have that $A$ and $B$ are separated. It follows therefore that $X$ is separable.
+By the result in (c) we have that $A$ and $B$ are separated. It follows therefore that $X$ is not connected.
 
 #qed
 
@@ -656,11 +656,11 @@ By the result in (c) we have that $A$ and $B$ are separated. It follows therefor
 
 We prove that closures of connected sets are always connected. Let $E$ be a connected subset of a metric space $X$. If $E$ is closed, then by Theorem 2.27 we have that $closure(E) = E$ and it follows that $closure(E)$ is connected. Assume therefore that $E$ is not closed.
 
-Suppose, for the sake of getting a contradiction, the opposite. Then there exists non-empty separated sets $A$ and $B$ such that $closure(E) = A union B$. Since $E$ is connected, one of the intersections $E sect A$ or $E sect B$ must be empty. For otherwise either $A sect closure(B)$ or $closure(A) sect B$ would be non-empty, because each of these sets would contain parts of the connected set $E$. And this would contradict the fact that $closure(E)$ is separable. Without loss of generalization assume that $E subset A$.
+Suppose, for the sake of getting a contradiction, the opposite. Then there exists non-empty separated sets $A$ and $B$ such that $closure(E) = A union B$. Since $E$ is connected, one of the intersections $E sect A$ or $E sect B$ must be empty. For otherwise either $A sect closure(B)$ or $closure(A) sect B$ would be non-empty, because each of these sets would contain parts of the connected set $E$. And this would contradict the fact that $closure(E)$ is not connected. Without loss of generalization assume that $E subset A$.
 
-Now consider the non-empty set $B$. Since $E subset A$ and is disjoint with $B$, there exists at least one point $p$ such that $p in E' sect B$. Because $E' subset closure(A)$ this would mean that $p in closure(A) sect B$ so that this intersection is non-empty. But this is a contradiction since we assume that $closure(E)$ is separable. Hence, closures of connected sets are always connected.
+Now consider the non-empty set $B$. Since $E subset A$ and is disjoint with $B$, there exists at least one point $p$ such that $p in E' sect B$. Because $E' subset closure(A)$ this would mean that $p in closure(A) sect B$ so that this intersection is non-empty. But this is a contradiction since we assume that $closure(E)$ is not connected. Hence, closures of connected sets are always connected.
 
-We now turn our attention interiors of connected sets and by example that they are not always connected. Let $A = {(x, y) in R^2 | x > 0}$ and $B = {(x, y) in R^2 | x < 0}$. These are disjoint open sets and are separable by Exercise 19 (b).
+We now turn our attention interiors of connected sets and by example that they are not always connected. Let $A = {(x, y) in R^2 | x > 0}$ and $B = {(x, y) in R^2 | x < 0}$. These are disjoint open sets and are separated by Exercise 19 (b).
 
 If $E = A union B union {bold(0)}$, then $E$ is connected. To see this, note that any partition of $E$ into two subsets $F$ and $G$ would contain points from $A$. The only way to make sure the intersections $F sect closure(G)$ and $closure(F) sect G$ are non-empty would be to ensure that $A sect F$ or $A sect G$ is empty. This is because $A$ is connected (the same applies for $B$). Therefore, assume without loss of generalization that $A subset F$ and $B subset G$.
 
