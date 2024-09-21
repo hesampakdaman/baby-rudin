@@ -27,6 +27,7 @@
 #let rationals = $bb(Q)$
 #let reals = $bb(R)$
 #let closure(X) = $overline(#X)$
+#let bvec(v) = $bold(upright(#v))$
 
 == Chapter 2
 === Exercise 1
@@ -670,3 +671,40 @@ Finally, because $bold(0)$ is a limit point to both $A$ and $B$, no matter where
 Now consider the interior of $E$. The point $bold(0)$ is not an interior point of $E$ and so $interior(E) = A union B$. As we know from before $A$ and $B$ are separated. Therefore, interiors of connected sets are not always connected.
 
 #qed
+
+=== Exercise 21
+
+#quote(block: true)[
+    Let $A$ and $B$ be separated subsets of some $reals^k$, suppose $bvec(a) in A$ and $bvec(b) in B$, and define
+
+    $ bvec(p)(t) = (1-t) bvec(a) + t bvec(b) $
+
+    for $t in reals$. Put $A_0 = bvec(p)^(-1)(A)$, $B_0 = bvec(p)^(-1)(B)$. [Thus $t in A_0$ if and only if $bvec(p)(t) in A$.]
+
+    #quote(block: true)[
+        #enum(
+            numbering: "(a)",
+            enum.item[Prove that $A_0$ and $B_0$ are separated subsets of $reals$.],
+            enum.item[Prove that there exists $t_0 in (0,1)$ such that $bvec(p)(t_0) in.not A union B$.],
+            enum.item[Prove that every convex subset of $reals^k$ is connected.]
+
+        )
+    ]
+]
+
+#enum(
+    numbering: "(a)",
+    enum.item[Assume the opposite, then there exists a point $t in A_0 sect closure(B_0)$. Since $t in A_0$ it follows that $bvec(p)(t) in A$. Hence, $bvec(p)(t) in.not B$ because $A$ and $B$ are separated, and we can conclude that $t in.not B_0$. It must be therefore true that $t$ is a limit point of $B_0$, that is $t in A_0 sect B'_0$.
+
+        Let $N$ be a neighborhood around $bvec(p)(t)$ with radius $r > 0$. Since $t$ is a limit point of $B_0$, we can find a point $t' in B_0$ such that the distance $d(t, t') < r / abs(bvec(a) - bvec(b))$. We have that the distance between $bvec(p)(t')$ and $bvec(p)(t)$ is
+
+        $
+            abs(bvec(p)(t') - bvec(p)(t)) &= abs((1-t') bvec(a) + t' bvec(b) - (1-t) bvec(a) - t bvec(b)) \
+                &= abs((t-t') bvec(a) - (t-t') bvec(b)) \
+                &lt.eq abs(t' - t) dot.c abs(bvec(a) - bvec(b)) \
+                &< r / abs(bvec(a) - bvec(b)) dot.c abs(bvec(a) - bvec(b)) \
+                &< r,
+        $
+
+        which implies that $bvec(p)(t)$ is a limit point of $B$. This means that $bvec(p)(t) in A sect closure(B)$ which is a contradiction since $A$ and $B$ are separated. \ \ ],
+)
