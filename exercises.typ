@@ -154,9 +154,10 @@ Lastly, we show that $E$ and $E'$ do not always have the same limit points. Let 
     #enum(
         numbering: "(a)",
         enum.item[If $B_n = union_(i=1)^n A_i$, prove that $overline(B)_n = union_(i=1)^n overline(A)_i$.],
-        enum.item[If $B = union_(i=1)^infinity A_i$, prove that $overline(B) supset union_(i=1)^infinity overline(A)_i$.]
+        enum.item[If $B = union_(i=1)^infinity A_i$, prove that $overline(B) supset union_(i=1)^infinity overline(A)_i$. Show, by an example, that this inclusion can be proper. ]
     )
 ]
+
 (a) We first need to show that for any sets $A$ and $B$ it is true that $(A union B)' = A' union B'$. If $x in (A union B)'$, then for every neighborhood $N_r (x)$ with a radius $r > 0$ there exists at least one point $p in N_r (x)$ such that $p in A union B$. Thus, $p in A$ or $p in B$ which implies that $x in A'$ or $x in B'$ so that $x in A' union B'$.
 
 Suppose now that $x in A' union B'$, then for any neighborhood $N_r (x)$ with a radius $r > 0$ there is a point $p in N_r (x)$ such that $p in A$ or $p in B$. This means that $p in A union B$ and it follows that $x in (A union B)'$.
@@ -186,15 +187,15 @@ $
     overline(A)_n,
 $
 
-where we used the result in (a) to get the second equality. This implies that $x in overline(B)$. Since $x$ is arbitrary it follows that $union.big_(i=1)^infinity overline(A)_i subset overline(B)$ as desired.
+where we used the result in (a) to get the second equality. This implies that $x in overline(B)$. Since $x$ is arbitrary it follows that $ overline(B) supset union.big_(i=1)^infinity overline(A)_i$ as desired.
 
-We shall conclude by showing that this subset can indeed be proper. Let $A_i = {1/2, 1/3, dots, 1/i}$ and note that there exists no $k in naturals$ such that $0 in A_k$. Thus $0 in.not union.big_(i=1)^infinity A_i$. Furthermore, each set $A_i$ has no limit points which is why $overline(A)_i = A_i$, and therefore $union.big_(i=1)^infinity overline(A)_i = union.big_(i=1)^infinity A_i$. It follows then that $0 in.not union.big_(i=1)^infinity overline(A_i)$. Now let's consider $overline(B)$
+We shall conclude by showing that this subset can indeed be proper. Let $A_i = {1, 1/2, 1/3, dots, 1/i}$ and note that there exists no $k in naturals$ such that $0 in A_k$. Thus $0 in.not union.big_(i=1)^infinity A_i$. Furthermore, each set $A_i$ has no limit points which is why $overline(A)_i = A_i$, and therefore $union.big_(i=1)^infinity overline(A)_i = union.big_(i=1)^infinity A_i$. It follows then that $0 in.not union.big_(i=1)^infinity overline(A_i)$. Now let's consider $overline(B)$
 
 $
     overline(B) &=
     overline(union.big_(i=1)^infinity A_i) =
-    overline( { 1/2, 1/3, dots } ) =
-    { 0, 1/2, 1/3, dots },
+    overline( { 1, 1/2, 1/3, dots } ) =
+    { 0, 1, 1/2, 1/3, dots },
 $
 
 which implies that $0 in overline(B)$. Since $0 in.not union.big_(i=1)^infinity
@@ -660,7 +661,7 @@ Suppose, for the sake of getting a contradiction, the opposite. Then there exist
 
 Now consider the non-empty set $B$. Since $E subset A$ and is disjoint with $B$, there exists at least one point $p$ such that $p in E' sect B$. Because $E' subset closure(A)$ this would mean that $p in closure(A) sect B$ so that this intersection is non-empty. But this is a contradiction since we assume that $closure(E)$ is not connected. Hence, closures of connected sets are always connected.
 
-We now turn our attention interiors of connected sets and by example that they are not always connected. Let $A = {(x, y) in R^2 | x > 0}$ and $B = {(x, y) in R^2 | x < 0}$. These are disjoint open sets and are separated by Exercise 19 (b).
+We now turn our attention to interiors of connected sets and show by example that they are not always connected. Let $A = {(x, y) in R^2 | x > 0}$ and $B = {(x, y) in R^2 | x < 0}$. These are disjoint open sets and are separated by Exercise 19 (b).
 
 If $E = A union B union {bold(0)}$, then $E$ is connected. To see this, note that any partition of $E$ into two subsets $F$ and $G$ would contain points from $A$. The only way to make sure the intersections $F sect closure(G)$ and $closure(F) sect G$ are non-empty would be to ensure that $A sect F$ or $A sect G$ is empty. This is because $A$ is connected (the same applies for $B$). Therefore, assume without loss of generalization that $A subset F$ and $B subset G$.
 
