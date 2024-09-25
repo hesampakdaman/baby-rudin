@@ -696,7 +696,7 @@ Now consider the interior of $E$. The point $bold(0)$ is not an interior point o
     numbering: "(a)",
     enum.item[Assume the opposite, then there exists a point $t in A_0 sect closure(B_0)$. Since $t in A_0$ it follows that $bvec(p)(t) in A$. Hence, $bvec(p)(t) in.not B$ because $A$ and $B$ are separated, and we can conclude that $t in.not B_0$. It must be therefore true that $t$ is a limit point of $B_0$, that is $t in A_0 sect B'_0$.
 
-        Let $N$ be a neighborhood around $bvec(p)(t)$ with radius $r > 0$. Since $t$ is a limit point of $B_0$, we can find a point $t' in B_0$ such that the distance $d(t, t') < r / abs(bvec(a) - bvec(b))$. We have that the distance between $bvec(p)(t')$ and $bvec(p)(t)$ is
+        Let $N$ be a neighborhood around $bvec(p)(t)$ with radius $r > 0$. Since $t$ is a limit point of $B_0$, we can find a point $t' in B_0$ such that the distance $d(t, t') < r / abs(bvec(a) - bvec(b))$. As for the points $bvec(p)(t')$ and $bvec(p)(t)$, the distance between them is
 
         $
             abs(bvec(p)(t') - bvec(p)(t)) &= abs((1-t') bvec(a) + t' bvec(b) - (1-t) bvec(a) - t bvec(b)) \
@@ -707,4 +707,22 @@ Now consider the interior of $E$. The point $bold(0)$ is not an interior point o
         $
 
         which implies that $bvec(p)(t)$ is a limit point of $B$. This means that $bvec(p)(t) in A sect closure(B)$ which is a contradiction since $A$ and $B$ are separated. \ \ ],
+
+    enum.item[
+        Suppose not, then $bvec(p)(t) in A union B$ whenever $t in (0, 1)$. Since $A_0$ and $B_0$ are separated, the interval $(0, 1)$ belongs to either $A_0$ or $B_0$ exclusively. For otherwise, $(0, 1)$ would be a connected set that is also a union of two nonempty separated sets $(0,1) sect A_0$ and $(0,1) sect B_0$, which is absurd.
+
+        If we assume that the intersection $(0, 1) sect A_0$ is empty, then $(0, 1) subset B_0$. Since $0 in A_0$ and is a limit point of $(0, 1)$, we would get that $closure(A_0) sect B_0 eq.not emptyset$. But this is a contradiction since $A_0$ and $B_0$ are separated.
+
+        If we assume that the intersection $(0, 1) sect B_0$ is empty, then similarly $A_0 sect closure(B_0) eq.not emptyset$ since $1 in B_0$ would be a limit point of $A_0$.
+
+        We have exhausted all possibilities and have seen that they lead to contradiction. Hence, our initial assumption must be wrong and therefore there must exist a $t_0 in (0, 1)$ such that $bvec(p)(t_0) in.not A union B$. \ \ ],
+
+    enum.item[Assume the opposite, and let $E$ be a convex subset of $reals^k$. Then there exists two nonempty separated sets $A$ and $B$ such that $E = A union B$. Take any two points $bvec(a) in A$ and $bvec(b) in B$, then put
+
+        $ bvec(p)(t) = (1-t) bvec(a) + t bvec(b). $
+
+        By the result in (b) we know that there is a number $t_0 in (0, 1)$ such that $bvec(p)(t_0) in.not A union B$, which means that $bvec(p)(t_0) in.not E$. But this is a contradiction since $E$ is supposed to be convex, and no such $t_0$ should exist (see Definition 2.17).
+    ],
 )
+
+#qed
