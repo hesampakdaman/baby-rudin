@@ -721,8 +721,6 @@ Now consider the interior of $E$. The point $bold(0)$ is not an interior point o
 
         $ bvec(p)(t) = (1-t) bvec(a) + t bvec(b). $
 
-        By the result in (b) we know that there is a number $t_0 in (0, 1)$ such that $bvec(p)(t_0) in.not A union B$, which means that $bvec(p)(t_0) in.not E$. But this is a contradiction since $E$ is supposed to be convex, and no such $t_0$ should exist (see Definition 2.17).
+        By the result in (b) we know that there is a number $t_0 in (0, 1)$ such that $bvec(p)(t_0) in.not A union B$, which means that $bvec(p)(t_0) in.not E$. But this is a contradiction since $E$ is supposed to be convex and no such $t_0$ should exist (see Definition 2.17). #qed
     ],
 )
-
-#qed
