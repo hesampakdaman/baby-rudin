@@ -724,3 +724,28 @@ Now consider the interior of $E$. The point $bold(0)$ is not an interior point o
         By the result in (b) we know that there is a number $t_0 in (0, 1)$ such that $bvec(p)(t_0) in.not A union B$, which means that $bvec(p)(t_0) in.not E$. But this is a contradiction since $E$ is supposed to be convex and no such $t_0$ should exist (see Definition 2.17). #qed
     ],
 )
+
+=== Exercise 2.22
+
+#quote(block: true)[A metric space is called _separable_ if it contains a countable dense subset. Show that $reals^k$ is separable. _Hint:_ Consider the set of points which have only rational coordinates.]
+
+From Theorem 1.20 (b), we know that $rationals$ is dense in $reals$ and that every point of $reals$ is a limit point of $rationals$. We shall show that the set of points which have only rational coordinates $rationals^k$ is a countable dense subset of $reals^k$.
+
+That $rationals^k$ is countable follows from Theorem 2.13, simply put $A = rationals$ and $B_k$ will be the set of all points with rational coordinates with $k$-dimensions.
+
+It remains to show that any point of $reals^k$ is a limit point of $rationals^k$. Fix $bvec(x) in reals^k$ and let $N$ be a neighborhood around $bvec(x)$ with some chosen radius $r > 0$. Since $rationals$ is dense in $reals$, for every coordinate $x_i in reals$ we can choose rational number $p_i in rationals$ such that the $abs(p_i - x_i) < r / sqrt(k)$. Having done so for $1 lt.eq i lt.eq k$, we can construct the rational number
+
+$ bvec(p) = (p_1, p_2, dots, p_k) in rationals^k. $
+
+Consider now its distance to $bvec(x)$
+
+$ abs(bvec(p) - bvec(x))
+    &= sqrt(sum_(i=0)^k (p_i - x_i)^2)
+    &lt.eq sqrt(sum_(i=0)^k abs(p_i - x_i)^2)
+    & lt sqrt(k dot.c r^2/ k)
+    &= r,
+$
+
+which means that $bvec(p) in N$, and therefore $bvec(x)$ is a limit point of $rationals^k$. Since the choice of $bvec(x)$ was arbitrary, it follows that every point of $reals^k$ is a limit point of $rationals^k$. This proves that $rationals^k$ is a countable dense subset of $reals^k$, and it follows by definition that $reals^k$ is separable.
+
+#qed
