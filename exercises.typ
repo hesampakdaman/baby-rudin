@@ -694,7 +694,7 @@ Now consider the interior of $E$. The point $bold(0)$ is not an interior point o
 
 #enum(
     numbering: "(a)",
-    enum.item[Assume the opposite, then there exists a point $t in A_0 sect closure(B_0)$. Since $t in A_0$ it follows that $bvec(p)(t) in A$. Hence, $bvec(p)(t) in.not B$ because $A$ and $B$ are separated, and we can conclude that $t in.not B_0$. It must be therefore true that $t$ is a limit point of $B_0$, that is $t in A_0 sect B'_0$.
+    enum.item[Assume the opposite, then at least one of the intersections $A_0 sect closure(B_0)$ or $closure(A_0) sect B_0$ is nonempty. Assume that exists a point $t in A_0 sect closure(B_0)$. Since $t in A_0$ it follows that $bvec(p)(t) in A$. Hence, $bvec(p)(t) in.not B$ because $A$ and $B$ are separated, and we can conclude that $t in.not B_0$. It must be therefore true that $t$ is a limit point of $B_0$, that is $t in A_0 sect B'_0$.
 
         Let $N$ be a neighborhood around $bvec(p)(t)$ with radius $r > 0$. Since $t$ is a limit point of $B_0$, we can find a point $t' in B_0$ such that the distance $d(t, t') < r / abs(bvec(a) - bvec(b))$. As for the points $bvec(p)(t')$ and $bvec(p)(t)$, the distance between them is
 
@@ -706,7 +706,7 @@ Now consider the interior of $E$. The point $bold(0)$ is not an interior point o
                 &< r,
         $
 
-        which implies that $bvec(p)(t)$ is a limit point of $B$. This means that $bvec(p)(t) in A sect closure(B)$ which is a contradiction since $A$ and $B$ are separated. \ \ ],
+        which implies that $bvec(p)(t)$ is a limit point of $B$. This means that $bvec(p)(t) in A sect closure(B)$. And similarly, it can be shown that $bvec(p)(t) in closure(A) sect B$ if $ t in closure(A_0) sect B_0$ is nonempty. But this is a contradiction since $A$ and $B$ are separated. \ \ ],
 
     enum.item[
         Suppose not, then $bvec(p)(t) in A union B$ whenever $t in (0, 1)$. Since $A_0$ and $B_0$ are separated, the interval $(0, 1)$ belongs to either $A_0$ or $B_0$ exclusively. For otherwise, $(0, 1)$ would be a connected set that is also a union of two nonempty separated sets $(0,1) sect A_0$ and $(0,1) sect B_0$, which is absurd.
