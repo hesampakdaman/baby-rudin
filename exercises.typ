@@ -749,3 +749,37 @@ $
 which means that $bvec(p) in N$, and therefore $bvec(x)$ is a limit point of $rationals^k$. Since the choice of $bvec(x)$ was arbitrary, it follows that every point of $reals^k$ is a limit point of $rationals^k$. This proves that $rationals^k$ is a countable dense subset of $reals^k$, and it follows by definition that $reals^k$ is separable.
 
 #qed
+
+=== Exercise 2.23
+
+#quote(block: true)[A collection ${V_alpha}$ of open subsets of $X$ is said to be a _base_ for $X$ if the following is true: For every $x in X$ and every open set $G subset X$ such that $x in G$, we have $x in V_alpha subset G$ for some $alpha$. In other words, every open set in $X$ is the union of a sub-collection of ${V_alpha}$.
+
+    Prove that every separable metric space has a _countable_ base. _Hint:_ Take all neighborhoods with rational radius and center in some countable dense subset of $X$.]
+
+Since $X$ is separable, it contains a countable dense subset $E$. For every $p in E$ let $W_p$ consists of all neighborhoods with non-negative rational radius $h > 0$
+
+$
+    W_p = {N_r (p) | h in rationals, h > 0 }.
+$
+
+Each member of $W_p$ is in one-to-one correspondence with exactly one non-negative rational radius. This means that $W_p$ is countable. By the Corollary to Theorem 2.12 the union
+
+$
+    V = union.big_(p in E) W_p
+$
+
+is also countable. Hence, the members of $V$ can be arranged in a sequence ${V_alpha}$ where each $alpha$ is a member of some countable set.
+
+It remains to be shown that the collection of open sets ${V_alpha}$ is a base. Let $x$ be any point of $X$ and $G$ be any open subset of $X$ such that $x in G$. Since $x$ is an interior point of $G$, we know that there exists a radius $r > 0$ such that the neighborhood $N_r (x) subset G$.
+
+$E$ is dense in $X$ and therefore we can find a point $p in E$ such that the distance $d(p, x) = delta < r / 2$. Since $rationals$ is dense in $reals$, there exists a $h in rationals$ such that $delta < h < r / 2$ by Theorem 1.20.
+
+For this $p$ and rational radius $h$ there exists a neighborhood $V_alpha$ in the collection. Because the distance $d(x, p) = delta < h$ we have that $x in V_alpha$. In fact, for any point $y in V_alpha$ we have that
+
+$
+    d(y, x) & lt.eq d(y, p) + d(p, x) lt h + delta < 2 dot.c r / 2 = r,
+$
+
+which implies $y in N_r (x)$ and therefore $V_alpha subset N_r (x)$. Since the choice of $x$ and $G$ were arbitrary it follows that the collection ${V_alpha}$ is a countable base of $X$.
+
+#qed
