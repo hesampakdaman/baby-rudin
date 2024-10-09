@@ -783,3 +783,32 @@ $
 which implies $y in N_r (x)$ and therefore $V_alpha subset N_r (x)$. Since the choice of $x$ and $G$ were arbitrary it follows that the collection ${V_alpha}$ is a countable base of $X$.
 
 #qed
+
+=== Exercise 2.24
+
+#quote(block: true)[
+    Let $X$ be a metric space in which every infinite subset has a limit point. Prove that $X$ is separable. _Hint:_ Fix $delta > 0$, and pick $x_1 in X$. Having chosen $x_1, dots, x_j in X$, choose $x_(j+1) in X$, if possible, so that $d(x_i, x_(j+1)) gt.eq delta$ for $i = 1, dots, j$. Show that this process must stop after a finite number of steps, and that $X$ can therefore be covered by finitely many neighborhoods of radius $delta$. Take $delta = 1/n$ ($n=1, 2, 3, dots$), and consider the centers of the corresponding neighborhoods.
+]
+
+We begin by showing that the process in the hint must stop after a finite number of steps. Assume the opposite to get a contradiction. Then the process never stops and the set of the chosen points
+
+$
+    A = {x_1, x_2, x_3, dots}
+
+$
+
+is infinite. By construction of $A$ it is true that for any two points $x_n, x_m in A$ such that $m eq.not n$, the distance is $d(x_m, x_n) gt.eq delta$. This implies that no point of $A$ is a limit point of $A$.
+
+Let $y$ be a point in the complement of $A$. If $y$ is such that $d(y, x_i) = r < delta / 2$ for some $x_i in A$, then for any natural number $j eq.not i$ we have that
+
+$
+    d(x_j, x_i) lt.eq d(x_j, y) + d(y, x_i) lt.eq d(x_j, y) + delta slash 2
+$
+
+which after rearranging
+
+$
+    d(x_j, y) gt.eq d(x_j, x_i) - delta slash 2 gt.eq delta - delta slash 2 = delta slash 2
+$
+
+Hence, the neighborhood with center in $y$ and radius $h > 0$ would contain no point of $A$ whenever $h < r$.  But this is absurd, since $A$ would be an infinite subset of $X$ that has no limit point.
