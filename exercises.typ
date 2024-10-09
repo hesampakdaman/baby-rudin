@@ -759,10 +759,10 @@ which means that $bvec(p) in N$, and therefore $bvec(x)$ is a limit point of $ra
 Since $X$ is separable, it contains a countable dense subset $E$. For every $p in E$ let $W_p$ consists of all neighborhoods with non-negative rational radius $h > 0$
 
 $
-    W_p = {N_r (p) | h in rationals, h > 0 }.
+    W_p = {N_h (p) | h in rationals, h > 0 }.
 $
 
-Each member of $W_p$ is in one-to-one correspondence with exactly one non-negative rational radius. This means that $W_p$ is countable. By the Corollary to Theorem 2.12 the union
+Each member of $W_p$ is associated with exactly one non-negative rational radius. This means that $W_p$ is countable. By the Corollary to Theorem 2.12 the union
 
 $
     V = union.big_(p in E) W_p
