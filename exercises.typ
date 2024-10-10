@@ -30,14 +30,14 @@
 #let bvec(v) = $bold(upright(#v))$
 
 == Chapter 2
-=== Exercise 1
+=== Exercise 2.1
 #quote(block: true)[Prove that the empty set is a subset of every set.]
 
 Let $A$ be any set, $emptyset$ be the empty set and assume the opposite. Then there exists at least one element $x in emptyset$ such that $x in.not A$. But the empty set does not contain any elements and no such $x$ can therefore be found. This is a contradiction and hence $emptyset subset A$ must be true.
 
 #qed
 
-=== Exercise 2
+=== Exercise 2.2
 #quote(block: true)[Prove that the set of all algebraic numbers is countable.]
 
 Let $alpha = (a_0, dots, a_n) in B_(n+1)$ be an n+1-tuple of integers. Example 2.5 shows that the set of all integers $integers$ is countable. Using Theorem 2.13 with $A = integers$ shows that the set of n+1-tuples $B_(n+1)$ is countable.
@@ -66,7 +66,7 @@ which means that $q$ is algebraic. Since $q$ is arbitrary it follows that $ratio
 
 #qed
 
-=== Exercise 3
+=== Exercise 2.3
 #quote(block: true)[Prove that there are real numbers which are not algebraic.]
 
 Suppose not. Let $algebraicset$ be the set of all algebraic numbers. Since we assume the opposite any real number is algebraic and it follows that $reals subset algebraicset$.
@@ -75,7 +75,7 @@ From Exercise 2.2 we know that $algebraicset$ is countable. By Theorem 2.8 this 
 
 #qed
 
-=== Exercise 4
+=== Exercise 2.4
 #quote(block: true)[Is the set of all irrational real numbers countable?]
 
 Denote the set of irrational numbers by $irrationals$. According to Theorem 2.13 $rationals$ is countable. Now suppose $irrationals$ is countable. We already know that
@@ -86,7 +86,7 @@ which means that $reals$ is countable by Theorem 2.12. But this is a contradicti
 
 #qed
 
-=== Exercise 5
+=== Exercise 2.5
 #quote(block: true)[Construct a bounded set of real numbers with exactly three limit points.]
 
 Let $k$ be a natural number and consider the set $E_k$ of numbers $k + 1/n$ where $n = 1, 2, 3, dots$ . Clearly $E_k subset (k, k+1]$ and is therefore bounded.
@@ -131,7 +131,7 @@ Specifically, the limit points to $E$ are $1, 2, 3$ and $E_1, E_2, E_3$ are all 
 
 #qed
 
-=== Exercise 6
+=== Exercise 2.6
 #quote(block: true)[Prove that $E'$ is closed. Prove that $E$ and $overline(E)$ have the same limit points. Do $E$ and $E'$ always have the same limit points?
 ]
 
@@ -149,7 +149,7 @@ Lastly, we show that $E$ and $E'$ do not always have the same limit points. Let 
 
 #qed
 
-=== Exercise 7
+=== Exercise 2.7
 #quote(block: true)[
     Let $A_1, A_2, A_3,dots$ be subsets of a metric space.
     #enum(
@@ -204,7 +204,7 @@ overline(A_i)$ we've shown that the inclusion can be proper.
 
 #qed
 
-=== Exercise 8
+=== Exercise 2.8
 #quote(block: true)[Is every point of every open set $E subset reals^2$ a limit point of $E$? Answer the same question for closed sets in $reals^2$.]
 
 We first show that every point in every open set $E subset reals^2$ is a limit point of $E$. Suppose not. Then there exists an open set $E subset reals^2$ with a point $x in E$ that is not a limit point of $E$. It follows that there exists an $r > 0$ such that the neighborhood $N_r (x)$ contains no point of $E$ except $x$.
@@ -224,7 +224,7 @@ Now we show that the case does not hold true in general for closed sets. Conside
 
 #qed
 
-=== Exercise 9
+=== Exercise 2.9
 #let interior(E) = $#E^circle.small$
 #quote(block: true)[
     Let $interior(E)$ be the set of all interior points of $E$.
@@ -272,7 +272,7 @@ Conversely, let $p in overline(E^c) = E^c union E^c'$ . Then it is clear that ei
 
 #qed
 
-=== Exercise 10
+=== Exercise 2.10
 #quote(block: true)[Let $X$ be an infinite set. For $p in X$ and $q in X$, define
     $ d(p,q) = cases(
     1 quad quad "(if" p eq.not q")",
@@ -315,7 +315,7 @@ Every subset $G_(p_n)$ is an open neighborhood around $p_n$ with radius $1$. Fro
 
 #qed
 
-=== Exercise 11
+=== Exercise 2.11
 #quote(block: true)[
     For $x in reals$ and $y in reals$, define
 
@@ -416,7 +416,7 @@ We have shown that any open cover of $K$ has a finite sub-cover which implies th
 
 #qed
 
-=== Exercise 13
+=== Exercise 2.13
 #quote(block: true)[Construct a compact set of real numbers whose limit points form a countable set.]
 
 Let $n$ be a natural number and construct a sequence ${x_k}$ as follows. Define $x_1$ as the midpoint between $1/(n+1)$ and $1/n$
@@ -450,7 +450,7 @@ As desired, we have constructed a compact set $S$ of real numbers whose limit po
 #qed
 
 
-=== Exercise 14
+=== Exercise 2.14
 #quote(block: true)[Give an example of an open cover of the segment $(0, 1)$ which has no finite sub-cover.]
 
 Let $G_n$ be the open set on the form $(1 slash n, 1)$ for any natural number $n$. The collection ${G_n}$ is an open cover of $(0, 1)$
@@ -466,7 +466,7 @@ yet clearly $x in (0, 1)$. This shows that the union constructed with indices $n
 #qed
 
 
-=== Exercise 15
+=== Exercise 2.15
 #quote(block:true)[Show that Theorem 2.36 and its Corollary become false (in $reals$, for example) if the word "compact" is replaced by "closed" or by "bounded."]
 
 We first show that "compact" cannot be replaced by closed. Consider the set of natural numbers starting from the positive integer $n$ and beyond
@@ -493,7 +493,7 @@ is, however, empty. This can be proven with similar argument as for why the inte
 #qed
 
 
-=== Exercise 16
+=== Exercise 2.16
 #quote(block: true)[Regard $rationals$, the set of all rational numbers, as a metric space, with $d(p,q) = |p - q|$. Let $E$ be the set of all $p in rationals$ such that $2 < p^2 < 3$. Show that $E$ is closed and bounded in $rationals$, but that $E$ is not compact. Is $E$ open in $rationals$?]
 
 We begin with showing that $E$ is bounded. If $2 < p^2 < 3$ then $1 < abs(p) < 2$, and indeed we see that $E$ is bounded.
@@ -522,7 +522,7 @@ Lastly, we answer the question if $E$ is open in $rationals$. Consider the open 
 
 #qed
 
-=== Exercise 17
+=== Exercise 2.17
 #quote(block: true)[Let $E$ be the set of all $x in [0, 1]$ whose decimal expansion contains only the digits $4$ and $7$. Is $E$ countable? Is $E$ dense in $[0, 1]$? Is $E$ compact? Is $E$ perfect?]
 
 That $E$ is not countable can be shown using Cantor's diagonal process. Simply exchange $0$, $1$ with $4$, $7$ respectively in Theorem 2.14 and its proof. Alternatively, if we can show that $E$ is perfect then by Theorem 2.43 $E$ is uncountable.
@@ -560,7 +560,7 @@ Thus, $q$ is a limit point of $E$ and we have shown that $E$ is perfect.
 #qed
 
 
-=== Exercise 18
+=== Exercise 2.18
 #quote(block: true)[Is there a nonempty perfect set in $reals$ which contains no rational number?]
 
 Let $E$ be the set from Exercise 2.17. This set is a nonempty perfect set in $reals$ that contains rational numbers. We want to find a number $y$ such that for every $x in E$ the sum $x + y$ is irrational. Then the set of irrational numbers given by
@@ -606,7 +606,7 @@ We have shown that $P$ is a nonempty set of irrational numbers that is perfect a
 
 #qed
 
-=== Exercise 19
+=== Exercise 2.19
 #quote(block: true)[
      #enum(
         numbering: "(a)",
@@ -652,7 +652,7 @@ By the result in (c) we have that $A$ and $B$ are separated. It follows therefor
 
 #qed
 
-=== Exercise 20
+=== Exercise 2.20
 
 #quote(block: true)[Are closures and interiors of connected sets always connected? (Look at subsets of $reals^2$.)]
 
@@ -672,7 +672,7 @@ Now consider the interior of $E$. The point $bold(0)$ is not an interior point o
 
 #qed
 
-=== Exercise 21
+=== Exercise 2.21
 
 #quote(block: true)[
     Let $A$ and $B$ be separated subsets of some $reals^k$, suppose $bvec(a) in A$ and $bvec(b) in B$, and define
