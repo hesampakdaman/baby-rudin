@@ -802,13 +802,13 @@ is infinite. By construction of $A$ it is true that for any two points $x_n, x_m
 Let $y$ be a point in the complement of $A$. If $y$ is such that $d(y, x_i) = r < delta / 2$ for some $x_i in A$, then for any natural number $j eq.not i$ we have that
 
 $
-    d(x_j, x_i) lt.eq d(x_j, y) + d(y, x_i) lt.eq d(x_j, y) + delta slash 2
+    d(x_j, x_i) lt.eq d(x_j, y) + d(y, x_i) lt d(x_j, y) + delta slash 2
 $
 
 which after rearranging
 
 $
-    d(x_j, y) gt.eq d(x_j, x_i) - delta slash 2 gt.eq delta - delta slash 2 = delta slash 2
+    d(x_j, y) gt d(x_j, x_i) - delta slash 2 gt.eq delta - delta slash 2 = delta slash 2.
 $
 
-Hence, the neighborhood with center in $y$ and radius $h > 0$ would contain no point of $A$ whenever $h < r$.  But this is absurd, since $A$ would be an infinite subset of $X$ that has no limit point.
+Hence, the neighborhood with center in $y$ and radius $h < r$ would contain no point of $A$.  But this is absurd, since that would make $A$ an infinite subset of $X$ that has no limit point.
