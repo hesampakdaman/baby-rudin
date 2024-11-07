@@ -789,25 +789,51 @@ which implies $y in N_r (x)$ and therefore $V_alpha subset N_r (x)$. Since the c
     Let $X$ be a metric space in which every infinite subset has a limit point. Prove that $X$ is separable. _Hint:_ Fix $delta > 0$, and pick $x_1 in X$. Having chosen $x_1, dots, x_j in X$, choose $x_(j+1) in X$, if possible, so that $d(x_i, x_(j+1)) gt.eq delta$ for $i = 1, dots, j$. Show that this process must stop after a finite number of steps, and that $X$ can therefore be covered by finitely many neighborhoods of radius $delta$. Take $delta = 1/n$ ($n=1, 2, 3, dots$), and consider the centers of the corresponding neighborhoods.
 ]
 
-We begin by showing that the process in the hint must stop after a finite number of steps. Assume the opposite to get a contradiction. Then the process never stops and the set of the chosen points
+We begin by showing that the process in the hint must stop after a finite number of steps. Assume the opposite to get a contradiction -- then the process never stops and the set of the chosen points
 
 $
-    A = {x_1, x_2, x_3, dots}
+    A_delta = {x_1, x_2, x_3, dots}
 
 $
 
-is infinite. By construction of $A$ it is true that for any two points $x_n, x_m in A$ such that $m eq.not n$, the distance is $d(x_m, x_n) gt.eq delta$. This implies that no point of $A$ is a limit point of $A$.
+is infinite. By construction, it is true that for any two points $x_n, x_m in A_delta$ such that $m eq.not n$, the distance is $d(x_m, x_n) gt.eq delta$. This implies that no point of $A_delta$ is a limit point of $A_delta$.
 
-Let $y$ be a point in the complement of $A$. If $y$ is such that $d(y, x_i) = r < delta / 2$ for some $x_i in A$, then for any natural number $j eq.not i$ we have that
+Let $y$ be a point in the complement of $A_delta$ and consider its neighborhood $N_r (y)$ with radius $r < delta / 2$. If there exists some $x_i in A_delta$ such that $x_i in N_r (y)$, then for any other point $x_j in A_delta$ we have that
 
 $
-    d(x_j, x_i) lt.eq d(x_j, y) + d(y, x_i) lt d(x_j, y) + delta slash 2
+    d(x_i, x_j) lt.eq d(x_i, y) + d(y, x_j) lt delta slash 2 + d(y, x_j)
 $
 
 which after rearranging
 
 $
-    d(x_j, y) gt d(x_j, x_i) - delta slash 2 gt.eq delta - delta slash 2 = delta slash 2.
+    d(y, x_j) gt d(x_i, x_j) - delta slash 2 gt.eq delta - delta slash 2 = delta slash 2.
 $
 
-Hence, the neighborhood with center in $y$ and radius $h < r$ would contain no point of $A$.  But this is absurd, since that would make $A$ an infinite subset of $X$ that has no limit point.
+Hence, any neighborhood with center in $y$ with radius less than $d(x_i, y)$ would contain no point of $A_delta$.  But this is absurd, since that would make $A_delta$ an infinite subset of $X$ which has no limit point. Therefore, $A_delta$ must be a finite subset of $X$.
+
+We shall now show that $X$ can be covered by finitely many neighborhoods of radius $delta$. Let $V_x$ be the open neighborhood with center in some $x in A_delta$ and radius $delta$. Consider the collection of these neighborhoods
+
+$
+    V = {V_x | x in A_delta}.
+$
+
+That $V$ is finite follows from the fact that $A_delta$ is finite.
+
+If $y in.not A_delta$ then by construction of $A_delta$ there exists some $x in A_delta$ such that $d(x, y) < delta$. Therefore $y$ belongs to the open neighborhood $V_x$. This shows that $X$ is covered by the finite collection of open sets $V$.
+
+We now aim to show that $X$ is separable. Following the same process used to construct $A_delta$, take $delta = 1/n$ ($n = 1, 2, 3 dots$) and construct a sequence of sets $A_(1 / n)$. For simplicity of notation, let $E_n = A_(1/n)$ and take the union of these finite sets
+
+$
+    S = union.big_(n=1)^infinity E_n.
+$
+
+Since each $E_n$ is finite, the union $S$ is at most countable by Theorem 2.12. Moreover, we can conclude that $S$ is countable. Because $X$ is infinite and we can construct infinitely many non-empty sets $E_n$ by increasing $n$, or if $E_n$ is empty for some $n$ then there exists .
+
+Let $z in X$ be any point in the complement of $S$. To prove that $S$ is dense in $X$ it is sufficient to show that $z$ is a limit point of $S$. Take any neighborhood $N_r (z)$ with center in $z$ for some radius $r >0$. By the Archimedean property of $reals$ there exist a natural number $n$ such that $r > 1/n$.
+
+Since $z$ is in the complement of $S$ it follows that $z in.not E_n$ for any natural number $n$. Hence, by construction of $E_n$ we can find a point $x in E_n$ such that $d(x, y) < 1/n$. This implies that $x in N_r (z)$ and therefore $z$ is a limit point of $S$. Since both $z$ and $r$ were arbitrarily chosen, we can concluded that $S$ is dense in $X$.
+
+We have shown that $S$ is a countable dense subset of $X$. This proves that $X$ is separable as desired.
+
+#qed
