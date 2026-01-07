@@ -474,7 +474,7 @@ $ E_n = {n, n+1, n+2, dots}. $
 
 Each set in the collection ${E_n}$ is closed relative to $reals$ and is unbounded. Since we have that $E_n supset E_(n+1)$ ($n = 1, 2, 3, dots$) any intersection of a finite sub-collection of ${E_n}$ is non-empty. However, the countable intersection
 
-$ E = sect.big_(n=1)^infinity E_n, $
+$ E = inter.big_(n=1)^infinity E_n, $
 
 is empty. To see this, note that for any natural number $m$ we have that $m in.not E_n$ whenever $m < n$. Hence, there exists no natural number $m$ which belongs to all sets in the collection ${E_n}$ and it follows that the intersection is empty.
 
@@ -485,7 +485,7 @@ $ A_n = { 1/n , 1/(n+1), 1/(n+2), dots }. $
 
 This set is bounded by $1$ and is not closed since it does not contain its limit point $0$. We also have that $A_n supset A_(n+1)$ for $n=1, 2, 3, dots$ and hence any intersection of a finite sub-collection will be non-empty. The countable intersection
 
-$ A = sect.big_(n=1)^infinity A_n, $
+$ A = inter.big_(n=1)^infinity A_n, $
 
 is, however, empty. This can be proven with similar argument as for why the intersection $E$ is empty. We have shown that the word "compact" cannot be replaced by "bounded."
 
@@ -517,7 +517,7 @@ Similarly, it follows that any neighborhood around $q$ with radius $abs(q^2 - 3)
 
 To prove that $E$ is not compact in $rationals$, it suffices by Theorem 2.33 to show that $E$ is not compact in $reals$. First, note that $E$ is not closed in $reals$ because it does not contain all of its limit points. In particular, $sqrt(2)$ is an irrational number that is a limit point of $E$ but not a member of the set. Therefore, by Heine-Borel's theorem (Theorem 2.41) $E$ cannot be compact in $reals$.
 
-Lastly, we answer the question if $E$ is open in $rationals$. Consider the open intervals $A = (-sqrt(3), -sqrt(2))$ and $B = (sqrt(2), sqrt(3))$ in $reals$. Put $G = A union B$ and note that by Theorem 2.24 $G$ is open in $reals$. Since $E = rationals sect G$, it follows by Theorem 2.30 that $E$ is open in $rationals$.
+Lastly, we answer the question if $E$ is open in $rationals$. Consider the open intervals $A = (-sqrt(3), -sqrt(2))$ and $B = (sqrt(2), sqrt(3))$ in $reals$. Put $G = A union B$ and note that by Theorem 2.24 $G$ is open in $reals$. Since $E = rationals inter G$, it follows by Theorem 2.30 that $E$ is open in $rationals$.
 
 #qed
 
@@ -618,13 +618,13 @@ We have shown that $P$ is a nonempty set of irrational numbers that is perfect a
 
 (a) If $A$ and $B$ both are closed, then by Theorem 2.27 we have that $overline(A) = A$ and $overline(B) = B$. Therefore
 
-$ A sect overline(B) = overline(A) sect B = A sect B = emptyset, $
+$ A inter overline(B) = overline(A) inter B = A inter B = emptyset, $
 
 since $A$ and $B$ are disjoint. \ \
-(b) We prove that the set $A sect overline(B)$ is empty. If $p in B'$, then for every radius $r > 0$ the neighborhood $N_r (p)$ contains points from $B$. Hence, $N(p) subset.not A$ and $p$ is not an interior point of $A$. Because $A$ is open, by definition 2.18 (f) every point of $A$ is an interior point. It follows that $p in.not A$ and therefore $A sect B' = emptyset$. Since $A$ and $B$ are disjoint we have that $A sect overline(B) = emptyset$. With the same argument we can establish that $overline(A) sect B = emptyset$. This show that $A$ and $B$ are separated. \ \
+(b) We prove that the set $A inter overline(B)$ is empty. If $p in B'$, then for every radius $r > 0$ the neighborhood $N_r (p)$ contains points from $B$. Hence, $N(p) subset.not A$ and $p$ is not an interior point of $A$. Because $A$ is open, by definition 2.18 (f) every point of $A$ is an interior point. It follows that $p in.not A$ and therefore $A inter B' = emptyset$. Since $A$ and $B$ are disjoint we have that $A inter overline(B) = emptyset$. With the same argument we can establish that $overline(A) inter B = emptyset$. This show that $A$ and $B$ are separated. \ \
 (c) By definition 2.18 (a) and Theorem 2.19 $A$ is open. Now consider the complement of $B$. This set $B^c$ contains all numbers $q$ such that $d(p, q) lt.eq delta$. But this is exactly the closure of $A$, that is $B^c = overline(A)$. The complement to $B$ is therefore closed and by Theorem 2.23 $B$ is open.
 
-The sets $A$ and $B$ are disjoint. For otherwise there exists some point $q in A sect B$ such that $d(p, q) < delta$ and $d(p, q) > delta$, which is absurd.
+The sets $A$ and $B$ are disjoint. For otherwise there exists some point $q in A inter B$ such that $d(p, q) < delta$ and $d(p, q) > delta$, which is absurd.
 
 We have shown that $A$ and $B$ are disjoint open sets, hence they are separated using the result in (b). \ \
 (d) We prove the contrapositive. Let $X$ be at most countable and arrange the elements in a sequence ${q_n}$.  If $X$ has less than two points, then $X$ is connected since at least one of the sets $A$ or $B$ will be empty. Hence, assume $X$ has two or more points.
@@ -657,15 +657,15 @@ By the result in (c) we have that $A$ and $B$ are separated. It follows therefor
 
 We prove that closures of connected sets are always connected. Let $E$ be a connected subset of a metric space $X$. If $E$ is closed, then by Theorem 2.27 we have that $closure(E) = E$ and it follows that $closure(E)$ is connected. Assume therefore that $E$ is not closed.
 
-Suppose, for the sake of getting a contradiction, the opposite. Then there exists non-empty separated sets $A$ and $B$ such that $closure(E) = A union B$. Since $E$ is connected, one of the intersections $E sect A$ or $E sect B$ must be empty. For otherwise either $A sect closure(B)$ or $closure(A) sect B$ would be non-empty, because each of these sets would contain parts of the connected set $E$. And this would contradict the fact that $closure(E)$ is not connected. Without loss of generalization assume that $E subset A$.
+Suppose, for the sake of getting a contradiction, the opposite. Then there exists non-empty separated sets $A$ and $B$ such that $closure(E) = A union B$. Since $E$ is connected, one of the intersections $E inter A$ or $E inter B$ must be empty. For otherwise either $A inter closure(B)$ or $closure(A) inter B$ would be non-empty, because each of these sets would contain parts of the connected set $E$. And this would contradict the fact that $closure(E)$ is not connected. Without loss of generalization assume that $E subset A$.
 
-Now consider the non-empty set $B$. Since $E subset A$ and is disjoint with $B$, there exists at least one point $p$ such that $p in E' sect B$. Because $E' subset closure(A)$ this would mean that $p in closure(A) sect B$ so that this intersection is non-empty. But this is a contradiction since we assume that $closure(E)$ is not connected. Hence, closures of connected sets are always connected.
+Now consider the non-empty set $B$. Since $E subset A$ and is disjoint with $B$, there exists at least one point $p$ such that $p in E' inter B$. Because $E' subset closure(A)$ this would mean that $p in closure(A) inter B$ so that this intersection is non-empty. But this is a contradiction since we assume that $closure(E)$ is not connected. Hence, closures of connected sets are always connected.
 
 We now turn our attention to interiors of connected sets and show by example that they are not always connected. Let $A = {(x, y) in R^2 | x > 0}$ and $B = {(x, y) in R^2 | x < 0}$. These are disjoint open sets and are separated by Exercise 19 (b).
 
-If $E = A union B union {bold(0)}$, then $E$ is connected. To see this, note that any partition of $E$ into two subsets $F$ and $G$ would contain points from $A$. The only way to make sure the intersections $F sect closure(G)$ and $closure(F) sect G$ are non-empty would be to ensure that $A sect F$ or $A sect G$ is empty. This is because $A$ is connected (the same applies for $B$). Therefore, assume without loss of generalization that $A subset F$ and $B subset G$.
+If $E = A union B union {bold(0)}$, then $E$ is connected. To see this, note that any partition of $E$ into two subsets $F$ and $G$ would contain points from $A$. The only way to make sure the intersections $F inter closure(G)$ and $closure(F) inter G$ are non-empty would be to ensure that $A inter F$ or $A inter G$ is empty. This is because $A$ is connected (the same applies for $B$). Therefore, assume without loss of generalization that $A subset F$ and $B subset G$.
 
-Finally, because $bold(0)$ is a limit point to both $A$ and $B$, no matter where we put this point in $F$ or $G$, we see that exactly one of the intersections $F sect closure(G)$ or $closure(F) sect G$ would be non-empty. And so, $E$ is connected.
+Finally, because $bold(0)$ is a limit point to both $A$ and $B$, no matter where we put this point in $F$ or $G$, we see that exactly one of the intersections $F inter closure(G)$ or $closure(F) inter G$ would be non-empty. And so, $E$ is connected.
 
 Now consider the interior of $E$. The point $bold(0)$ is not an interior point of $E$ and so $interior(E) = A union B$. As we know from before $A$ and $B$ are separated. Therefore, interiors of connected sets are not always connected.
 
@@ -693,7 +693,7 @@ Now consider the interior of $E$. The point $bold(0)$ is not an interior point o
 
 #enum(
     numbering: "(a)",
-    enum.item[Assume the opposite, then at least one of the intersections $A_0 sect closure(B_0)$ or $closure(A_0) sect B_0$ is nonempty. Assume that exists a point $t in A_0 sect closure(B_0)$. Since $t in A_0$ it follows that $bvec(p)(t) in A$. Hence, $bvec(p)(t) in.not B$ because $A$ and $B$ are separated, and we can conclude that $t in.not B_0$. It must be therefore true that $t$ is a limit point of $B_0$, that is $t in A_0 sect B'_0$.
+    enum.item[Assume the opposite, then at least one of the intersections $A_0 inter closure(B_0)$ or $closure(A_0) inter B_0$ is nonempty. Assume that exists a point $t in A_0 inter closure(B_0)$. Since $t in A_0$ it follows that $bvec(p)(t) in A$. Hence, $bvec(p)(t) in.not B$ because $A$ and $B$ are separated, and we can conclude that $t in.not B_0$. It must be therefore true that $t$ is a limit point of $B_0$, that is $t in A_0 inter B'_0$.
 
         Let $N$ be a neighborhood around $bvec(p)(t)$ with radius $r > 0$. Since $t$ is a limit point of $B_0$, we can find a point $t' in B_0$ such that the distance $d(t, t') < r / abs(bvec(a) - bvec(b))$. As for the points $bvec(p)(t')$ and $bvec(p)(t)$, the distance between them is
 
@@ -705,14 +705,14 @@ Now consider the interior of $E$. The point $bold(0)$ is not an interior point o
                 &< r,
         $
 
-        which implies that $bvec(p)(t)$ is a limit point of $B$. This means that $bvec(p)(t) in A sect closure(B)$. And similarly, it can be shown that $bvec(p)(t) in closure(A) sect B$ if $ t in closure(A_0) sect B_0$ is nonempty. But this is a contradiction since $A$ and $B$ are separated. \ \ ],
+        which implies that $bvec(p)(t)$ is a limit point of $B$. This means that $bvec(p)(t) in A inter closure(B)$. And similarly, it can be shown that $bvec(p)(t) in closure(A) inter B$ if $ t in closure(A_0) inter B_0$ is nonempty. But this is a contradiction since $A$ and $B$ are separated. \ \ ],
 
     enum.item[
-        Suppose not, then $bvec(p)(t) in A union B$ whenever $t in (0, 1)$. Since $A_0$ and $B_0$ are separated, the interval $(0, 1)$ belongs to either $A_0$ or $B_0$ exclusively. For otherwise, $(0, 1)$ would be a connected set that is also a union of two nonempty separated sets $(0,1) sect A_0$ and $(0,1) sect B_0$, which is absurd.
+        Suppose not, then $bvec(p)(t) in A union B$ whenever $t in (0, 1)$. Since $A_0$ and $B_0$ are separated, the interval $(0, 1)$ belongs to either $A_0$ or $B_0$ exclusively. For otherwise, $(0, 1)$ would be a connected set that is also a union of two nonempty separated sets $(0,1) inter A_0$ and $(0,1) inter B_0$, which is absurd.
 
-        If we assume that the intersection $(0, 1) sect A_0$ is empty, then $(0, 1) subset B_0$. Since $0 in A_0$ and is a limit point of $(0, 1)$, we would get that $closure(A_0) sect B_0 eq.not emptyset$. But this is a contradiction since $A_0$ and $B_0$ are separated.
+        If we assume that the intersection $(0, 1) inter A_0$ is empty, then $(0, 1) subset B_0$. Since $0 in A_0$ and is a limit point of $(0, 1)$, we would get that $closure(A_0) inter B_0 eq.not emptyset$. But this is a contradiction since $A_0$ and $B_0$ are separated.
 
-        If we assume that the intersection $(0, 1) sect B_0$ is empty, then similarly $A_0 sect closure(B_0) eq.not emptyset$ since $1 in B_0$ would be a limit point of $A_0$.
+        If we assume that the intersection $(0, 1) inter B_0$ is empty, then similarly $A_0 inter closure(B_0) eq.not emptyset$ since $1 in B_0$ would be a limit point of $A_0$.
 
         We have exhausted all possibilities and have seen that they lead to contradiction. Hence, our initial assumption must be wrong and therefore there must exist a $t_0 in (0, 1)$ such that $bvec(p)(t_0) in.not A union B$. \ \ ],
 
