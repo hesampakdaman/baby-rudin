@@ -18,17 +18,39 @@
   }
 }
 
+#let qed = [#h(1fr) $qed$]
+
+== Chapter 1
+=== Exercise 1.1
+#quote(block: true)[If $r$ is rational ($r != 0$) and $x$ is irrational, prove that $r + x$ and $r x$ are irrational.]
+Suppose $r + x$ is rational. Then there exists integers $m, n$ such that
+
+$
+    x = m / n - r.
+$
+
+Since $m, n$ and $r$ are rational their difference is also in $QQ$. But this contradicts our assumption about $x$ being irrational. With the same line of reasoning it can be shown that $r x$ is irrational.
+
+#qed
+
+=== Exercise 1.2
+#quote(block: true)[Prove that there is no rational number whose square is 12.]
+
+We have that $p = sqrt(12) = 2 sqrt(3)$. Since $sqrt(3)$ is irrational it follows by Exercise 1.1 that $p$ is irrational.
+
+#qed
+
+#pagebreak()
+== Chapter 2
 #let algebraicset = $cal(A)$
 #let integers = $bb(Z)$
 #let irrationals = $bb(I)$
 #let naturals = $bb(N)$
-#let qed = [#h(1fr) $qed$]
 #let rationals = $bb(Q)$
 #let reals = $bb(R)$
 #let closure(X) = $overline(#X)$
 #let bvec(v) = $bold(upright(#v))$
 
-== Chapter 2
 === Exercise 2.1
 #quote(block: true)[Prove that the empty set is a subset of every set.]
 
