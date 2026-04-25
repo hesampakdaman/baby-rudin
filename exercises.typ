@@ -40,7 +40,7 @@ The right hand-side is clearly a rational number which contradicts our assumptio
 #qed
 
 === Exercise 1.2
-#quote(block: true)[Prove that there is no rational number whose square is 12.]
+#quote(block: true)[Prove that there is no rational number whose square is $12$.]
 
 We have that $p = sqrt(12) = 2 sqrt(3)$. Since $sqrt(3)$ is irrational it follows by Exercise 1.1 that $p$ is irrational.
 
