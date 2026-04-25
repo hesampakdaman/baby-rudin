@@ -29,7 +29,13 @@ $
     x = m / n - r.
 $
 
-Since $m, n$ and $r$ are rational their difference is also in $QQ$. But this contradicts our assumption about $x$ being irrational. With the same line of reasoning it can be shown that $r x$ is irrational.
+Since $r$ is rational it can be written as a fraction of two integers $r = p slash q$. We have that
+
+$
+    x = m / n - p / q = (m q - n p ) / (n q).
+$
+
+The right hand-side is clearly a rational number which contradicts our assumption about $x$ being irrational. With the same line of reasoning it can be shown that $r x$ is irrational.
 
 #qed
 
@@ -39,6 +45,8 @@ Since $m, n$ and $r$ are rational their difference is also in $QQ$. But this con
 We have that $p = sqrt(12) = 2 sqrt(3)$. Since $sqrt(3)$ is irrational it follows by Exercise 1.1 that $p$ is irrational.
 
 #qed
+
+
 
 #pagebreak()
 == Chapter 2
