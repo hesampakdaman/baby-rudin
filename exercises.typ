@@ -59,6 +59,21 @@ We have that $p = sqrt(12) = 2 sqrt(3)$. Since $sqrt(3)$ is irrational it follow
 
 #qed
 
+=== Exercise 1.4
+#quote(block: true)[Let $E$ be a nonempty subset of an ordered set; suppose $alpha$ is a lower bound of $E$ and $beta$ is an upper bound of $E$. Prove that $alpha lt.eq beta$.]
+
+Suppose not, then $alpha > beta$. Since $alpha$ is a lower bound to $E$ we have that $x gt.eq alpha$ for any $x$ in $E$. Then
+
+$
+    x gt.eq alpha > beta,
+$
+
+is a contradiction of the assumption that $beta$ is an upper bound to $E$.
+
+Alternatively we may prove the statement using definition 1.15 of ordered sets. We have that $alpha lt.eq x$ and $x lt.eq beta$. Then it follows from property (ii) that $alpha lt.eq beta$.
+
+#qed
+
 #pagebreak()
 
 == Chapter 2
