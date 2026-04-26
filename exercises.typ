@@ -46,9 +46,21 @@ We have that $p = sqrt(12) = 2 sqrt(3)$. Since $sqrt(3)$ is irrational it follow
 
 #qed
 
+=== Exercise 1.3
+#quote(block: true)[Prove Proposition 1.15.]
 
+#enum(
+    numbering: "(a)",
+    enum.item[We have that $y = y x (1 slash x) = z x (1 slash x) = z.$],
+    enum.item[Put $z=1$ in (a) to obtain the result.],
+    enum.item[Similarly, putting $z = 1 slash x$ in (a) gives the result.],
+    enum.item[Because $x dot.op (1 slash x) = 1$ we can use it in (c) with $x = 1 slash x$ and $y = x$. This proves the last result.],
+)
+
+#qed
 
 #pagebreak()
+
 == Chapter 2
 #let algebraicset = $cal(A)$
 #let integers = $bb(Z)$
