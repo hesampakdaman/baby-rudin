@@ -74,6 +74,21 @@ Alternatively we may prove the statement using definition 1.15 of ordered sets. 
 
 #qed
 
+=== Exercise 1.5
+#quote(block: true)[Let $A$ be a nonempty set of real numbers which is bounded below. Let $-A$ be the set of all numbers $-x$, where $x in A$. Prove that $ inf A = -sup(-A). $]
+
+By Theorem 1.11 $alpha = sup A$ exist in $RR$. This means that that $alpha lt.eq x$ for any $x in A$, or equivalently that $-x lt.eq -alpha$. Since $-x in -A$ it follows that $-alpha$ is an upper bound to $-A$.
+
+We now show that $-alpha$ is the least upper bound. For any $gamma < -alpha$ there exists a number $y in A$ such that $alpha lt.eq y < -gamma$, for otherwise $-gamma$ would be a greater lower bound than $inf A$ which is absurd. Reversing inequalities gives us that
+
+$
+    gamma < y lt.eq -alpha.
+$
+
+Hence $gamma$ is not an upper bound to $-A$ and we have shown that $inf A = -sup(-A)$ as desired.
+
+#qed
+
 #pagebreak()
 
 == Chapter 2
