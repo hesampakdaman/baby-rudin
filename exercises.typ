@@ -1,4 +1,4 @@
-#let first-indent-spacing = 1.8em
+4#let first-indent-spacing = 1.8em
 #let indent = h(first-indent-spacing)
 #set page(margin: 1.75in)
 #set par(leading: 0.55em, spacing: 0.55em, first-line-indent: first-indent-spacing, justify: true)
@@ -25,15 +25,11 @@
 #quote(block: true)[If $r$ is rational ($r != 0$) and $x$ is irrational, prove that $r + x$ and $r x$ are irrational.]
 Suppose $r + x$ is rational. Then there exists integers $m, n$ such that
 
-$
-    x = m / n - r.
-$
+    $ x = m / n - r. $
 
 Since $r$ is rational it can be written as a fraction of two integers $r = p slash q$. We have that
 
-$
-    x = m / n - p / q = (m q - n p ) / (n q).
-$
+    $ x = m / n - p / q = (m q - n p ) / (n q). $
 
 The right hand-side is clearly a rational number which contradicts our assumption about $x$ being irrational. With the same line of reasoning it can be shown that $r x$ is irrational.
 
@@ -64,9 +60,7 @@ We have that $p = sqrt(12) = 2 sqrt(3)$. Since $sqrt(3)$ is irrational it follow
 
 Suppose not, then $alpha > beta$. Since $alpha$ is a lower bound to $E$ we have that $x gt.eq alpha$ for any $x$ in $E$. Then
 
-$
-    x gt.eq alpha > beta,
-$
+    $ x gt.eq alpha > beta, $
 
 is a contradiction of the assumption that $beta$ is an upper bound to $E$.
 
