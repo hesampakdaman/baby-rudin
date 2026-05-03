@@ -19,6 +19,8 @@
 }
 
 #let qed = [#h(1fr) $qed$]
+#let dotsop = $dot.op dot.op dot.op$
+
 
 == Chapter 1
 === Exercise 1.1
@@ -88,6 +90,96 @@ $
 as desired.
 
 #qed
+
+=== Exercise 1.6
+#quote(block: true)[Fix $b>1.$ #enum(
+    numbering: "(a)",
+    enum.item[If $m, n, p, q$ are integers, $n>0, q>0,$ and $r=m slash n = p slash q$, prove that
+        $
+            (b^m)^(1 slash n) = (b^p)^(1 slash q).
+        $
+        Hence it makes sense to define $b^r = (b^m)^(1 slash n)$.
+    ],
+    enum.item[Prove that $b^(r+s) = b^r b^s$ if $r$ and $s$ are rational.],
+    enum.item[If $x$ is real, define $B(x)$ to be the set of all numbers $b^t$, where $t$ is rational and $t lt.eq x$. Prove that
+
+        $
+            b^r = sup B(r)
+        $
+
+        where $r$ is rational. Hence it makes sense to define
+
+        $
+            b^x = sup B(x)
+        $
+
+        for every real $x$.],
+)]
+
+First note that if $x$ is a real positive number then for any integers $m, n$
+
+$
+    (x^m)^n &= underbrace((x dots.c x), m "terms")^n
+        =  overbrace(underbrace((x dots.c x), m "terms")  dotsop (x dots.c x), n "times") \
+        &= underbrace(x dots.c x, m n "terms")
+        =  overbrace(underbrace((x dots.c x), n "terms")  dotsop (x dots.c x), m "times") \
+        &= underbrace((x dots.c x), n "terms")^m
+        = (x^n)^m.
+$
+and
+
+$
+    x^(m+n) = underbrace(x dotsop x, m+n "terms") = underbrace(x dots.c x, m "terms") dot.op underbrace(x dots.c x, n "terms") = x^m x^n.
+$
+
+#enum(
+    numbering: "(a)",
+    enum.item[
+
+        Since $n$ is a positive integer and $b > 1$ we know that there exists a number $alpha$ such that $alpha^n = b$ by Theorem 1.21. Therefore $b^m = (alpha^n)^m = (alpha^m)^n$. Uniqueness of Theorem 1.21 gives us that $alpha^m = (b^m)^(1 slash n).$ Now we write $b^p$ in terms of $alpha$
+
+        $
+            b^p = (alpha^n)^p = (alpha^m)^q,
+        $
+
+        where we used the assumption that $m q = n p.$ Since $q>0$ uniqueness of Theorem 1.21 gives us that $alpha^m = (b^p)^(1 slash q).$ Hence
+
+        $
+            (b^m)^(1 slash n) = alpha^m = (b^p)^(1 slash q).
+        $
+
+        This completes the proof.
+
+    ],
+    enum.item[
+        Since $r, s$ are rational we can find integers such that $r = m slash n$ and $s = p slash q$ with $n > 0$ and $q > 0$. Using the result in (a) we can write
+
+        $
+            b^(r+s) = b^(m / n + p / q) = (b^(m q + p n))^(1 / (n q)) = (b^(m q) dot.op b^(p n))^(1 / (n q)).
+        $
+
+        By the corollary to Theorem 1.21 we have that
+
+        $
+            (b^(m q) dot.op b^(p n))^(1 / (n q)) = (b^(m q))^(1/(n q)) dot.op (b^(p n))^(1 / (n q)).
+        $
+
+        Thus
+
+        $
+
+            b^(r+s) = (b^(m q))^(1/(n q)) dot.op (b^(p n))^(1 / (n q)) = b^r b^s,
+        $
+
+        as desired
+
+    ],
+    enum.item[
+        Suppose $p, q$ are rationals such that $p lt.eq q$. From (b) we have that $b^q = b^(p+k) = b^p b^k$ for some rational $k gt.eq 0$. Recall that $b>1$ is fixed, hence $b^k gt.eq 1$ and it follows that $b^q = b^p b^k gt.eq b^p.$ Since $t lt.eq r$ we can establish that $b^r$ is an upper bound to $B(r)$.
+
+        Furthermore, since $r lt.eq r$ we know that $b^r in B(r)$. Hence any number $gamma < b^r$ cannot be an upper bound to $B(r)$ because it is strictly less than at least one member of $B(r)$. If on the other hand $gamma$ is such that $b^r < gamma$, then $gamma$ is not the _least_ upper bound of $B(r)$ because $b^r$ is a smaller. Therefore we have shown that $b^r = sup B(r)$.
+    ],
+)
 
 #pagebreak()
 
