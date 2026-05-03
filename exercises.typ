@@ -181,6 +181,51 @@ $
     ],
 )
 
+=== Exercise 1.7
+#quote(block: true)[Fix $b>1, y>0,$ and prove that there is a unique real $x$ such that $b^x = y$, by completing the following outline. (This $x$ is called the logarithm of $y$ to the base of $b$.)
+
+    #enum(
+        numbering: "(a)",
+        enum.item[For any positive integer $n, b^n -1 gt.eq n(b-1).$],
+        enum.item[Hence $b-1 gt.eq n(b^(1 slash n) - 1).$],
+        enum.item[If $t > 1$ and $n > (b-1) slash (t - 1)$, then $b^(1 slash n) < t$],
+    )
+]
+
+#enum(
+    numbering: "(a)",
+    enum.item[
+        First note that
+
+        $
+            (b&-1)(b^(n-1) + b^(n-2) + dots.c + b + 1) \
+                &=(b^n + dots.c + b^2 + b) - (b^(n-1) + dots.c + b + 1) \
+                &= b^n + (b^(n-1) - b^(n-1)) + (b^(n-2) - b^(n-2)) + dots.c + (b - b) - 1 \
+                &= b^n - 1.
+        $
+
+        Since $b>1$ is fixed we have that
+
+        $
+            b^n - 1 &= (b-1)(b^(n-1) + dots.c + b + 1)  \
+                &gt.eq (b - 1)(1 + dots.c + 1 + 1)  \
+                &= n(b-1),
+        $
+
+        as desired.
+    ],
+    enum.item[By Theorem 1.21 there exists a number $alpha$ such that $alpha^n = b$. If $0 < alpha <= 1$ then $alpha^n = alpha dotsop alpha lt.eq 1 dotsop 1 = 1$. But $b > 1$ is fixed which implies that $alpha > 1$. Therefore we can put $alpha$ in (a) to get that
+
+        $
+            alpha^n - 1 gt.eq n(alpha - 1).
+        $
+
+        Substituting $b$ back we obtain the result.
+    ],
+    enum.item[],
+)
+
+
 #pagebreak()
 
 == Chapter 2
