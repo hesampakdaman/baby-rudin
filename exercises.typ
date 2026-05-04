@@ -189,6 +189,7 @@ $
         enum.item[For any positive integer $n, b^n -1 gt.eq n(b-1).$],
         enum.item[Hence $b-1 gt.eq n(b^(1 slash n) - 1).$],
         enum.item[If $t > 1$ and $n > (b-1) slash (t - 1)$, then $b^(1 slash n) < t$],
+        enum.item[If $w$ is such that $b^w < y$, then $b^(w+ (1 slash n)) < y$ for sufficiently large $n$; to see this, apply part (c) with $t= y dot.op b^(-w).$],
     )
 ]
 
@@ -214,6 +215,7 @@ $
 
         as desired.
     ],
+
     enum.item[By Theorem 1.21 there exists a number $alpha$ such that $alpha^n = b$. If $0 < alpha <= 1$ then $alpha^n = alpha dotsop alpha lt.eq 1 dotsop 1 = 1$. But $b > 1$ is fixed which implies that $alpha > 1$. Therefore we can put $alpha$ in (a) to get that
 
         $
@@ -222,7 +224,50 @@ $
 
         Substituting $b$ back we obtain the result.
     ],
+
+    enum.item[We use the result in (b)
+
+        $
+            b - 1 gt.eq n (b^(1 slash n) - 1) > (b-1) / (t-1) (b^(1 slash n) - 1).
+        $
+
+        Since $b > 1$ we can multiply both side by $(t - 1) slash (b - 1)$
+
+        $
+            t - 1  > b^(1 slash n) - 1.
+        $
+
+        This shows that $b^(n slash 1) < t$.
+    ],
+
+    enum.item[Because $b^w < y$ we know that $t = y dot.op b^(-w) = y slash b^w > 1$. If we choose $n$ large enough so that $n > (b-1) slash (y dot.op b^(-w) - 1)$ holds, then we can use the result in (c)
+
+    $
+        &b^(1 slash n) < t = y dot.op b^(-w) \
+            &b^(w + (1 slash n)) < y
+    $
+
+    ],
+
+    enum.item[In similar vein to (d) we set $t = b^w slash y$ and note that $t > 1$ since $b^w > y$. We choose $n$ sufficiently large so that $n >(t-1)slash(b-1)$ and apply (c) again
+
+        $
+            &b^(1 slash n) < t = b^(w) slash y \
+            &y < b^(w - 1 slash n) \
+        $
+
+    ],
     enum.item[],
+    enum.item[
+        Suppose not, then there exists a number $x' != x$ such that $b^x' = y$. Hence
+
+        $
+            1 = y / y = b^x' / b^x = b^(x' - x).
+        $
+
+        Recall that $b > 1$ is fixed, so the only way to satisfy $b^w = 1$ is iff $w = 0$. This would mean that $x - x' = 0$ which contradicts the fact that $x' != x$.
+    ],
+
 )
 
 
