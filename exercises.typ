@@ -190,6 +190,9 @@ $
         enum.item[Hence $b-1 gt.eq n(b^(1 slash n) - 1).$],
         enum.item[If $t > 1$ and $n > (b-1) slash (t - 1)$, then $b^(1 slash n) < t$],
         enum.item[If $w$ is such that $b^w < y$, then $b^(w+ (1 slash n)) < y$ for sufficiently large $n$; to see this, apply part (c) with $t= y dot.op b^(-w).$],
+        enum.item[If $b^w > y$, then $b^(w-(1 slash n)) > y$ for sufficiently large $n$.],
+        enum.item[Let $A$ be the set of all $w$ such that $b^w < y$, and show that $x=sup A(x)$ satisfies $b^x = y$.],
+        enum.item[Prove that this $x$ is unique.],
     )
 ]
 
@@ -257,7 +260,13 @@ $
         $
 
     ],
-    enum.item[],
+    enum.item[Assume $b^x < y$, then by construction of $A$ we know that $x in A$. Use the result in (d) to get that $b^(x + (1 slash n)) < y$ which implies that $x+1 slash n in A$ for sufficiently large $n$. However, $x < x + 1 slash n in A$ contradicts the fact that $x= sup A$.
+
+        If we on the other hand assume $b^x > y$, then by (e) we have that $b^(x - (1 slash n)) > y$ for sufficiently large $n$. Since $x > x - 1 slash n$ we have found a smaller upper bound to $A$ than $x$. But that is absurd since $x = sup A$.
+
+        This shows that $b^x = y$ and concludes the proof.
+
+    ],
     enum.item[
         Suppose not, then there exists a number $x' != x$ such that $b^x' = y$. Hence
 
@@ -265,9 +274,9 @@ $
             1 = y / y = b^x' / b^x = b^(x' - x).
         $
 
-        Recall that $b > 1$ is fixed, so the only way to satisfy $b^w = 1$ is iff $w = 0$. This would mean that $x - x' = 0$ which contradicts the fact that $x' != x$.
+        Recall that $b > 1$ is fixed, so the only way to satisfy $b^w = 1$ is iff $w = 0$. This would mean that $x - x' = 0$ which would contradict our assumption of $x' != x$.
+        #qed
     ],
-
 )
 
 
