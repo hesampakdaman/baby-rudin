@@ -177,7 +177,7 @@ $
     enum.item[
         Suppose $p, q$ are rationals such that $p lt.eq q$. From (b) we have that $b^q = b^(p+k) = b^p b^k$ for some rational $k gt.eq 0$. Recall that $b>1$ is fixed, hence $b^k gt.eq 1$ and it follows that $b^q = b^p b^k gt.eq b^p.$ Since $t lt.eq r$ we can establish that $b^r$ is an upper bound to $B(r)$.
 
-        Furthermore, since $r lt.eq r$ we know that $b^r in B(r)$. Hence any number $gamma < b^r$ cannot be an upper bound to $B(r)$ because it is strictly less than at least one member of $B(r)$. If on the other hand $gamma$ is such that $b^r < gamma$, then $gamma$ is not the _least_ upper bound of $B(r)$ because $b^r$ is a smaller. Therefore we have shown that $b^r = sup B(r)$.
+        Furthermore, since $r lt.eq r$ we know that $b^r in B(r)$. Hence any number $gamma < b^r$ cannot be an upper bound to $B(r)$ because it is strictly less than at least one member of $B(r)$. If on the other hand $gamma$ is such that $gamma > b^r$, then $gamma$ is not the _least_ upper bound of $B(r)$ because $b^r$ is a smaller. Therefore we have shown that $b^r = sup B(r)$.
     ],
 )
 
