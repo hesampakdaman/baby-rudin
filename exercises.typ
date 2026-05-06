@@ -296,9 +296,10 @@ $
 
 where we used proposition 1.16 (d). As we can see this does not satisfy property 1.17 (ii) either.
 
-Hence any order on $CC$ does not satisfy property 1.17 (ii). But this is absurd since any ordered field must satisfy 1.17 (ii).
+Hence any order on $CC$ does not satisfy property 1.17 (ii). But this is absurd since $CC$ is assumed to be an ordered field.
 
 #qed
+
 
 
 #pagebreak()
