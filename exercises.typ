@@ -20,7 +20,8 @@
 
 #let qed = [#h(1fr) $qed$]
 #let dotsop = $dot.op dot.op dot.op$
-
+#let Re = math.op("Re")
+#let Im = math.op("Im")
 
 == Chapter 1
 === Exercise 1.1
@@ -300,7 +301,28 @@ Hence any order on $CC$ does not satisfy property 1.17 (ii). But this is absurd 
 
 #qed
 
+=== Exercise 1.9
+#quote(block: true)[Suppose $z = a + b i, w = c + d i$. Define $z < w$ if $a < c$, and also if $a=c$ but $b<d$. Prove that this turns the set of all complex numbers into an ordered set. (This type of order relation is called a _dictionary order_, or _lexicographic order_, for obvious reasons.) Does this ordered set have the least-upper-bound property?]
 
+We check that this order on $CC$ satisfies properties 1.5 (i) and (ii). Clearly (i) holds using the new order relation together with the structure of $RR$. Next, let $x = e + f i$ such that $z < w$ and $w < x$. Since $z < w$, then $a < c$ or $a = c$ and $b < d$. The same two cases holds for $w, x$ since $w < x$.
+
+- If $z < w$ such that $a <= c$ and $w < x$ such that $c < e$, then $a <= c < e => z < x$.
+- If $z < w$ such that $a < c$ and $w < x$ such that $c = e$, then $a < c = e => z < x$.
+- If $z < w$ such that $a = c$, $b < d$ and $w < x$ such that $c = e$, $d < f$, then $b < d < f => z < x$.
+
+This shows that the _dictionary order_ turns the complex numbers into an ordered set.
+
+Now suppose this ordered set has the least-upper-bound property. For an arbitrary complex number $z$, let $E subset CC$ be the set of all numbers $v$ such that $Re(v) < Re(z)$. It is clear that $E$ is non-empty and bounded above. Then $alpha = sup E$ exists.
+
+If $alpha in E$ then it is true that $Re(alpha) < Re(z)$ by construction of $E$. Let $u$ be a complex number such that $Re(u) = (Re(alpha) + Re(z)) slash 2$ and note that
+
+$
+    Re(alpha) = frac(2 Re(alpha), 2) < frac(Re(alpha) + Re(z), 2) < Re(z).
+$
+
+This shows that $Re(alpha) < Re(u)$ which implies $alpha < u$ by dictionary order. Furthermore, since $ Re(u) < Re(z)$ we have that $u in E$. But this contradicts $alpha$ being an upper-bound to $E$.
+
+Assume therefore that $alpha in.not E$ and let $v$ be any number in $E$. Put $beta = Re(alpha) + (Im(alpha) - 1)i$. Since $alpha in.not E$ we have that $Re(v) < Re(z) lt.eq Re(alpha) = Re(beta)$. By the dictionary order we have that $v < beta$. Hence $beta$ is an upper-bound to $E$. Because $beta$ is chosen such that $Im(beta) < Im(alpha)$ it follows that $beta < alpha$. But this is absurd since $alpha$ is assumed to be the _least_ upper-bound to $E$. This shows that $alpha$ cannot exist and hence the initial assumption of least upper-bound property is false.
 
 #pagebreak()
 
