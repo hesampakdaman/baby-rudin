@@ -279,6 +279,27 @@ $
     ],
 )
 
+=== Exercise 1.8
+#quote(block: true)[Prove that no order can be defined in the complex field that turns it into an ordered field. _Hint:_ $-1$ is a square.]
+
+Consider any order that would turn $CC$ into an ordered field. This means that property 1.17 (ii) holds. If in this order $i >0$ then
+
+$
+    i dot.op i = i^2 = -1,
+$
+
+does not satisfy property (ii) of 1.17. Assume therefore that $i < 0$ is true. By proposition 1.18 (a) $-i > 0$ and
+
+$
+    (-i) dot.op (-i) = i^2 = -1,
+$
+
+where we used proposition 1.16 (d). As we can see this does not satisfy property 1.17 (ii) either.
+
+Hence any order on $CC$ does not satisfy property 1.17 (ii). But this is absurd since any ordered field must satisfy 1.17 (ii).
+
+#qed
+
 
 #pagebreak()
 
