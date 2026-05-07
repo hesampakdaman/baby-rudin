@@ -393,6 +393,27 @@ Because $r > 0$ we have that $w = v$ and we get a contradiction since we assumed
 
 #qed
 
+=== Exercise 1.12
+#quote(block: true)[If $z_1, dots, z_n$ are complex, prove that
+
+    $
+        |z_1 + z_2 + dots.c + z_n| lt.eq |z_1| + |z_2| + dots.c + |z_n|.
+    $
+]
+
+We shall prove the statement using induction on $n$. The base case $n = 1$ is clearly true. Now assume the statement holds for $n = k$. Note that $sum_(i=1)^k z_i$ is a complex number since $CC$ is closed under addition. We have that
+
+$
+    |z_1 + z_2 + dots.c + z_(k+1)| &= abs(sum_(i=1)^k z_i + z_(k+1)) \
+        &= |(z_1 + z_2 + dots.c + z_k) + z_(k+1)| \
+        &<= |z_1 + z_2 + dots.c + z_k| + |z_(k+1)| \
+        &<= |z_1| + |z_2| + dots.c + |z_(k+1)|,
+$
+
+where we have used Theorem 1.33 (e) for the first inequality and the induction hypothesis for the latter.
+
+#qed
+
 == Chapter 2
 #let algebraicset = $cal(A)$
 #let integers = $bb(Z)$
