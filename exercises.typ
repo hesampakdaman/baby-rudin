@@ -436,6 +436,29 @@ where we used Theorem 1.33 for the following: $|overline(z)| = |z|$, $|z w| = |z
 
 #qed
 
+=== Exercise 1.14
+#quote(block: true)[If $z$ is a complex number such that $|z| = 1$, that is, such that $z overline(z) = 1$, compute
+
+    $
+        abs(1 + z)^2 + abs(1-z)^2.
+    $
+]
+
+We use Theorem 1.31 (a), and note that $1$ is its own conjugate, in the calculation below
+
+$
+  |1 + z|^2 &= (1 + z)(1 + overline(z)) = 1 + z + overline(z) + z overline(z) \
+             &= 2 + 2 Re(z).
+$
+
+In the expression above put $-z$ in place of $z$ to get $|1 - z|^2 = 2 - 2 Re(z)$. Hence
+
+$
+  |1 + z|^2 + |1 - z|^2 = 4.
+$
+
+#qed
+
 == Chapter 2
 #let algebraicset = $cal(A)$
 #let integers = $bb(Z)$
