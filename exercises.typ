@@ -414,6 +414,28 @@ where we have used Theorem 1.33 (e) for the first inequality and the induction h
 
 #qed
 
+=== Exercise 1.13
+#quote(block: true)[If $x$, $y$ are complex, prove that
+
+    $
+        abs(|x| - |y|) <= |x - y|.
+    $
+]
+
+We follow the same outline for the proof to 1.33 (e). As noted in that proof recall that $z overline(w) + overline(z) w = 2Re(z overline(w))$. Then we can write
+
+$
+  abs(|x| - |y|)^2 &= |x|^2 - 2|x||y| + |y|^2 \
+      &= x overline(x) - 2|x y| + y overline(y) \
+      &<= x overline(x) - 2 Re(x overline(y)) + y overline(y) \
+      &= x overline(x) - x overline(y) - overline(x) y + y overline(y) \
+      &= |x - y|^2,
+$
+
+where we used Theorem 1.33 for the following: $|overline(z)| = |z|$, $|z w| = |z||w|$ and $|Re(z)| <= |z|$.
+
+#qed
+
 == Chapter 2
 #let algebraicset = $cal(A)$
 #let integers = $bb(Z)$
