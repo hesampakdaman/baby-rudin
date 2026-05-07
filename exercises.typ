@@ -310,9 +310,9 @@ We check that this order on $CC$ satisfies properties 1.5 (i) and (ii). Clearly 
 - If $z < w$ such that $a < c$ and $w < x$ such that $c = e$, then $a < c = e => z < x$.
 - If $z < w$ such that $a = c$, $b < d$ and $w < x$ such that $c = e$, $d < f$, then $b < d < f => z < x$.
 
-This shows that the _dictionary order_ turns the complex numbers into an ordered set.
+This shows that the dictionary order turns the complex numbers into an ordered set.
 
-Now suppose this ordered set has the least-upper-bound property. For an arbitrary complex number $z$, let $E subset CC$ be the set of all numbers $v$ such that $Re(v) < Re(z)$. It is clear that $E$ is non-empty and bounded above. Then $alpha = sup E$ exists.
+Now suppose this ordered set has the least-upper-bound property. For an arbitrary complex number $z$, let $E subset CC$ be the set of all numbers $v$ such that $Re(v) < Re(z)$. It is clear that $E$ is nonempty and bounded above, hence $alpha = sup E$ exists.
 
 If $alpha in E$ then it is true that $Re(alpha) < Re(z)$ by construction of $E$. Let $u$ be a complex number such that $Re(u) = (Re(alpha) + Re(z)) slash 2$ and note that
 
@@ -322,7 +322,7 @@ $
 
 This shows that $Re(alpha) < Re(u)$ which implies $alpha < u$ by dictionary order. Furthermore, since $ Re(u) < Re(z)$ we have that $u in E$. But this contradicts $alpha$ being an upper-bound to $E$.
 
-Assume therefore that $alpha in.not E$ and let $v$ be any number in $E$. Put $beta = Re(alpha) + (Im(alpha) - 1)i$. Since $alpha in.not E$ we have that $Re(v) < Re(z) lt.eq Re(alpha) = Re(beta)$. By the dictionary order we have that $v < beta$. Hence $beta$ is an upper-bound to $E$. Because $beta$ is chosen such that $Im(beta) < Im(alpha)$ it follows that $beta < alpha$. But this is absurd since $alpha$ is assumed to be the _least_ upper-bound to $E$. This shows that $alpha$ cannot exist and hence the initial assumption of least upper-bound property is false.
+Assume therefore that $alpha in.not E$ and let $v$ be any number in $E$. Put $beta = Re(alpha) + (Im(alpha) - 1)i$. Since $alpha in.not E$ we have that $Re(v) < Re(z) lt.eq Re(alpha) = Re(beta)$. By dictionary order we have that $v < beta$. Hence $beta$ is an upper-bound to $E$. Because $beta$ is chosen such that $Im(beta) < Im(alpha)$ it follows that $beta < alpha$. But this is absurd since $alpha$ is assumed to be the _least_ upper-bound to $E$. This shows that $alpha$ cannot exist and hence the initial assumption of least upper-bound property is false.
 
 #pagebreak()
 
