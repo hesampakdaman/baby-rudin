@@ -324,6 +324,44 @@ This shows that $Re(alpha) < Re(u)$ which implies $alpha < u$ by dictionary orde
 
 Assume therefore that $alpha in.not E$ and let $v$ be any number in $E$. Put $beta = Re(alpha) + (Im(alpha) - 1)i$. Since $alpha in.not E$ we have that $Re(v) < Re(z) lt.eq Re(alpha) = Re(beta)$. By dictionary order we have that $v < beta$. Hence $beta$ is an upper-bound to $E$. Because $beta$ is chosen such that $Im(beta) < Im(alpha)$ it follows that $beta < alpha$. But this is absurd since $alpha$ is assumed to be the _least_ upper-bound to $E$. This shows that $alpha$ cannot exist and hence the initial assumption of least upper-bound property is false.
 
+#qed
+
+=== Exercise 1.10
+#quote(block: true)[Suppose $z = a + b i$, $w = u + i v$, and
+
+    $
+        a = ((|w| + u) / 2)^(1 / 2), quad b = ((|w| - u) / 2)^(1 / 2).
+    $
+
+    Prove that $z^2 = w$ if $v gt.eq 0$ and that $(overline(z))^2$ if $v lt.eq 0$. Conclude that every complex number (with one exception!) has two complex square roots.]
+
+First note that $u <= sqrt(u^2) <= sqrt(u^2 + v^2) = |w|$ using Theorem 1.18 (d). Hence $|w| + u >= 0$ and $|w| - u >= 0$. Therefore we may use the corollary to Theorem 1.21 in the simplification below
+
+$
+  2a b &= 2 ((|w| + u) / 2)^(1/2) ((|w| - u) / 2)^(1/2) \
+       &= ((|w| + u)(|w| - u))^(1/2) = (|w|^2 - u^2)^(1/2) \
+       &= (u^2 + v^2 - u^2)^(1/2) = |v|.
+$
+
+We also have the following simplification,
+
+$
+  a^2 - b^2 &= (|w| + u) / 2 - (|w| - u) / 2 = u.
+$
+
+Using the results above we have that
+
+$
+  z^2 &= a^2 + i 2a b - b^2 = u + i|v| = w, quad "if" v >= 0 \
+  (overline(z))^2 &= a^2 - i 2a b - b^2 = u - i|v| = w, quad "if" v <= 0.
+$
+
+Recall that by proposition 1.16 (d) for any complex number $x$ it is true that $(-x)(-x) = (-x)^2 = x^2$.
+Hence we can conclude that for every complex number $w$, with exception for $0$, there exists two square roots.
+They are either $plus.minus z$ or $plus.minus overline(z)$ depending on whether $Im(w)$ is positive or negative, respectively.
+
+#qed
+
 #pagebreak()
 
 == Chapter 2
