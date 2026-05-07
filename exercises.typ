@@ -367,7 +367,7 @@ They are either $plus.minus z$ or $plus.minus overline(z)$ depending on whether 
 === Exercise 1.11
 #quote(block: true)[If $z$ is a complex number, prove that there exists an $r gt.eq 0$ and a complex number $w$ with $|w| = 1$ such that $z = r w$. Are $w$ and $r$ always uniquely determined by $z$?]
 
-If $z = 0$, then any $w in CC$ such that $|w| = 1$ together with $r = 0$ satisfies $z = r w$. In this case $w$ is not uniquely determined by $z$, but $r$ is.
+If $z = 0$, then any complex number $w$ such that $|w| = 1$ together with $r = 0$ satisfies $z = r w$. In this case $w$ is not uniquely determined by $z$, but $r$ is.
 
 Assume that $z != 0$. Put $r = |z|$ and $w = z dot.op 1 slash|z|$. Since the real number $1 slash|z|$ is the multiplicative inverse of the real number $|z|$, then clearly $|w| = 1$ by field axiom (M5) and Theorem 1.31 (b). Now we show that $z$ can be written as $r w$,
 
@@ -377,7 +377,13 @@ $
 
 since multiplication is commutative and $z != 0 => |z| > 0$ by Theorem 1.31 (d).
 
-Suppose the opposite, whenever $z != 0$ then $r$ and $w$ are not uniquely determined by $z$. In this case there exists $q > 0$, $v != w$ such that $|v| = 1$ and $z = q v = r w$. It follows that $|z| = |r w| = |r| |w| = r = |q v| = |q| |v| = q$. Hence $r = q$ and since $z = r w = q v$,
+Suppose the opposite, whenever $z != 0$ then $r$ and $w$ are not uniquely determined by $z$. In this case there exists $q > 0$, $v != w$ such that $|v| = 1$ and $z = q v$. It follows that
+
+$
+    r = |z| = |q v| = |q| |v| = q.
+$
+
+Since $z = r w = q v$ we can write
 
 $
   0 = r w - q v = r(w - v).
