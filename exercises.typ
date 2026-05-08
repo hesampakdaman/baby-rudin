@@ -459,6 +459,25 @@ $
 
 #qed
 
+=== Exercise 1.15
+#quote(block: true)[Under what conditions does equality hold in the Schwarz inequality?]
+
+We use the same notation as in the proof of the Schwarz inequality Theorem 1.35. We already know from the proof that
+
+$
+  sum |B a_j - C b_j|^2 = B(A B - |C|^2) >= 0.
+$
+
+Equality only holds if the expression above equals $0$. If $B = 0$ the solution is trivial and therefore we assume $B > 0$. The sum $sum |B a_j - C b_j|^2$ consists of non-negative terms and can only equal $0$ if $|B a_j - C b_j|^2 = 0$ for any $1 <= j <= n$. The absolute value of any complex number can only equal $0$ if that complex number is $0$ by Theorem 1.31 (d). Hence
+
+$
+  B a_j - C b_j = 0 quad => quad a_j = C / B b_j.
+$
+
+We can see here that if $a_j$ satisfy the relation above, then equality holds in the Schwarz inequality.
+
+#pagebreak()
+
 == Chapter 2
 #let algebraicset = $cal(A)$
 #let integers = $bb(Z)$
