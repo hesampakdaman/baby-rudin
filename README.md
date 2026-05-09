@@ -1,6 +1,4 @@
-# Exercises
-
-## Chapter 1 (incomplete)
-- 16
-- 19
-- 20
+# Incomplete exercises
+- 1.16
+- 1.19
+- 1.20
