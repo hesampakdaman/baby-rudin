@@ -180,7 +180,44 @@ $
 
         Furthermore, since $r lt.eq r$ we know that $b^r in B(r)$. Hence any number $gamma < b^r$ cannot be an upper bound to $B(r)$ because it is strictly less than at least one member of $B(r)$. If on the other hand $gamma$ is such that $gamma > b^r$, then $gamma$ is not the _least_ upper bound of $B(r)$ because $b^r$ is a smaller. Therefore we have shown that $b^r = sup B(r)$.
     ],
+
+    enum.item[
+        Assume $b^(x+y) < b^x b^y$. Let $A$ be the set which consists of all numbers $b^p b^q$ where $p, q$ are rationals and $p <= x$, $q <= y$ holds. It is clear that $b^x b^y = sup A$ because $b > 1$. Furthermore $b^(x+y) = sup B(x+y)$ by (c). Take any number $b^r b^s in A$, this means $r <= x$ and $s <= y$ and we get that $r + s <= x + y$. Because $r, s$ are rationals it follows that
+
+        $
+            b^r b^s = b^(r+s) in B(x+y).
+        $
+
+        But this leads to a contradiction because that would make $b^(x+y) = sup A$.
+
+        Now assume $b^x b^y < b^(x+y)$. Throughout this argument $t lt.eq x + y$ so that $b^t in B(x+y)$. We now show that it is possible to find rationals $r, s$ such that $t <= r + s <= x + y$ where $r <= x$ and $s <= y$.
+
+        Suppose #smallcaps[wlog] that $x lt.eq y < t$, then $t <= x + y => t - y <= x$ which means that we can find a rational $r$ such that $t - y <= r <= x$ by Theorem 1.20 (b). It follows that $s = t - r <= y$. We know that $s$ is rational since both $t$ and $r$ are. Hence
+
+        $
+            t = r + t - r = r + s <= x + y.
+        $
+
+        In case the assumption that $x lt.eq y < t$ is not true, then at least one of $x$ or $y$ is greater than or equal to $t$. #smallcaps[wlog] let $t <= y$ so that $t <= x + y => t - y <= x$. By Theorem 1.20 (b) we can find a rational $r$ such that $t - y <= r <= x$ which implies that $s = t - r <= y$. Then
+
+        $
+            t = r + t - r = r + s <= x + y.
+        $
+
+        We have now shown that for any $t <= x + y$, we can find rationals $r <= x, s <= y$ such that $t = r + s <= x + y$. Therefore $b^r in B(x)$ and $b^s in B(y)$. Because $b > 1$ we have
+
+        $
+            b^t = b^(r+s) = b^r b^s <= b^x b^y < b^(x + y).
+        $
+
+        This implies that $b^x b^y$ is an upper-bound to $B(x+y)$. But this contradicts $b^(x + y)$ being the _least_ upper bound of $B(x+y)$.
+
+        We have show that both assumptions $b^x b^y < b^(x+y)$ and $b^x b^y > b^(x+y)$ leads to contradiction. The only remaining alternative is that $b^(x+y) = b^x b^y$ as desired.
+    ],
 )
+#qed
+
+
 
 === Exercise 1.7
 #quote(block: true)[Fix $b>1, y>0,$ and prove that there is a unique real $x$ such that $b^x = y$, by completing the following outline. (This $x$ is called the logarithm of $y$ to the base of $b$.)
