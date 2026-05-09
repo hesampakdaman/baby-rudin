@@ -19,11 +19,10 @@
 }
 
 #let qed = [#h(1fr) $qed$]
-#let dotsop = $dot.op dot.op dot.op$
-#let Re = math.op("Re")
-#let Im = math.op("Im")
 
 == Chapter 1
+#let dotsop = $dot.op dot.op dot.op$
+
 === Exercise 1.1
 #quote(block: true)[If $r$ is rational ($r != 0$) and $x$ is irrational, prove that $r + x$ and $r x$ are irrational.]
 Suppose $r + x$ is rational. Then there exists integers $m, n$ such that
@@ -339,6 +338,9 @@ Hence any order on $CC$ does not satisfy property 1.17 (ii). But this is absurd 
 #qed
 
 === Exercise 1.9
+#let Im = math.op("Im")
+#let Re = math.op("Re")
+
 #quote(block: true)[Suppose $z = a + b i, w = c + d i$. Define $z < w$ if $a < c$, and also if $a=c$ but $b<d$. Prove that this turns the set of all complex numbers into an ordered set. (This type of order relation is called a _dictionary order_, or _lexicographic order_, for obvious reasons.) Does this ordered set have the least-upper-bound property?]
 
 We check that this order on $CC$ satisfies properties 1.5 (i) and (ii). Clearly (i) holds using the new order relation together with the structure of $RR$. Next, let $x = e + f i$ such that $z < w$ and $w < x$. Since $z < w$, then $a < c$ or $a = c$ and $b < d$. The same two cases holds for $w, x$ since $w < x$.
@@ -513,6 +515,98 @@ $
 
 We can see here that if $a_j$ satisfy the relation above, then equality holds in the Schwarz inequality.
 
+=== Exercise 1.16
+#let bvec(v) = math.bold(math.upright(v))
+
+#quote(block: true)[Suppose $k >= 3$, $bvec(x), bvec(y) in RR^k$, $abs(bvec(x) - bvec(y)) = d > 0$, and $r > 0$. Prove:
+    #enum(
+        numbering: "(a)",
+        enum.item[If $2r > d$, there are infinitely many $bvec(z) in RR^k$ such that
+            $
+                abs(bvec(z) - bvec(x)) = abs(bvec(z) - bvec(y)) = r.
+            $
+        ],
+        enum.item[If $2r = d$, there is exactly one such $bvec(z)$.],
+        enum.item[If $2r < d$, there is no such $bvec(z)$.],
+    )
+    How must these statements be modified if $k$ is $2$ or $1$?
+]
+
+Intuitively, $abs(bvec(x) - bvec(y)) = d$ is the diameter of a hyper-sphere with ends $bvec(x)$ and $bvec(y)$. All vectors $bvec(z)$ that are equidistant to $bvec(x)$ and $bvec(y)$ form a circular cross-section of this sphere with midpoint on the line $bvec(x) - bvec(y)$. This cross-section is perpendicular to the line $bvec(x) - bvec(y)$.
+
+#linebreak()
+
+#enum(
+    numbering: "(a)",
+    enum.item[Write $bvec(z)$ in terms of midpoint between $bvec(x)$ and $bvec(y)$, that is to say
+
+        $
+            bvec(z) = (bvec(x) + bvec(y)) / 2 + bvec(a),
+        $
+
+        for some vector $bvec(a)$. Note that any vector $bvec(z) in RR^k$ can be written this way. We know that $abs(bvec(z) - bvec(x))^2 = abs(bvec(z) - bvec(y))^2$ so substituting $bvec(z)$ we get
+
+        $
+            abs((bvec(y) - bvec(x))/2 + bvec(a))^2 = abs((bvec(x) - bvec(y))/2 + bvec(a))^2.
+        $
+
+        Expanding both sides and using the fact that $abs(bvec(x) - bvec(y)) = abs(bvec(x) - bvec(y))$ we get
+
+        $
+            bvec(a) dot.op (bvec(x) - bvec(y)) = 0.
+        $
+
+        Since $|bvec(x) - bvec(y)| = d > 0$ we also have that
+
+        $
+            r^2 &= abs(bvec(z) - bvec(x))^2 = abs((bvec(y) - bvec(x))/2 + bvec(a))^2 \
+                &= abs(bvec(y) - bvec(x))^2 / 4 + |bvec(a)|^2 \
+                &= d^2 / 4 + |bvec(a)|^2.
+        $
+
+        Hence $|bvec(a)| = sqrt(r^2 - d^2 slash 4)$.
+
+        We now show how to construct $bvec(a)$. Let $n$ be the first coordinate of $bvec(x) - bvec(y)$ that is nonzero. There is at least one such coordinate since $abs(bvec(x) - bvec(y)) = d > 0$. Let $bvec(v)$ be a vector for which all $k-1$ coordinates except the $n$th are freely chosen. We set $v_n$ to
+
+        $
+            v_n = (-1) / (x_n - y_n) thick sum_(i=1, i != n)^k v_i (x_i - y_i),
+        $
+
+        so that
+
+        $
+            bvec(v) dot.op (bvec(x) - bvec(y)) &= sum_(i=1)^k v_i (x_i - y_i) \
+                &= sum_(i=1, i!=n)^k v_i (x_i - y_i) + v_n (x_n - y_n) \
+                &= sum_(i=1, i!=n)^k v_i (x_i - y_i) - (x_n - y_n) / (x_n - y_n) thick sum_(i=1, i != n)^k v_i (x_i - y_i) \
+                &= 0.
+        $
+
+        If we set
+
+        $
+            bvec(a) = sqrt(r^2 - d^2 slash 4) dot.c bvec(v) / abs(bvec(v)),
+        $
+
+        then the vector $bvec(a)$ has the correct norm and is perpendicular to the line $bvec(x) - bvec(y)$. Since $k-1$ coordinates of $bvec(v)$ are arbitrary, this shows that there are infinitely many such $bvec(z)$.
+    ],
+    enum.item[If $2r = d$, then we can see that $|bvec(a)| = sqrt(r^2 - d^2 slash 4) = 0$. It follows that $bvec(a) = bvec(0)$ by Theorem 1.37. Hence
+
+        $
+            bvec(z) = (bvec(x) + bvec(y)) / 2,
+        $
+
+        is the only solution.
+    ],
+    enum.item[From (a) we know that $|bvec(a)| = sqrt(r^2 - d^2 slash 4)$. If $2r < d$ then $|bvec(a)| < 0$. But this is absurd, since for any vector $bvec(v) in RR^k$ we know that $abs(bvec(v)) >= 0$. It follows therefore that $bvec(z)$ cannot exists.
+    ],
+)
+
+#linebreak()
+
+We now note how statement (a) changes for smaller $k$. For $k=2$ there are exactly two such $bvec(z)$ and for $k=1$ there are none. Statements (b) and (c) remain unchanged for $k >= 1$.
+
+#qed
+
 #pagebreak()
 
 == Chapter 2
@@ -523,7 +617,6 @@ We can see here that if $a_j$ satisfy the relation above, then equality holds in
 #let rationals = $bb(Q)$
 #let reals = $bb(R)$
 #let closure(X) = $overline(#X)$
-#let bvec(v) = $bold(upright(#v))$
 
 === Exercise 2.1
 #quote(block: true)[Prove that the empty set is a subset of every set.]
