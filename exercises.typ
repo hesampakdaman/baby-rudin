@@ -566,18 +566,18 @@ Intuitively, $abs(bvec(x) - bvec(y)) = d$ is the diameter of a hyper-sphere with
 
         Hence $|bvec(a)| = sqrt(r^2 - d^2 slash 4)$.
 
-        We now show how to construct $bvec(a)$. Let $n$ be the first coordinate of $bvec(x) - bvec(y)$ that is nonzero. There is at least one such coordinate since $abs(bvec(x) - bvec(y)) = d > 0$. Let $bvec(v)$ be a vector for which all $k-1$ coordinates except the $n$th are freely chosen. We set $v_n$ to
+        We now show how to construct $bvec(a)$. Let $j$ be the first coordinate of $bvec(x) - bvec(y)$ that is nonzero. There is at least one such coordinate since $abs(bvec(x) - bvec(y)) = d > 0$. Let $bvec(v)$ be a vector for which all $k-1$ coordinates except the $j$th are chosen freely. We set $v_j$ to
 
         $
-            v_n = (-1) / (x_n - y_n) thick sum_(i=1, i != n)^k v_i (x_i - y_i),
+            v_j = (-1) / (x_j - y_j) thick sum_(i=1, i!=j)^k v_i (x_i - y_i),
         $
 
         so that
 
         $
             bvec(v) dot.op (bvec(x) - bvec(y)) &= sum_(i=1)^k v_i (x_i - y_i) \
-                &= sum_(i=1, i!=n)^k v_i (x_i - y_i) + v_n (x_n - y_n) \
-                &= sum_(i=1, i!=n)^k v_i (x_i - y_i) - (x_n - y_n) / (x_n - y_n) thick sum_(i=1, i != n)^k v_i (x_i - y_i) \
+                &= sum_(i=1, i!=j)^k v_i (x_i - y_i) + v_j (x_j - y_j) \
+                &= sum_(i=1, i!=j)^k v_i (x_i - y_i) - (x_j - y_j) / (x_j - y_j) thick sum_(i=1, i!=j)^k v_i (x_i - y_i) \
                 &= 0.
         $
 
@@ -597,7 +597,7 @@ Intuitively, $abs(bvec(x) - bvec(y)) = d$ is the diameter of a hyper-sphere with
 
         is the only solution.
     ],
-    enum.item[From (a) we know that $|bvec(a)| = sqrt(r^2 - d^2 slash 4)$. If $2r < d$ then $|bvec(a)| < 0$. But this is absurd, since for any vector $bvec(v) in RR^k$ we know that $abs(bvec(v)) >= 0$. It follows therefore that $bvec(z)$ cannot exists.
+    enum.item[From (a) we know that $|bvec(a)| = sqrt(r^2 - d^2 slash 4)$. If $2r < d$ then $|bvec(a)|$ is not a real number. But this is absurd, since for any vector $bvec(v) in RR^k$ we know that $abs(bvec(v)) >= 0$. It follows therefore that no such $bvec(z)$ can exists.
     ],
 )
 
