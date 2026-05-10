@@ -607,6 +607,29 @@ We now note how statement (a) changes for smaller $k$. For $k=2$ there are exact
 
 #qed
 
+=== Exercise 1.17
+#quote(block: true)[Prove that
+
+    $
+        abs(bvec(x) + bvec(y))^2 + abs(bvec(x) - bvec(y))^2 = 2|bvec(x)|^2 + 2|bvec(y)|^2
+    $
+
+    if $bvec(x) in RR^k$ and $bvec(y) in RR^k$. Interpret this geometrically, as a statement about parallelograms.
+]
+
+We can construct a parallelogram with sides $|bvec(x)|, |bvec(y)|$ and diagonals $|bvec(x) + bvec(y)|, |bvec(x) - bvec(y)|$. It holds that
+
+$
+    |bvec(x) + bvec(y)|^2 + |bvec(x) - bvec(y)|^2
+        &= |bvec(x)|^2 + 2 bvec(x) dot bvec(y) + |bvec(y)|^2
+        + |bvec(x)|^2 - 2 bvec(x) dot bvec(y) + |bvec(y)|^2 \
+        &= 2|bvec(x)|^2 + 2|bvec(y)|^2,
+$
+
+meaning that the sum of squares of the parallelogram's four sides equals the sum of squares of its two diagonals.
+
+#qed
+
 #pagebreak()
 
 == Chapter 2
