@@ -630,6 +630,29 @@ meaning that the sum of squares of the parallelogram's four sides equals the sum
 
 #qed
 
+=== Exercise 1.18
+#quote(block: true)[If $k >= 2$ and $bvec(x) in RR^k$, prove that there exists $bvec(y) in RR^k$ such that $bvec(y) != bvec(0)$ but $bvec(x) dot.op bvec(y) = 0$. Is this also true if $k = 1$?]
+
+If $bvec(x) = bvec(0)$ then any $bvec(y)$ satisfies $bvec(x) dot.op bvec(y) = 0$. Assume therefore that $bvec(x) != bvec(0)$. Then at least one coordinate of $bvec(x)$ is nonzero, that is $x_j != 0$ for some integer $1 <= j <= k$. Let $bvec(e)_i$ be a vector that is zero in every coordinate except the $i$th for which it is 1, i.e. $bvec(e)_i = (0, dots, 0, 1, 0, dots, 0)$ with $e_i = 1$ and $e_j = 0$ elsewhere. Put $bvec(y) = bvec(e)_n -x_n / x_j dot.op bvec(e)_j$ where $1 <= n <= k$ and $n != j$. We have that
+
+$
+    |bvec(y)|^2 &= abs(bvec(e)_n - x_n / x_j bvec(e)_j)^2 = |bvec(e)_n|^2 - 2 bvec(e)_n dot.op bvec(e)_j + x_n^2 / x_j^2 |bvec(e)_j|^2 = 1 + x_n^2 / x_j^2 > 0.
+$
+
+and it follows that $bvec(y) != bvec(0).
+
+$ The inner product is
+
+$
+    bvec(x) dot.op bvec(y) &= sum_(i=1)^k x_i y_i = x_n - x_j x_n / x_j = 0,
+$
+
+as desired.
+
+The inner product for $k = 1$ is the regular multiplication. Since $RR$ is a field, then by proposition 1.16 the statement cannot be true for $k = 1$.
+
+#qed
+
 #pagebreak()
 
 == Chapter 2
