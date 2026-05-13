@@ -550,7 +550,7 @@ Intuitively, $abs(bvec(x) - bvec(y)) = d$ is the diameter of a hyper-sphere with
             abs((bvec(y) - bvec(x))/2 + bvec(a))^2 = abs((bvec(x) - bvec(y))/2 + bvec(a))^2.
         $
 
-        Expanding both sides and using the fact that $abs(bvec(x) - bvec(y)) = abs(bvec(x) - bvec(y))$ we get
+        Expanding both sides and using the fact that $abs(bvec(y) - bvec(x)) = abs(bvec(x) - bvec(y))$ we get
 
         $
             bvec(a) dot.op (bvec(x) - bvec(y)) = 0.
@@ -560,11 +560,10 @@ Intuitively, $abs(bvec(x) - bvec(y)) = d$ is the diameter of a hyper-sphere with
 
         $
             r^2 &= abs(bvec(z) - bvec(x))^2 = abs((bvec(y) - bvec(x))/2 + bvec(a))^2 \
-                &= abs(bvec(y) - bvec(x))^2 / 4 + |bvec(a)|^2 \
-                &= d^2 / 4 + |bvec(a)|^2.
+                &= d^2 / 4 + |bvec(a)|^2
         $
 
-        Hence $|bvec(a)| = sqrt(r^2 - d^2 slash 4)$.
+        and $|bvec(a)| = sqrt(r^2 - d^2 slash 4)$.
 
         We now show how to construct $bvec(a)$. Let $j$ be the first coordinate of $bvec(x) - bvec(y)$ that is nonzero. There is at least one such coordinate since $abs(bvec(x) - bvec(y)) = d > 0$. Let $bvec(v)$ be a vector for which all $k-1$ coordinates except the $j$th are chosen freely. We set $v_j$ to
 
