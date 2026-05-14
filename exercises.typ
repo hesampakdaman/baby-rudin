@@ -666,7 +666,7 @@ The inner product for $k = 1$ is the regular multiplication. Since $RR$ is a fie
 === Exercise 2.1
 #quote(block: true)[Prove that the empty set is a subset of every set.]
 
-Let $A$ be any set, $emptyset$ be the empty set and assume the opposite. Then there exists at least one element $x in emptyset$ such that $x in.not A$. But the empty set does not contain any elements and no such $x$ can therefore be found. This is a contradiction and hence $emptyset subset A$ must be true.
+Let $A$ be any set and assume the opposite. Then there exists at least one element $x in emptyset$ such that $x in.not A$. But the empty set does not contain any elements and no such $x$ can therefore be found. This is a contradiction and hence $emptyset subset A$ must be true.
 
 #qed
 
