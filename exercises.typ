@@ -655,7 +655,6 @@ The inner product for $k = 1$ is the regular multiplication. Since $RR$ is a fie
 #pagebreak()
 
 == Chapter 2
-#let algebraicset = $cal(A)$
 #let integers = $bb(Z)$
 #let irrationals = $bb(I)$
 #let naturals = $bb(N)$
@@ -673,38 +672,38 @@ Let $A$ be any set and assume the opposite. Then there exists at least one eleme
 === Exercise 2.2
 #quote(block: true)[Prove that the set of all algebraic numbers is countable.]
 
-Let $alpha = (a_0, dots, a_n) in B_(n+1)$ be an n+1-tuple of integers. Example 2.5 shows that the set of all integers $integers$ is countable. Using Theorem 2.13 with $A = integers$ shows that the set of n+1-tuples $B_(n+1)$ is countable.
+Let $alpha = (a_0, dots, a_n) in B_(n+1)$ be an $n+1$ tuple of integers. Example 2.5 shows that the set of all integers $integers$ is countable. Using Theorem 2.13 with $A = integers$ shows that the set of $n+1$ tuples $B_(n+1)$ is countable.
 
 For particular choice of integers $a_0, dots, a_n$ we may construct an equation of the form
 
 $ a_n z^n + dots.c + a_1 z + a_0 = 0. $
 
-This polynomial has at most $n$ solutions. Let $E_alpha$ be the set of all complex numbers $z$ that is a solution to that polynomial. Hence $E_alpha$ is a finite subset of $algebraicset$ with at most $n$ elements. If $S_n$ is a set such that
+This polynomial has at most $n$ solutions. Let $E_alpha$ be the set of all complex numbers $z$ that is a solution to that polynomial. Hence $E_alpha$ is a finite subset of $cal(A)$ with at most $n$ elements. If $S_n$ is a set such that
 
 $ S_n = union.big_(alpha in B_(n+1)) E_alpha $
 
-then it is the union of a countable collection of finite sets. It follows from Theorem 2.12 that $S_n$ is at most countable. Since the union of a countable collection of at most countable sets is at most countable (follows from Theorem 2.12 again); the union
+then it is the countable union of finite sets. It follows from Theorem 2.12 that $S_n$ is at most countable. Since the union of a countable collection of at most countable sets is at most countable (follows from Theorem 2.12 again); the union
 
 $ S = union.big_(n=1)^(infinity) S_n, $
 
 is at most countable.
 
-We shall show that $algebraicset subset S$. For any $z in algebraicset$ there exist integers $a_0, dots, a_k$ such that   $a_k z^k + dots.h.c + a_1 z + a_0 = 0$. For these integers there is a k+1-tuple $alpha = (a_0, dots, a_k)$ which is associated with exactly one set $E_alpha$. Hence there exists at least one $alpha$ for which $z in E_alpha$ and therefore it follows that $algebraicset subset S$. This means that $algebraicset$ is at most countable since it is a subset of $S$.
+We shall show that $cal(A) subset S$. For any $z in cal(A)$ there exist integers $a_0, dots, a_k$ such that   $a_k z^k + dots.h.c + a_1 z + a_0 = 0$. For these integers there is a $k+1$ tuple $alpha = (a_0, dots, a_k)$ which is associated with exactly one set $E_alpha$. Hence there exists at least one $alpha$ for which $z in E_alpha$ and therefore it follows that $cal(A) subset S$. This means that $cal(A)$ is at most countable since it is a subset of $S$.
 
-Lastly we need to show that $algebraicset$ is infinite. The set of rational numbers $rationals$ is countable by the corollary to Theorem 2.13. For any $q in rationals$ there are integers $m, n$ such that $q = n/m$. Now choose $a_1 = m$ and $a_0 = -n$, then
+Lastly we need to show that $cal(A)$ is infinite. The set of rational numbers $rationals$ is countable by the corollary to Theorem 2.13. For any $q in rationals$ there are integers $m, n$ such that $q = n/m$. Now choose $a_1 = m$ and $a_0 = -n$, then
 
 $ a_1 q + a_0 = m n/m - n = 0, $
 
-which means that $q$ is algebraic. Since $q$ is arbitrary it follows that $rationals subset algebraicset$. This shows that $algebraicset$ has an infinite subset and must therefore itself be infinite. $algebraicset$ is an infinite set that is at most countable, and therefore it is countable as desired.
+which means that $q$ is algebraic. Since $q$ is arbitrary it follows that $rationals subset cal(A)$. This shows that $cal(A)$ has an infinite subset and must therefore itself be infinite. $cal(A)$ is an infinite set that is at most countable, and therefore it is countable as desired.
 
 #qed
 
 === Exercise 2.3
 #quote(block: true)[Prove that there are real numbers which are not algebraic.]
 
-Suppose not. Let $algebraicset$ be the set of all algebraic numbers. Since we assume the opposite any real number is algebraic and it follows that $reals subset algebraicset$.
+Suppose not. Let $cal(A)$ be the set of all algebraic numbers. Since we assume the opposite any real number is algebraic and it follows that $reals subset cal(A)$.
 
-From Exercise 2.2 we know that $algebraicset$ is countable. By Theorem 2.8 this would entail that $reals$ is countable, since it is an infinite subset of a countable set. But this is a contradiction since Theorem 2.43 shows that $reals$ is uncountable. Hence our assumption is false and there exists real numbers $x in reals$ such that $x in.not algebraicset$.
+From Exercise 2.2 we know that $cal(A)$ is countable. By Theorem 2.8 this would entail that $reals$ is countable, since it is an infinite subset of a countable set. But this is a contradiction since Theorem 2.43 shows that $reals$ is uncountable. Hence our assumption is false and there exists real numbers $x in reals$ such that $x in.not cal(A)$.
 
 #qed
 
