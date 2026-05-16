@@ -658,7 +658,6 @@ The inner product for $k = 1$ is the regular multiplication. Since $RR$ is a fie
 #let integers = $bb(Z)$
 #let naturals = $bb(N)$
 #let rationals = $bb(Q)$
-#let reals = $bb(R)$
 #let closure(X) = $overline(#X)$
 
 === Exercise 2.1
@@ -700,9 +699,9 @@ which means that $q$ is algebraic. Since $q$ is arbitrary it follows that $QQ su
 === Exercise 2.3
 #quote(block: true)[Prove that there are real numbers which are not algebraic.]
 
-Suppose not. Let $cal(A)$ be the set of all algebraic numbers. Since we assume the opposite any real number is algebraic and it follows that $reals subset cal(A)$.
+Suppose not. Let $cal(A)$ be the set of all algebraic numbers. Since we assume the opposite any real number is algebraic and it follows that $RR subset cal(A)$.
 
-From Exercise 2.2 we know that $cal(A)$ is countable. By Theorem 2.8 this would entail that $reals$ is countable, since it is an infinite subset of a countable set. But this is a contradiction since Theorem 2.43 shows that $reals$ is uncountable. Hence our assumption is false and there exists real numbers $x in reals$ such that $x in.not cal(A)$.
+From Exercise 2.2 we know that $cal(A)$ is countable. By Theorem 2.8 this would entail that $RR$ is countable, since it is an infinite subset of a countable set. But this is a contradiction since Theorem 2.43 shows that $RR$ is uncountable. Hence our assumption is false and there exists real numbers $x in RR$ such that $x in.not cal(A)$.
 
 #qed
 
@@ -747,7 +746,7 @@ $
 
 which gives us the result. Hence any neighborhood $N_r (k + 1/n)$ with radius $0 < r < abs(1/n - 1/(n+1)) = 1/(n(n+1))$ will contain no other points of $E_k$ except $k + 1/n$. This means that $k + 1/n$ cannot be a limit point of $E_k$.
 
-We now show that $k in.not E_k$ is a limit point of $E_k$. For any radius $r > 0$ we can find a natural number $N$ such that $1/N < r$ by using the Archemdian property of $reals$ (Thm. 1.20)
+We now show that $k in.not E_k$ is a limit point of $E_k$. For any radius $r > 0$ we can find a natural number $N$ such that $1/N < r$ by using the Archemdian property of $RR$ (Thm. 1.20)
 
 $ d (k, k + 1/N) = abs(k - ( k + 1/N )) = 1/N < r, $
 
@@ -836,11 +835,11 @@ overline(A_i)$ we've shown that the inclusion can be proper.
 #qed
 
 === Exercise 2.8
-#quote(block: true)[Is every point of every open set $E subset reals^2$ a limit point of $E$? Answer the same question for closed sets in $reals^2$.]
+#quote(block: true)[Is every point of every open set $E subset RR^2$ a limit point of $E$? Answer the same question for closed sets in $RR^2$.]
 
-We first show that every point in every open set $E subset reals^2$ is a limit point of $E$. Suppose not. Then there exists an open set $E subset reals^2$ with a point $x in E$ that is not a limit point of $E$. It follows that there exists an $r > 0$ such that the neighborhood $N_r (x)$ contains no point of $E$ except $x$.
+We first show that every point in every open set $E subset RR^2$ is a limit point of $E$. Suppose not. Then there exists an open set $E subset RR^2$ with a point $x in E$ that is not a limit point of $E$. It follows that there exists an $r > 0$ such that the neighborhood $N_r (x)$ contains no point of $E$ except $x$.
 
-Since $E$ is an open set, $x$ must be an interior point. Hence, there is a neighborhood with radius $s > 0$ such that $N_s (x) subset E$. Neighborhoods in $reals^2$ are non-empty interiors of circles, which means that $N_r$ is circle centered at $x$.
+Since $E$ is an open set, $x$ must be an interior point. Hence, there is a neighborhood with radius $s > 0$ such that $N_s (x) subset E$. Neighborhoods in $RR^2$ are non-empty interiors of circles, which means that $N_r$ is circle centered at $x$.
 
 Consider the cases for $r$ and $s$:
 
@@ -851,7 +850,7 @@ Consider the cases for $r$ and $s$:
 
 Since none of the relations $r < s$, $r = s$ and $r > s$ can be true, such an $r$ cannot exists. We've reached a contradiction and the assumption is wrong. Hence, each point of $E$ is a limit point of $E$.
 
-Now we show that the case does not hold true in general for closed sets. Consider the set of all natural numbers $naturals subset reals^2$. This set is closed, yet every point in this set is not a limit point of it.
+Now we show that the case does not hold true in general for closed sets. Consider the set of all natural numbers $naturals subset RR^2$. This set is closed, yet every point in this set is not a limit point of it.
 
 #qed
 
@@ -894,11 +893,11 @@ Conversely, let $p in overline(E^c) = E^c union E^c'$ . Then it is clear that ei
 
 
 
-(e) Let $E = (0, 1) union (1, 2)$ be a set consisting of line segments in $reals$. Since $E$ is open we have that $interior(E) = E$ by (b). The set of limit points $E'$ is the closed interval $[0, 2]$, so the closure is $overline(E) = E union E' = [0, 2]$. From here we can see that $interior((overline(E))) = (0, 2)$, which shows that $ interior(E) eq.not interior((overline(E)))$. Therefore, $E$ and $overline(E)$ do not always have the same interiors. \ \
+(e) Let $E = (0, 1) union (1, 2)$ be a set consisting of line segments in $RR$. Since $E$ is open we have that $interior(E) = E$ by (b). The set of limit points $E'$ is the closed interval $[0, 2]$, so the closure is $overline(E) = E union E' = [0, 2]$. From here we can see that $interior((overline(E))) = (0, 2)$, which shows that $ interior(E) eq.not interior((overline(E)))$. Therefore, $E$ and $overline(E)$ do not always have the same interiors. \ \
 
 
 
-(f) Consider the set $E = {1/n | n = 1, 2, 3, dots}$ as subset of $reals$. Since $0$ is the only limit point of $E$, we have that its closure is $overline(E) = E union {0}$. However, none of the points in $E$ are interior points, and therefore $interior(E) = emptyset$. This means that $overline(interior(E)) = emptyset$ so that $overline(E) eq.not overline(interior(E))$. We have shown that $E$ and $interior(E)$ do not always have the same closures.
+(f) Consider the set $E = {1/n | n = 1, 2, 3, dots}$ as subset of $RR$. Since $0$ is the only limit point of $E$, we have that its closure is $overline(E) = E union {0}$. However, none of the points in $E$ are interior points, and therefore $interior(E) = emptyset$. This means that $overline(interior(E)) = emptyset$ so that $overline(E) eq.not overline(interior(E))$. We have shown that $E$ and $interior(E)$ do not always have the same closures.
 
 
 #qed
@@ -948,7 +947,7 @@ Every subset $G_(p_n)$ is an open neighborhood around $p_n$ with radius $1$. Fro
 
 === Exercise 2.11
 #quote(block: true)[
-    For $x in reals$ and $y in reals$, define
+    For $x in RR$ and $y in RR$, define
 
 $
     d_1(x, y)& = (x - y)^2, \
@@ -969,7 +968,7 @@ $d_2$ Both 2.15 (a) and (b) are clearly true. We show that (c) is also satisfied
 
         $ sqrt(abs(x-y)) > sqrt(abs(x-r)) + sqrt(abs(r-y)). $
 
-If $0 < q < p$ then $q^2 < p^2$ for any $p, q in reals$ so that
+If $0 < q < p$ then $q^2 < p^2$ for any $p, q in RR$ so that
 
 $
     abs(x - y) &= sqrt(abs(x - y))^2 > (sqrt(abs(x-r)) + sqrt(abs(r-y)))^2 \
@@ -1030,12 +1029,12 @@ The last inequality is due to the last term being non-negative. Similar argument
 
 === Exercise 2.12
 #quote(block: true)[
-    Let $K subset reals$ consist of 0 and the numbers $1 slash n$, for $n = 1, 2, 3, dots$ . Prove that $K$ is compact directly from the definition (without using the Heine-Borel theorem).
+    Let $K subset RR$ consist of 0 and the numbers $1 slash n$, for $n = 1, 2, 3, dots$ . Prove that $K$ is compact directly from the definition (without using the Heine-Borel theorem).
 ]
 
 Let ${G_alpha}$ be any open cover of $K$. Then we know that there is an index $alpha_0$ such that $0 in G_(alpha_0)$. Since $G_(alpha_0)$ is an open set, we know that there exists a neighborhood $N_r (0)$ with radius $r > 0$ where $N_r subset G_(alpha_0)$.
 
-If $r gt.eq 1$, then $G_(alpha_0)$ covers $K$ and there is nothing to prove. Assume therefore that $r < 1$. By Archimedean property of $reals$ we can find positive integers $p$ such that $r gt.eq 1 slash p$. Let $m$ be the smallest integer such that $r gt 1 slash m$. It follows that if $q$ is an integer where $q > m$, then $r > 1 slash q$ so that $1 slash q in N_r (0)$. This shows that there are at most $m-1$ points in $E$ that are not in $N_r$,
+If $r gt.eq 1$, then $G_(alpha_0)$ covers $K$ and there is nothing to prove. Assume therefore that $r < 1$. By Archimedean property of $RR$ we can find positive integers $p$ such that $r gt.eq 1 slash p$. Let $m$ be the smallest integer such that $r gt 1 slash m$. It follows that if $q$ is an integer where $q > m$, then $r > 1 slash q$ so that $1 slash q in N_r (0)$. This shows that there are at most $m-1$ points in $E$ that are not in $N_r$,
 
 $ 1/(m-1), 1/(m-2), dots, 1/2, 1. $ \
 
@@ -1064,7 +1063,7 @@ $ E_1 = { 1, 3/4, 7/8, 15/16, 31/32, dots}. $
 
 Since the sequence ${x_k}$ is constructed by repeatedly taking midpoints between the previous term and $1/n$​, the sequence will approach the value $1/n$​, making it a limit point of $E_n$.
 
-We can show that any other point $y in reals$ such that $y eq.not 1 / n$ cannot be a limit point of $E_n$. Since $E_n$ is a countable set of values that approach $1/n$, there is a number $x_k eq.not y$ in $E_n$ that minimises $d(y, x_k)$. Then the neighborhood with $0 < r < d(y, x_k)$ will have no point of $E_n$ (other than possibly $y$). Hence, $1/n$ is the only limit point so that $ E'_n = {1 / n}$.
+We can show that any other point $y in RR$ such that $y eq.not 1 / n$ cannot be a limit point of $E_n$. Since $E_n$ is a countable set of values that approach $1/n$, there is a number $x_k eq.not y$ in $E_n$ that minimises $d(y, x_k)$. Then the neighborhood with $0 < r < d(y, x_k)$ will have no point of $E_n$ (other than possibly $y$). Hence, $1/n$ is the only limit point so that $ E'_n = {1 / n}$.
 
 The collection of sets ${E_n}$ is disjoint since $E_n subset (1/(n+1), 1/n]$. Let $S$ be the union of this collection along with the point $0$,
 
@@ -1098,13 +1097,13 @@ yet clearly $x in (0, 1)$. This shows that the union constructed with indices $n
 
 
 === Exercise 2.15
-#quote(block:true)[Show that Theorem 2.36 and its Corollary become false (in $reals$, for example) if the word "compact" is replaced by "closed" or by "bounded."]
+#quote(block:true)[Show that Theorem 2.36 and its Corollary become false (in $RR$, for example) if the word "compact" is replaced by "closed" or by "bounded."]
 
 We first show that "compact" cannot be replaced by closed. Consider the set of natural numbers starting from the positive integer $n$ and beyond
 
 $ E_n = {n, n+1, n+2, dots}. $
 
-Each set in the collection ${E_n}$ is closed relative to $reals$ and is unbounded. Since we have that $E_n supset E_(n+1)$ ($n = 1, 2, 3, dots$) any intersection of a finite sub-collection of ${E_n}$ is non-empty. However, the countable intersection
+Each set in the collection ${E_n}$ is closed relative to $RR$ and is unbounded. Since we have that $E_n supset E_(n+1)$ ($n = 1, 2, 3, dots$) any intersection of a finite sub-collection of ${E_n}$ is non-empty. However, the countable intersection
 
 $ E = inter.big_(n=1)^infinity E_n, $
 
@@ -1147,9 +1146,9 @@ $
 
 Similarly, it follows that any neighborhood around $q$ with radius $abs(q^2 - 3) / (2 abs(q))$ contains no point of $E$. This shows that any $q in.not E$ cannot be a limit point of $E$ and hence $E$ must be closed.
 
-To prove that $E$ is not compact in $rationals$, it suffices by Theorem 2.33 to show that $E$ is not compact in $reals$. First, note that $E$ is not closed in $reals$ because it does not contain all of its limit points. In particular, $sqrt(2)$ is an irrational number that is a limit point of $E$ but not a member of the set. Therefore, by Heine-Borel's theorem (Theorem 2.41) $E$ cannot be compact in $reals$.
+To prove that $E$ is not compact in $rationals$, it suffices by Theorem 2.33 to show that $E$ is not compact in $RR$. First, note that $E$ is not closed in $RR$ because it does not contain all of its limit points. In particular, $sqrt(2)$ is an irrational number that is a limit point of $E$ but not a member of the set. Therefore, by Heine-Borel's theorem (Theorem 2.41) $E$ cannot be compact in $RR$.
 
-Lastly, we answer the question if $E$ is open in $rationals$. Consider the open intervals $A = (-sqrt(3), -sqrt(2))$ and $B = (sqrt(2), sqrt(3))$ in $reals$. Put $G = A union B$ and note that by Theorem 2.24 $G$ is open in $reals$. Since $E = rationals inter G$, it follows by Theorem 2.30 that $E$ is open in $rationals$.
+Lastly, we answer the question if $E$ is open in $rationals$. Consider the open intervals $A = (-sqrt(3), -sqrt(2))$ and $B = (sqrt(2), sqrt(3))$ in $RR$. Put $G = A union B$ and note that by Theorem 2.24 $G$ is open in $RR$. Since $E = rationals inter G$, it follows by Theorem 2.30 that $E$ is open in $rationals$.
 
 #qed
 
@@ -1192,9 +1191,9 @@ Thus, $q$ is a limit point of $E$ and we have shown that $E$ is perfect.
 
 
 === Exercise 2.18
-#quote(block: true)[Is there a nonempty perfect set in $reals$ which contains no rational number?]
+#quote(block: true)[Is there a nonempty perfect set in $RR$ which contains no rational number?]
 
-Let $E$ be the set from Exercise 2.17. This set is a nonempty perfect set in $reals$ that contains rational numbers. We want to find a number $y$ such that for every $x in E$ the sum $x + y$ is irrational. Then the set of irrational numbers given by
+Let $E$ be the set from Exercise 2.17. This set is a nonempty perfect set in $RR$ that contains rational numbers. We want to find a number $y$ such that for every $x in E$ the sum $x + y$ is irrational. Then the set of irrational numbers given by
 
 $ P = { x + y | x in E} $
 
@@ -1285,7 +1284,7 @@ By the result in (c) we have that $A$ and $B$ are separated. It follows therefor
 
 === Exercise 2.20
 
-#quote(block: true)[Are closures and interiors of connected sets always connected? (Look at subsets of $reals^2$.)]
+#quote(block: true)[Are closures and interiors of connected sets always connected? (Look at subsets of $RR^2$.)]
 
 We prove that closures of connected sets are always connected. Let $E$ be a connected subset of a metric space $X$. If $E$ is closed, then by Theorem 2.27 we have that $closure(E) = E$ and it follows that $closure(E)$ is connected. Assume therefore that $E$ is not closed.
 
@@ -1306,18 +1305,18 @@ Now consider the interior of $E$. The point $bold(0)$ is not an interior point o
 === Exercise 2.21
 
 #quote(block: true)[
-    Let $A$ and $B$ be separated subsets of some $reals^k$, suppose $bvec(a) in A$ and $bvec(b) in B$, and define
+    Let $A$ and $B$ be separated subsets of some $RR^k$, suppose $bvec(a) in A$ and $bvec(b) in B$, and define
 
     $ bvec(p)(t) = (1-t) bvec(a) + t bvec(b) $
 
-    for $t in reals$. Put $A_0 = bvec(p)^(-1)(A)$, $B_0 = bvec(p)^(-1)(B)$. [Thus $t in A_0$ if and only if $bvec(p)(t) in A$.]
+    for $t in RR$. Put $A_0 = bvec(p)^(-1)(A)$, $B_0 = bvec(p)^(-1)(B)$. [Thus $t in A_0$ if and only if $bvec(p)(t) in A$.]
 
     #quote(block: true)[
         #enum(
             numbering: "(a)",
-            enum.item[Prove that $A_0$ and $B_0$ are separated subsets of $reals$.],
+            enum.item[Prove that $A_0$ and $B_0$ are separated subsets of $RR$.],
             enum.item[Prove that there exists $t_0 in (0,1)$ such that $bvec(p)(t_0) in.not A union B$.],
-            enum.item[Prove that every convex subset of $reals^k$ is connected.]
+            enum.item[Prove that every convex subset of $RR^k$ is connected.]
 
         )
     ]
@@ -1348,7 +1347,7 @@ Now consider the interior of $E$. The point $bold(0)$ is not an interior point o
 
         We have exhausted all possibilities and have seen that they lead to contradiction. Hence, our initial assumption must be wrong and therefore there must exist a $t_0 in (0, 1)$ such that $bvec(p)(t_0) in.not A union B$. \ \ ],
 
-    enum.item[Assume the opposite, and let $E$ be a convex subset of $reals^k$. Then there exists two nonempty separated sets $A$ and $B$ such that $E = A union B$. Take any two points $bvec(a) in A$ and $bvec(b) in B$, then put
+    enum.item[Assume the opposite, and let $E$ be a convex subset of $RR^k$. Then there exists two nonempty separated sets $A$ and $B$ such that $E = A union B$. Take any two points $bvec(a) in A$ and $bvec(b) in B$, then put
 
         $ bvec(p)(t) = (1-t) bvec(a) + t bvec(b). $
 
@@ -1358,13 +1357,13 @@ Now consider the interior of $E$. The point $bold(0)$ is not an interior point o
 
 === Exercise 2.22
 
-#quote(block: true)[A metric space is called _separable_ if it contains a countable dense subset. Show that $reals^k$ is separable. _Hint:_ Consider the set of points which have only rational coordinates.]
+#quote(block: true)[A metric space is called _separable_ if it contains a countable dense subset. Show that $RR^k$ is separable. _Hint:_ Consider the set of points which have only rational coordinates.]
 
-From Theorem 1.20 (b), we know that $rationals$ is dense in $reals$ and that every point of $reals$ is a limit point of $rationals$. We shall show that the set of points which have only rational coordinates $rationals^k$ is a countable dense subset of $reals^k$.
+From Theorem 1.20 (b), we know that $rationals$ is dense in $RR$ and that every point of $RR$ is a limit point of $rationals$. We shall show that the set of points which have only rational coordinates $rationals^k$ is a countable dense subset of $RR^k$.
 
 That $rationals^k$ is countable follows from Theorem 2.13, simply put $A = rationals$ and $B_k$ will be the set of all points with rational coordinates with $k$-dimensions.
 
-It remains to show that any point of $reals^k$ is a limit point of $rationals^k$. Fix $bvec(x) in reals^k$ and let $N$ be a neighborhood around $bvec(x)$ with some chosen radius $r > 0$. Since $rationals$ is dense in $reals$, for every coordinate $x_i in reals$ we can choose rational number $p_i in rationals$ such that the $abs(p_i - x_i) < r / sqrt(k)$. Having done so for $1 lt.eq i lt.eq k$, we can construct the rational number
+It remains to show that any point of $RR^k$ is a limit point of $rationals^k$. Fix $bvec(x) in RR^k$ and let $N$ be a neighborhood around $bvec(x)$ with some chosen radius $r > 0$. Since $rationals$ is dense in $RR$, for every coordinate $x_i in RR$ we can choose rational number $p_i in rationals$ such that the $abs(p_i - x_i) < r / sqrt(k)$. Having done so for $1 lt.eq i lt.eq k$, we can construct the rational number
 
 $ bvec(p) = (p_1, p_2, dots, p_k) in rationals^k. $
 
@@ -1377,7 +1376,7 @@ $ abs(bvec(p) - bvec(x))
     &= r,
 $
 
-which means that $bvec(p) in N$, and therefore $bvec(x)$ is a limit point of $rationals^k$. Since the choice of $bvec(x)$ was arbitrary, it follows that every point of $reals^k$ is a limit point of $rationals^k$. This proves that $rationals^k$ is a countable dense subset of $reals^k$, and it follows by definition that $reals^k$ is separable.
+which means that $bvec(p) in N$, and therefore $bvec(x)$ is a limit point of $rationals^k$. Since the choice of $bvec(x)$ was arbitrary, it follows that every point of $RR^k$ is a limit point of $rationals^k$. This proves that $rationals^k$ is a countable dense subset of $RR^k$, and it follows by definition that $RR^k$ is separable.
 
 #qed
 
@@ -1403,7 +1402,7 @@ is also countable. Hence, the members of $V$ can be arranged in a sequence ${V_a
 
 It remains to be shown that the collection of open sets ${V_alpha}$ is a base. Let $x$ be any point of $X$ and $G$ be any open subset of $X$ such that $x in G$. Since $x$ is an interior point of $G$, we know that there exists a radius $r > 0$ such that the neighborhood $N_r (x) subset G$.
 
-$E$ is dense in $X$ and therefore we can find a point $p in E$ such that the distance $d(p, x) = delta < r / 2$. Since $rationals$ is dense in $reals$, there exists a $h in rationals$ such that $delta < h < r / 2$ by Theorem 1.20.
+$E$ is dense in $X$ and therefore we can find a point $p in E$ such that the distance $d(p, x) = delta < r / 2$. Since $rationals$ is dense in $RR$, there exists a $h in rationals$ such that $delta < h < r / 2$ by Theorem 1.20.
 
 For this $p$ and rational radius $h$ there exists a neighborhood $V_alpha$ in the collection. Because the distance $d(x, p) = delta < h$ we have that $x in V_alpha$. In fact, for any point $y in V_alpha$ we have that
 
@@ -1462,7 +1461,7 @@ $
 
 Since each $E_n$ is finite, the union $S$ is at most countable by Theorem 2.12. Moreover, we can conclude that $S$ is countable. Because $X$ is infinite and we can construct infinitely many non-empty sets $E_n$ by increasing $n$, or if $E_n$ is empty for some $n$ then there exists .
 
-Let $z in X$ be any point in the complement of $S$. To prove that $S$ is dense in $X$ it is sufficient to show that $z$ is a limit point of $S$. Take any neighborhood $N_r (z)$ with center in $z$ for some radius $r >0$. By the Archimedean property of $reals$ there exist a natural number $n$ such that $r > 1/n$.
+Let $z in X$ be any point in the complement of $S$. To prove that $S$ is dense in $X$ it is sufficient to show that $z$ is a limit point of $S$. Take any neighborhood $N_r (z)$ with center in $z$ for some radius $r >0$. By the Archimedean property of $RR$ there exist a natural number $n$ such that $r > 1/n$.
 
 Since $z$ is in the complement of $S$ it follows that $z in.not E_n$ for any natural number $n$. Hence, by construction of $E_n$ we can find a point $x in E_n$ such that $d(x, y) < 1/n$. This implies that $x in N_r (z)$ and therefore $z$ is a limit point of $S$. Since both $z$ and $r$ were arbitrarily chosen, we can concluded that $S$ is dense in $X$.
 
