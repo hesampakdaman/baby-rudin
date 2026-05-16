@@ -656,7 +656,6 @@ The inner product for $k = 1$ is the regular multiplication. Since $RR$ is a fie
 
 == Chapter 2
 #let integers = $bb(Z)$
-#let naturals = $bb(N)$
 #let rationals = $bb(Q)$
 #let closure(X) = $overline(#X)$
 
@@ -808,7 +807,7 @@ $
 $
 
 where we have used the induction hypothesis in the penultimate equality. \ \
-(b) If $x in union.big_(i=1)^infinity overline(A)_i$, then there is an $n in naturals$ such that $x in overline(A)_n$. We have that
+(b) If $x in union.big_(i=1)^infinity overline(A)_i$, then there is an $n in NN$ such that $x in overline(A)_n$. We have that
 
 $
     overline(B) =
@@ -820,7 +819,7 @@ $
 
 where we used the result in (a) to get the second equality. This implies that $x in overline(B)$. Since $x$ is arbitrary it follows that $ overline(B) supset union.big_(i=1)^infinity overline(A)_i$ as desired.
 
-We shall conclude by showing that this subset can indeed be proper. Let $A_i = {1, 1/2, 1/3, dots, 1/i}$ and note that there exists no $k in naturals$ such that $0 in A_k$. Thus $0 in.not union.big_(i=1)^infinity A_i$. Furthermore, each set $A_i$ has no limit points which is why $overline(A)_i = A_i$, and therefore $union.big_(i=1)^infinity overline(A)_i = union.big_(i=1)^infinity A_i$. It follows then that $0 in.not union.big_(i=1)^infinity overline(A_i)$. Now let's consider $overline(B)$
+We shall conclude by showing that this subset can indeed be proper. Let $A_i = {1, 1/2, 1/3, dots, 1/i}$ and note that there exists no $k in NN$ such that $0 in A_k$. Thus $0 in.not union.big_(i=1)^infinity A_i$. Furthermore, each set $A_i$ has no limit points which is why $overline(A)_i = A_i$, and therefore $union.big_(i=1)^infinity overline(A)_i = union.big_(i=1)^infinity A_i$. It follows then that $0 in.not union.big_(i=1)^infinity overline(A_i)$. Now let's consider $overline(B)$
 
 $
     overline(B) &=
@@ -850,7 +849,7 @@ Consider the cases for $r$ and $s$:
 
 Since none of the relations $r < s$, $r = s$ and $r > s$ can be true, such an $r$ cannot exists. We've reached a contradiction and the assumption is wrong. Hence, each point of $E$ is a limit point of $E$.
 
-Now we show that the case does not hold true in general for closed sets. Consider the set of all natural numbers $naturals subset RR^2$. This set is closed, yet every point in this set is not a limit point of it.
+Now we show that the case does not hold true in general for closed sets. Consider the set of all natural numbers $NN subset RR^2$. This set is closed, yet every point in this set is not a limit point of it.
 
 #qed
 
@@ -1272,7 +1271,7 @@ Fix any $p in X$ and enumerate all distances from this point.
     )
 )
 
-Using Cantor's diagonal process we can construct a real number $delta > 0$ such that $d(p, q_n) eq.not delta$ for all $n in naturals$. We do so in the following manner. Let the $n$-th decimal of $delta$ be the $n$-th decimal of $d_n$ that we increment by $1$ if $d_n$'s $n$-th decimal is less than $9$, otherwise we decrement by $1$. Lastly, we set the integer part of $delta$ to $1$.
+Using Cantor's diagonal process we can construct a real number $delta > 0$ such that $d(p, q_n) eq.not delta$ for all $n in NN$. We do so in the following manner. Let the $n$-th decimal of $delta$ be the $n$-th decimal of $d_n$ that we increment by $1$ if $d_n$'s $n$-th decimal is less than $9$, otherwise we decrement by $1$. Lastly, we set the integer part of $delta$ to $1$.
 
 This procedure will create a non-negative real number $delta > 0$ that is different to distance $d_k$ in the $k$-th decimal. Hence, there are no points $q in X$ such that $d(p, q) = delta$. Due to this we can write $X$ in terms of the sets $A = {q in X | d(p, q) < delta}$ and $B = {q in X | d(p, q) > delta}$,
 
