@@ -690,9 +690,9 @@ is at most countable.
 
 We shall show that $cal(A) subset S$. For any $z in cal(A)$ there exist integers $a_0, dots, a_k$ such that   $a_k z^k + dots.h.c + a_1 z + a_0 = 0$. For these integers there is a $k+1$ tuple $alpha = (a_0, dots, a_k)$ which is associated with exactly one set $E_alpha$. Hence there exists at least one $alpha$ for which $z in E_alpha$ and therefore it follows that $cal(A) subset S$. This means that $cal(A)$ is at most countable since it is a subset of $S$.
 
-Lastly we need to show that $cal(A)$ is infinite. The set of rational numbers $rationals$ is countable by the corollary to Theorem 2.13. For any $q in rationals$ there are integers $m, n$ such that $q = n/m$. Now choose $a_1 = m$ and $a_0 = -n$, then
+Lastly we need to show that $cal(A)$ is infinite. The set of rational numbers $QQ$ is countable by the corollary to Theorem 2.13. For any $q in QQ$ there are integers $m, n$ such that $q = m/n$. Now choose $a_1 = n$ and $a_0 = -m$, then
 
-$ a_1 q + a_0 = m n/m - n = 0, $
+$ a_1 q + a_0 = n m/n - m = 0, $
 
 which means that $q$ is algebraic. Since $q$ is arbitrary it follows that $rationals subset cal(A)$. This shows that $cal(A)$ has an infinite subset and must therefore itself be infinite. $cal(A)$ is an infinite set that is at most countable, and therefore it is countable as desired.
 
