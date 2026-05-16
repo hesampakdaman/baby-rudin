@@ -694,7 +694,7 @@ Lastly we need to show that $cal(A)$ is infinite. The set of rational numbers $Q
 
 $ a_1 q + a_0 = n m/n - m = 0, $
 
-which means that $q$ is algebraic. Since $q$ is arbitrary it follows that $rationals subset cal(A)$. This shows that $cal(A)$ has an infinite subset and must therefore itself be infinite. $cal(A)$ is an infinite set that is at most countable, and therefore it is countable as desired.
+which means that $q$ is algebraic. Since $q$ is arbitrary it follows that $QQ subset cal(A)$. This shows that $cal(A)$ has an infinite subset and must therefore itself be infinite. $cal(A)$ is an infinite set that is at most countable, and therefore it is countable as desired.
 
 #qed
 
