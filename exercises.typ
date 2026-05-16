@@ -656,7 +656,6 @@ The inner product for $k = 1$ is the regular multiplication. Since $RR$ is a fie
 
 == Chapter 2
 #let integers = $bb(Z)$
-#let irrationals = $bb(I)$
 #let naturals = $bb(N)$
 #let rationals = $bb(Q)$
 #let reals = $bb(R)$
@@ -710,11 +709,11 @@ From Exercise 2.2 we know that $cal(A)$ is countable. By Theorem 2.8 this would 
 === Exercise 2.4
 #quote(block: true)[Is the set of all irrational real numbers countable?]
 
-Denote the set of irrational numbers by $irrationals$. According to Theorem 2.13 $rationals$ is countable. Now suppose $irrationals$ is countable. We already know that
+Denote the set of irrational numbers by $II$. According to Theorem 2.13 $QQ$ is countable. Now suppose $II$ is countable. We already know that
 
-$ reals = rationals union irrationals, $
+$ RR = QQ union II, $
 
-which means that $reals$ is countable by Theorem 2.12. But this is a contradiction since by Theorem 2.43 the set of real numbers $reals$ is uncountable. If $irrationals$ is assumed to be finite, then that still would make $reals$ countable. Hence, $irrationals$ must be uncountable.
+which means that $RR$ is countable by Theorem 2.12. But this is a contradiction since by Theorem 2.43 the set of real numbers $RR$ is uncountable. If $II$ is assumed to be finite, then that still would make $RR$ countable. Hence, $II$ must be uncountable.
 
 #qed
 
