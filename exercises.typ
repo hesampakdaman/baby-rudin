@@ -718,7 +718,7 @@ which means that $RR$ is countable by Theorem 2.12. But this is a contradiction 
 === Exercise 2.5
 #quote(block: true)[Construct a bounded set of real numbers with exactly three limit points.]
 
-Let $k$ be a natural number and consider the set $E_k$ of numbers $k + 1/n$ where $n = 1, 2, 3, dots$ . Clearly $E_k subset (k, k+1]$ and is therefore bounded.
+Let $k$ be a natural number and consider the set $E_k$ of numbers $k + 1/n$ ($n = 1, 2, 3, dots$). Clearly $E_k subset (k, k+1]$ and is therefore bounded.
 
 We need to show that $E_k$ does not contain any limit points. For any natural numbers $n, m$ we have that
 
@@ -732,7 +732,7 @@ holds with any natural number $m eq.not n$.
 
 If $m gt.eq n+1$, then
 
-$ d(1/n, 1/m) = abs(1/n - 1/m) gt.eq abs(1/n - 1/(n+1)) = d(1/n, 1/(n+1)). $ \
+$ d(1/n, 1/m) = abs(1/n - 1/m) gt.eq abs(1/n - 1/(n+1)) = d(1/n, 1/(n+1)). $
 
 If $m lt.eq n - 1$, then
 
