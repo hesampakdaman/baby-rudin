@@ -836,18 +836,7 @@ overline(A_i)$ we've shown that the inclusion can be proper.
 === Exercise 2.8
 #quote(block: true)[Is every point of every open set $E subset RR^2$ a limit point of $E$? Answer the same question for closed sets in $RR^2$.]
 
-We first show that every point in every open set $E subset RR^2$ is a limit point of $E$. Suppose not. Then there exists an open set $E subset RR^2$ with a point $x in E$ that is not a limit point of $E$. It follows that there exists an $r > 0$ such that the neighborhood $N_r (x)$ contains no point of $E$ except $x$.
-
-Since $E$ is an open set, $x$ must be an interior point. Hence, there is a neighborhood with radius $s > 0$ such that $N_s (x) subset E$. Neighborhoods in $RR^2$ are non-empty interiors of circles, which means that $N_r$ is circle centered at $x$.
-
-Consider the cases for $r$ and $s$:
-
-+ If $r > s$ then $N_s$ is a circle inscribed in a larger circle $N_r$. This implies $N_s subset N_r$. Consequently, there exists points $y in N_s subset N_r subset E$ where $y eq.not x$. However, this contradicts our assumption that $N_r (x)$ contains no points of $E$ other than $x$.
-
-+ If $r lt.eq s$, then $N_r$ is inscribed in $N_s$. Given that $N_s$​ is non-empty circle such that $N_s subset E$, it follows that $N_s$ contains points of $E$ arbitrarily close to its center point $x$. In particular, for any distance $0 < d < r$, there are points $y in E$ where $y eq.not x$ such that $y in N_s$. Since $N_r subset N_s$, these $y$ must be a point of $N_r$ because $d < r$. This contradicts our assumption that $x$ is not a limit point of $E$.
-
-
-Since none of the relations $r < s$, $r = s$ and $r > s$ can be true, such an $r$ cannot exists. We've reached a contradiction and the assumption is wrong. Hence, each point of $E$ is a limit point of $E$.
+We first show that every point in every open set $E subset RR^2$ is a limit point of $E$. Suppose, to get a contradiction, that $E$ contains an isolated point $bvec(x)$. Then there is an $r > 0$ such that the neighborhood $N_r (bvec(x))$ contains no point of $E$ except $bvec(x)$. Since there exists points $bvec(y) in RR^2$ such that $abs(bvec(y) - bvec(x)) < h$ for any $0 < h < r$, it follows that $bvec(y) in.not E$. Hence every neighborhood  around $bvec(x)$ will contain points $bvec(y)$ such that $bvec(y) in.not E$. But this is absurd since $bvec(x)$ is an interior point of $E$.
 
 Now we show that the case does not hold true in general for closed sets. Consider the set of all natural numbers $NN subset RR^2$. This set is closed, yet every point in this set is not a limit point of it.
 
