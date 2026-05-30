@@ -857,30 +857,50 @@ Now we show that the case does not hold true in general for closed sets. Conside
     )
 ]
 
-(a) If $p in interior(E)$ then $p$ is an interior point of $E$. This means that there exists some neighborhood $N(p)$ with $r > 0$ such that $N(p) subset E$. By Theorem 2.19 $N(p)$ is an open set, implying that every point in $N(p)$ is an interior point. Hence, $N(p) subset interior(E)$ and it follows $interior(E)$ is an open set. \ \
+#enum(
+    numbering: "(a)",
+    enum.item[If $p in interior(E)$ then $p$ is an interior point of $E$. This means that there exists some neighborhood $N(p)$ with $r > 0$ such that $N(p) subset E$. By Theorem 2.19 $N(p)$ is an open set, implying that every point in $N(p)$ is an interior point of $E$. Hence $N(p) subset interior(E)$ and it follows $interior(E)$ is an open set.],
 
 
-(b) If $E$ is open then every point $x$ of $E$ is an interior point and it is therefore true that $x in interior(E)$. This shows that $E subset interior(E)$. Since by construction $interior(E) subset E$ we have that $interior(E) = E$.
+    enum.item[If $E$ is open then every point $x$ of $E$ is an interior point and it is therefore true that $x in interior(E)$. This shows that $E subset interior(E)$. Since by construction $interior(E) subset E$ we have that $interior(E) = E$.
 
-Conversely, if $interior(E) = E$ then it follows from (a) that $E$ is open. \ \
-
-
-(c) If $G$ is open, then for any point $p in G$ we can find a neighborhood $N(p)$ with $r > 0$ such that $N(p) subset G$. Since $N(p) subset G subset E$, it follows that $p$ is an interior point of $E$ and thus $p in interior(E)$. This shows that $G subset interior(E)$. \ \
+        Conversely, if $interior(E) = E$ then it follows from (a) that $E$ is open.],
 
 
-(d) Let $x$ be any point in $(interior(E))^c$. First we show that $(interior(E))^c subset overline(E^c)$. Suppose that $x in.not E$. Then
+    enum.item[If $G$ is open, then for any point $p in G$ we can find a neighborhood $N(p)$ with $r > 0$ such that $N(p) subset G$. Since $N(p) subset G subset E$, it follows that $p$ is an interior point of $E$ and thus $p in interior(E)$. This shows that $G subset interior(E)$.],
+    enum.item[Let $x$ be any point in $(interior(E))^c$. First we show that $(interior(E))^c subset overline(E^c)$. Suppose that $x in.not E$. Then
 
-$ x in E^c subset E^c union E^c' = overline(E^c). $
+        $ x in E^c subset E^c union E^c' = overline(E^c). $
 
-Now let $x in E$. Since $x$ is in the complement of $interior(E)$, we know that $x$ is not an interior point of $E$. Therefore, for every neighborhood $N(x)$ with radius $r > 0$, we have that $N(x) subset.not E$. This means that $N(x)$ always has points in $E^c$, which makes $x$ a limit point of $E^c$. Thus, $x in E^c' subset overline(E^c)$. This shows that $(interior(E))^c subset overline(E^c)$.
+        Now let $x in E$. Since $x$ is in the complement of $interior(E)$, we know that $x$ is not an interior point of $E$. Therefore, for every neighborhood $N(x)$ with radius $r > 0$, we have that $N(x) subset.not E$. This means that $N(x)$ always has points in $E^c$, which makes $x$ a limit point of $E^c$. Thus, $x in E^c' subset overline(E^c)$. This shows that $(interior(E))^c subset overline(E^c)$.
 
-Conversely, let $p in overline(E^c) = E^c union E^c'$ . Then it is clear that either $p in E^c$ or $p in E^c'$. Assume $p in E^c$. Then we know that $p$ is not an interior point to $E$, so $p in.not interior(E)$, which implies that $p in (interior(E))^c$. If $p in E^c'$, then it is a limit point of $E^c$, and therefore every neighborhood $N(p)$ with radius $r > 0$ have points (other than $p$) that lie in $E^c$. Hence, there is no neighborhood such that $N(p) subset E$ which means that $p$ cannot be an interior point of $E$. Therefore, $p in (interior(E))^c$, and we have now shown that $overline(E^c) subset (interior(E))^c$. \ \
-
-
-(e) Let $E = (0, 1) union (1, 2)$ be a set consisting of line segments in $RR$. Since $E$ is open we have that $interior(E) = E$ by (b). The set of limit points $E'$ is the closed interval $[0, 2]$, so the closure is $overline(E) = E union E' = [0, 2]$. From here we can see that $interior((overline(E))) = (0, 2)$, which shows that $ interior(E) eq.not interior((overline(E)))$. Therefore, $E$ and $overline(E)$ do not always have the same interiors. \ \
+        Conversely, let $p in overline(E^c) = E^c union E^c'$ . Then it is clear that either $p in E^c$ or $p in E^c'$. Assume $p in E^c$. Then we know that $p$ is not an interior point to $E$, so $p in.not interior(E)$, which implies that $p in (interior(E))^c$. If $p in E^c'$, then it is a limit point of $E^c$, and therefore every neighborhood $N(p)$ with radius $r > 0$ have points (other than $p$) that lie in $E^c$. Hence, there is no neighborhood such that $N(p) subset E$ which means that $p$ cannot be an interior point of $E$. Therefore, $p in (interior(E))^c$, and we have now shown that $overline(E^c) subset (interior(E))^c$.],
 
 
-(f) Consider the set $E = {1/n | n = 1, 2, 3, dots}$ as a subset of $RR$. Since $0$ is the only limit point of $E$, we have that its closure is $overline(E) = E union {0}$. However, none of the points in $E$ are interior points, and therefore $interior(E) = emptyset$. This means that $overline(interior(E)) = emptyset$ so that $overline(E) eq.not overline(interior(E))$. We have shown that $E$ and $interior(E)$ do not always have the same closures.
+    enum.item[Let $E = (0, 1) union (1, 2)$ be a set consisting of line segments in $RR$. Since $E$ is open we have that $interior(E) = E$ by (b). The set of limit points $E'$ is the closed interval $[0, 2]$, so the closure is $overline(E) = E union E' = [0, 2]$. From here we can see that $interior((overline(E))) = (0, 2)$, which shows that $ interior(E) eq.not interior((overline(E)))$. Therefore, $E$ and $overline(E)$ do not always have the same interiors.],
+
+
+    enum.item[Consider the set $E = {1/n | n = 1, 2, 3, dots}$ as a subset of $RR$. Since $0$ is the only limit point of $E$, we have that its closure is $overline(E) = E union {0}$. However, none of the points in $E$ are interior points, and therefore $interior(E) = emptyset$. This means that $overline(interior(E)) = emptyset$ so that $overline(E) eq.not overline(interior(E))$. We have shown that $E$ and $interior(E)$ do not always have the same closures.],
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #qed
 
