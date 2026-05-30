@@ -884,24 +884,6 @@ Now we show that the case does not hold true in general for closed sets. Conside
 
 )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #qed
 
 === Exercise 2.10
