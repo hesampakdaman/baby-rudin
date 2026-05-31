@@ -1030,11 +1030,11 @@ The last inequality is due to the last term being non-negative. Similar argument
     Let $K subset RR$ consist of 0 and the numbers $1 slash n$, for $n = 1, 2, 3, dots$ . Prove that $K$ is compact directly from the definition (without using the Heine-Borel theorem).
 ]
 
-Let ${G_alpha}$ be any open cover of $K$. Then we know that there is an index $alpha_0$ such that $0 in G_(alpha_0)$. Since $G_(alpha_0)$ is an open set, we know that there exists a neighborhood $N_r (0)$ with radius $r > 0$ where $N_r subset G_(alpha_0)$.
+Let ${G_alpha}$ be any open cover of $K$. Then we know that there is an index $alpha_0$ such that $0 in G_(alpha_0)$. Since $G_(alpha_0)$ is an open set, we know that there exists a neighborhood $N$ around $0$ with radius $r > 0$ such that $N subset G_(alpha_0)$.
 
-If $r gt.eq 1$, then $G_(alpha_0)$ covers $K$ and there is nothing to prove. Assume therefore that $r < 1$. By Archimedean property of $RR$ we can find positive integers $p$ such that $r gt.eq 1 slash p$. Let $m$ be the smallest integer such that $r gt 1 slash m$. It follows that if $q$ is an integer where $q > m$, then $r > 1 slash q$ so that $1 slash q in N_r (0)$. This shows that there are at most $m-1$ points in $E$ that are not in $N_r$,
+If $r gt.eq 1$, then $G_(alpha_0)$ covers $K$ and there is nothing to prove. Assume therefore that $r < 1$. By Archimedean property of $RR$ we can find a positive integer $p$ such that $r gt.eq 1 slash p$. Let $m$ be the smallest non-negative integer such that $r gt 1 slash m$. It follows that if $q$ is an integer where $q > m$, then $1 slash q = abs(1 slash q - 0) < r$ so that $1 slash q in N$. This shows that there are at most $m-1$ points in $E$ that are not in $N_r$
 
-$ 1/(m-1), 1/(m-2), dots, 1/2, 1. $ \
+$ 1/(m-1), 1/(m-2), dots, 1/2, 1. $
 
 Let $G_(alpha_k)$ denote an open set in the collection ${G_alpha}$ such that $1 slash k in G_(alpha_k)$ $(k = 1, 2, 3, dots)$. Because ${G_alpha}$ is an open cover of $K$, each of the above $m-1$ points can be associated this way to at least one index (not necessarily distinct) in the collection. Therefore
 
