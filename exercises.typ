@@ -944,70 +944,84 @@ $
     Determine, for each of these, whether it is a metric or not.
 ]
 
-$d_1$ Condition 2.15 (c) is not satisfied, which therefore is not a metric. We give an example,
+#enum(
+    numbering: n => [$d_#n$],
+    enum.item[Conditions 2.15 (c) is not satisfied. We give an example
 
-               $ d_1(10, 0) > d_1(10, 4) + d_1(4, 0). $ \
+               $ d_1(10, 0) > d_1(10, 4) + d_1(4, 0). $
+    ],
 
-$d_2$ Both 2.15 (a) and (b) are clearly true. We show that (c) is also satisfied. Assume not, then there exists points $x$, $y$ and $r$ such that $ d_2(x, y) > d_2(x, r) + d_2(r, y), $ which in this particular case is
+    enum.item[Both 2.15 (a) and (b) are clearly true. We show that (c) is also satisfied. Assume not, then there exists points $x$, $y$ and $z$ such that
 
-        $ sqrt(abs(x-y)) > sqrt(abs(x-r)) + sqrt(abs(r-y)). $
+        $ d_2(x, y) > d_2(x, z) + d_2(z, y) $
 
-If $0 < q < p$ then $q^2 < p^2$ for any $p, q in RR$ so that
+        which in this particular case is
 
-$
-    abs(x - y) &= sqrt(abs(x - y))^2 > (sqrt(abs(x-r)) + sqrt(abs(r-y)))^2 \
-        &= abs(x - r) + 2 sqrt(abs(x-r) abs(r-y)) + abs(r - y) \
-        &gt.eq abs(x - r) + abs(r - y),
-$
+        $ sqrt(abs(x - y)) > sqrt(abs(x - z)) + sqrt(abs(z - y)). $
 
-where the last inequality comes from the fact that $sqrt(abs(x-r) abs(r-y)) gt.eq 0$. The above shows that $d(p,q) = abs(p - q)$ cannot be a metric. But that is a contradiction, since Theorem 1.37 shows that $abs(p-q)$ satisfies 2.15 (c). Hence, $d_2$​ is a metric. \ \
-
-$d_3$ Condition 2.15 (a) is not satisfied. We show an example $
-    d_3(2, -2) &= abs(2^2 - (-2)^2) = 4 - 4 = 0.
-$ We have found $x eq.not y$ such that $d_3(x, y) = 0$. This shows that $d_3(x, y)$ is not a metric. \ \
-
-$d_4$ We show that $d_4$ is not a metric since condition (a) of Definition 2.15 is not satisfied. If $x eq.not 0$ then
-
-               $ d_4(x, x) = |x - 2x| = |x| > 0. $ \
-
-#let distfive(x, y) = $abs(#x)/(1 + abs(#y))$
-#let distfivenoabs(x, y) = $#x/(1 + #y)$
-$d_5$ Conditions in (a), (b) are clearly satisfied so we focus on (c). Throughout this exercise WLOG assume $x lt.eq y$. Suppose $x lt.eq r lt.eq y$, we have that
+Then
 
 $
-    d_5(x, y) &= distfive(x-y, x-y) = distfive(x-r + r-y, x-y) \
-        &lt.eq distfive(x-r, x-y) + distfive(r-y, x-y) \
-        &lt.eq distfive(x-r, x-r) + distfive(r-y, r-y) \
-        &lt.eq d_5(x, r) + d_5(r, y),
+    abs(x - y) &= sqrt(abs(x - y))^2 > (sqrt(abs(x - z)) + sqrt(abs(z - y)))^2 \
+        &= abs(x - z) + 2 sqrt(abs(x - z) abs(z - y)) + abs(z - y) \
+        &gt.eq abs(x - z) + abs(z - y),
 $
 
-where we used Theorem 1.37 in the first inequality. Since $x lt.eq r lt.eq y$ we know that $abs(x-r) lt.eq abs(x-y)$ and $abs(r-y) lt.eq abs(x-y)$, both of which we used to get the second inequality.
+where the last inequality comes from the fact that $sqrt(abs(x - z) abs(z - y)) gt.eq 0$. The above shows that $d(p,q) = abs(p - q)$ cannot be a metric. But that is a contradiction, since Theorem 1.37 shows that $abs(p-q)$ satisfies 2.15 (c). Hence, $d_2$​ is a metric.],
 
-Now assume $x lt.eq y < r$. First we show that for any $epsilon > 0$
+    enum.item[Condition 2.15 (a) is not satisfied. We show an example
+
+        $ d_3(2, -2) &= abs(2^2 - (-2)^2) = 4 - 4 = 0. $
+    ],
+
+    enum.item[We show that $d_4$ is not a metric since condition (a) of Definition 2.15 is not satisfied. If $x eq.not 0$ then
+
+        $ d_4(x, x) = |x - 2x| = |x| > 0. $
+    ],
+
+    enum.item[
+        #let distfive(x, y) = $abs(#x)/(1 + abs(#y))$
+        #let distfivenoabs(x, y) = $#x/(1 + #y)$
+
+        Conditions in (a), (b) are clearly satisfied so we focus on (c). Throughout this exercise #smallcaps("wlog") assume $x lt.eq y$. Suppose $x lt.eq z lt.eq y$, we have that
+
+$
+    d_5(x, y) &= distfive(x - y, x - y) = distfive(x - z + z - y, x - y) \
+        &lt.eq distfive(x - z, x - y) + distfive(z - y, x - y) \
+        &lt.eq distfive(x - z, x - z) + distfive(z - y, z - y) \
+        &lt.eq d_5(x, z) + d_5(z, y),
+$
+
+where we used Theorem 1.37 in the first inequality. Since $x lt.eq z lt.eq y$ we know that $abs(x - z) lt.eq abs(x - y)$ and $abs(z - y) lt.eq abs(x - y)$, both of which we used to get the second inequality.
+
+Now assume $x lt.eq y < z$. First we show that for any $r > 0$
 
 #math.equation(block: true, numbering: "(1)")[
-    $ distfive(w, w) < distfivenoabs(abs(w)+epsilon, abs(w)+epsilon), $
+    $ distfive(w, w) < distfivenoabs(abs(w) + r, abs(w) + r), $
 ] <intermediate>
 
 holds. The statement is clearly true for $w=0$. If $|w| > 0$, then
 
 $
     distfive(w, w) = distfivenoabs(1, 1/abs(w))
-    < distfivenoabs(1, 1/(abs(w) + epsilon))
-    = distfivenoabs(abs(w)+epsilon, abs(w)+epsilon),
+    < distfivenoabs(1, 1/(abs(w) + r))
+    = distfivenoabs(abs(w) + r, abs(w) + r),
 $
 
 which shows that @intermediate is true.
 
-Since $x lt.eq y < r$, we have that $abs(x-y) < abs(x-r)$. This means we can use @intermediate to get the first inequality below,
+Since $x lt.eq y < z$, we have that $abs(x-y) < abs(x - z)$. This means we can use @intermediate to get the first inequality below,
 
 $
-    d_5(x, y) &= distfive(x-y, x-y) < distfive(x-r, x-r) \
-        &lt.eq distfive(x-r, x-r) + distfive(r-y, r-y) \
-        &= d_5(x, r) + d_5(r, y).
+    d_5(x, y) &= distfive(x - y, x - y) < distfive(x - z, x - z) \
+        &lt.eq distfive(x - z, x - z) + distfive(z - y, z - y) \
+        &= d_5(x, z) + d_5(z, y).
 $
 
-The last inequality is due to the last term being non-negative. Similar argument can be made for $r < x lt.eq y$ because $abs(x-y) < abs(r-y)$ which allows us to use @intermediate again. This shows that $d_5(x,y)$ is a metric.
+The last inequality is due to the last term being non-negative. Similar argument can be made for $z < x lt.eq y$ because $abs(x-y) < abs(z - y)$ which allows us to use @intermediate again. This shows that $d_5(x,y)$ is a metric.
+],
+
+)
 
 #qed
 
