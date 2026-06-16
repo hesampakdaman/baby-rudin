@@ -1282,9 +1282,21 @@ By the result in (c) we have that $A$ and $B$ are separated. It follows therefor
 
 We prove that closures of connected sets are always connected. Let $E$ be a connected subset of a metric space $X$. If $E$ is closed, then by Theorem 2.27 we have that $closure(E) = E$ and it follows that $closure(E)$ is connected. Assume therefore that $E$ is not closed.
 
-Suppose, for the sake of getting a contradiction, the opposite. Then there exists non-empty separated sets $A$ and $B$ such that $closure(E) = A union B$. Since $E$ is connected, one of the intersections $E inter A$ or $E inter B$ must be empty. For otherwise either $A inter closure(B)$ or $closure(A) inter B$ would be non-empty, because each of these sets would contain parts of the connected set $E$. And this would contradict the fact that $closure(E)$ is not connected. Without loss of generalization assume that $E subset A$.
+Suppose, to get a contradiction, that $closure(E)$ is separated. Then there exists two non-empty disjoint sets $A$ and $B$ such that $closure(E) = A union B$. It follows that $E$ can be written as $E = (E inter A) union (E inter B)$. Since $E inter A subset A$ and $E inter B subset B$, we have that
 
-Now consider the non-empty set $B$. Since $E subset A$ and is disjoint with $B$, there exists at least one point $p$ such that $p in E' inter B$. Because $E' subset closure(A)$ this would mean that $p in closure(A) inter B$ so that this intersection is non-empty. But this is a contradiction since we assume that $closure(E)$ is not connected. Hence, closures of connected sets are always connected.
+$
+    (E inter A) inter closure((E subset B)) subset A inter closure(B) = emptyset.
+$
+
+Similarly we obtain that $closure((E inter A)) inter (E subset B) = emptyset$. Since $E$ is connected, at least one of the intersections $E inter A$ and $E inter B$ must be empty. Assume #smallcaps("wlog") that $E inter B$ is empty so that $E subset A$.
+
+Since $B subset closure(E)$ is a non-empty set disjoint from $E$, we know that there exists at least one point $p in E' inter B$. Furthermore,
+
+$
+    E subset A quad => quad E' subset A' subset closure(A)
+$
+
+which follows from the fact that any neighborhood around a limit point of $E$ always contains points from $E subset A$. Hence if $p in E' inter B$, then $p in closure(A) inter B$ and the intersection $closure(A) inter B$ is non-empty. We arrive at a contradiction since we assumed that $closure(E)$ is separated. Hence closures of connected sets are always connected.
 
 We now turn our attention to interiors of connected sets and show by example that they are not always connected. Let $A = {(x, y) in R^2 | x > 0}$ and $B = {(x, y) in R^2 | x < 0}$. These are disjoint open sets and are separated by Exercise 19 (b).
 
