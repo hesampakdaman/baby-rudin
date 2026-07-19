@@ -1233,7 +1233,7 @@ We have shown that $P$ is a nonempty set of irrational numbers that is perfect a
 === Exercise 2.19
 #quote(block: true)[
      #enum(
-        numbering: "(a)",
+         numbering: "(a)",
          enum.item[If $A$ and $B$ are disjoint closed sets in some metric space $X$, prove that they are separated.],
          enum.item[Prove the same for disjoint open sets.],
          enum.item[Fix $p in X$, $delta > 0$, define $A$ to be the set of all $q in X$ for which $d(p, q) < delta$, define $B$ similarly, with $>$ in place of $<$. Prove that $A$ and $B$ are separated.],
@@ -1241,18 +1241,23 @@ We have shown that $P$ is a nonempty set of irrational numbers that is perfect a
      )
 ]
 
-(a) If $A$ and $B$ both are closed, then by Theorem 2.27 we have that $overline(A) = A$ and $overline(B) = B$. Therefore
+#enum(
+    numbering: "(a)",
+    enum.item[If $A$ and $B$ both are closed, then by Theorem 2.27 we have that $overline(A) = A$ and $overline(B) = B$. Therefore
 
-$ A inter overline(B) = overline(A) inter B = A inter B = emptyset, $
+        $ A inter overline(B) = overline(A) inter B = A inter B = emptyset, $
 
-since $A$ and $B$ are disjoint. \ \
-(b) We prove that the set $A inter overline(B)$ is empty. If $p in B'$, then for every radius $r > 0$ the neighborhood $N_r (p)$ contains points from $B$. Hence, $N(p) subset.not A$ and $p$ is not an interior point of $A$. Because $A$ is open, by definition 2.18 (f) every point of $A$ is an interior point. It follows that $p in.not A$ and therefore $A inter B' = emptyset$. Since $A$ and $B$ are disjoint we have that $A inter overline(B) = emptyset$. With the same argument we can establish that $overline(A) inter B = emptyset$. This show that $A$ and $B$ are separated. \ \
-(c) By definition 2.18 (a) and Theorem 2.19 $A$ is open. Now consider the complement of $B$. This set $B^c$ contains all numbers $q$ such that $d(p, q) lt.eq delta$. But this is exactly the closure of $A$, that is $B^c = overline(A)$. The complement to $B$ is therefore closed and by Theorem 2.23 $B$ is open.
+        since $A$ and $B$ are disjoint.],
 
-The sets $A$ and $B$ are disjoint. For otherwise there exists some point $q in A inter B$ such that $d(p, q) < delta$ and $d(p, q) > delta$, which is absurd.
+    enum.item[We prove that the set $A inter overline(B)$ is empty. If $p in B'$, then for every radius $r > 0$ the neighborhood $N_r (p)$ contains points from $B$. Hence, $N(p) subset.not A$ and $p$ is not an interior point of $A$. Because $A$ is open, by definition 2.18 (f) every point of $A$ is an interior point. It follows that $p in.not A$ and therefore $A inter B' = emptyset$. Since $A$ and $B$ are disjoint we have that $A inter overline(B) = emptyset$. With the same argument we can establish that $overline(A) inter B = emptyset$. This show that $A$ and $B$ are separated.],
 
-We have shown that $A$ and $B$ are disjoint open sets, hence they are separated using the result in (b). \ \
-(d) We prove the contrapositive. Let $X$ be at most countable and arrange the elements in a sequence ${q_n}$.  If $X$ has less than two points, then $X$ is connected since a partition to any two sets $A$ and $B$ will leave at least one of the sets empty. Hence, assume $X$ has two or more points.
+    enum.item[By definition 2.18 (a) and Theorem 2.19 $A$ is open. Now consider the complement of $B$. This set $B^c$ contains all numbers $q$ such that $d(p, q) lt.eq delta$. But this is exactly the closure of $A$, that is $B^c = overline(A)$. The complement to $B$ is therefore closed and by Theorem 2.23 $B$ is open.
+
+        The sets $A$ and $B$ are disjoint. For otherwise there exists some point $q in A inter B$ such that $d(p, q) < delta$ and $d(p, q) > delta$, which is absurd.
+
+        We have shown that $A$ and $B$ are disjoint open sets, hence they are separated using the result in (b).],
+
+    enum.item[We prove the contrapositive. Let $X$ be at most countable and arrange the elements in a sequence ${q_n}$. If $X$ has less than two points, then $X$ is connected since a partition to any two sets $A$ and $B$ will leave at least one of the sets empty. Hence assume $X$ has two or more points.
 
 Fix any $p in X$ and enumerate all distances from this point.
 
@@ -1266,13 +1271,13 @@ Fix any $p in X$ and enumerate all distances from this point.
     )
 )
 
-Using Cantor's diagonal process we can construct a real number $delta > 0$ such that $d(p, q_n) eq.not delta$ for all $n in NN$. We do so in the following manner. Let the $n$-th decimal of $delta$ be the $n$-th decimal of $d_n$ that we increment by $1$ if $d_n$'s $n$-th decimal is less than $9$, otherwise we decrement by $1$. Lastly, we set the integer part of $delta$ to $1$.
+        Using Cantor's diagonal process we can construct a real number $delta > 0$ such that $d(p, q_n) eq.not delta$ for all $n in NN$. We do so in the following manner. Let the $n$-th decimal of $delta$ be the $n$-th decimal of $d_n$ that we increment by $1$ if $d_n$'s $n$-th decimal is less than $9$, otherwise we decrement by $1$. Lastly, we set the integer part of $delta$ to $1$.
 
-This procedure will create a non-negative real number $delta > 0$ that is different to distance $d_k$ in the $k$-th decimal. Hence, there are no points $q in X$ such that $d(p, q) = delta$. Due to this we can write $X$ in terms of the sets $A = {q in X | d(p, q) < delta}$ and $B = {q in X | d(p, q) > delta}$,
+        This procedure will create a non-negative real number $delta > 0$ that is different to distance $d_k$ in the $k$-th decimal. Hence, there are no points $q in X$ such that $d(p, q) = delta$. Due to this we can write $X$ in terms of the sets $A = {q in X | d(p, q) < delta}$ and $B = {q in X | d(p, q) > delta}$,
 
-$ X = A union B. $
+        $ X = A union B. $
 
-By the result in (c) we have that $A$ and $B$ are separated. It follows therefore that $X$ is not connected.
+        By the result in (c) we have that $A$ and $B$ are separated. It follows therefore that $X$ is not connected.])
 
 #qed
 
