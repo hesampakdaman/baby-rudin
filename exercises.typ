@@ -1252,7 +1252,7 @@ since $A$ and $B$ are disjoint. \ \
 The sets $A$ and $B$ are disjoint. For otherwise there exists some point $q in A inter B$ such that $d(p, q) < delta$ and $d(p, q) > delta$, which is absurd.
 
 We have shown that $A$ and $B$ are disjoint open sets, hence they are separated using the result in (b). \ \
-(d) We prove the contrapositive. Let $X$ be at most countable and arrange the elements in a sequence ${q_n}$.  If $X$ has less than two points, then $X$ is connected since at least one of the sets $A$ or $B$ will be empty. Hence, assume $X$ has two or more points.
+(d) We prove the contrapositive. Let $X$ be at most countable and arrange the elements in a sequence ${q_n}$.  If $X$ has less than two points, then $X$ is connected since a partition to any two sets $A$ and $B$ will leave at least one of the sets empty. Hence, assume $X$ has two or more points.
 
 Fix any $p in X$ and enumerate all distances from this point.
 
