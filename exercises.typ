@@ -1287,21 +1287,19 @@ Fix any $p in X$ and enumerate all distances from this point.
 
 We prove that closures of connected sets are always connected. Let $E$ be a connected subset of a metric space $X$. If $E$ is closed, then by Theorem 2.27 we have that $closure(E) = E$ and it follows that $closure(E)$ is connected. Assume therefore that $E$ is not closed.
 
-Suppose, to get a contradiction, that $closure(E)$ is separated. Then there exists two non-empty disjoint sets $A$ and $B$ such that $closure(E) = A union B$. It follows that $E$ can be written as $E = (E inter A) union (E inter B)$. Since $E inter A subset A$ and $E inter B subset B$, we have that
+Suppose, to get a contradiction, that $closure(E)$ is not connected. Then there exists two non-empty separated sets $A$ and $B$ such that $closure(E) = A union B$. It follows that $E$ can be written as $E = (E inter A) union (E inter B)$. Since $E inter A subset A$ and $E inter B subset B$, we have that
 
 $
-    (E inter A) inter closure((E subset B)) subset A inter closure(B) = emptyset.
+    (E inter A) inter closure((E inter B)) subset A inter closure(B) = emptyset.
 $
 
-Similarly we obtain that $closure((E inter A)) inter (E subset B) = emptyset$. Since $E$ is connected, at least one of the intersections $E inter A$ and $E inter B$ must be empty. Assume #smallcaps("wlog") that $E inter B$ is empty so that $E subset A$.
+Similarly we obtain that $closure((E inter A)) inter (E inter B) = emptyset$. Since $E$ is connected, at least one of the intersections $E inter A$ and $E inter B$ must be empty. Assume #smallcaps("wlog") that $E inter B$ is empty so that $E subset A$.
 
 Since $B subset closure(E)$ is a non-empty set disjoint from $E$, we know that there exists at least one point $p in E' inter B$. Furthermore,
 
-$
-    E subset A quad => quad E' subset A' subset closure(A)
-$
+$ E subset A quad => quad E' subset A' subset closure(A) $
 
-which follows from the fact that any neighborhood around a limit point of $E$ always contains points from $E subset A$. Hence if $p in E' inter B$, then $p in closure(A) inter B$ and the intersection $closure(A) inter B$ is non-empty. We arrive at a contradiction since we assumed that $closure(E)$ is separated. Hence closures of connected sets are always connected.
+which follows from the fact that any neighborhood around a limit point of $E$ always contains points from $E subset A$. Hence if $p in E' inter B$, then $p in closure(A) inter B$ and the intersection $closure(A) inter B$ is non-empty. We arrive at a contradiction since we assumed that $closure(E)$ is not connected. Hence closures of connected sets are always connected.
 
 We now turn our attention to interiors of connected sets and show by example that they are not always connected. Let $A = {(x, y) in R^2 | x > 0}$ and $B = {(x, y) in R^2 | x < 0}$. These are disjoint open sets and are separated by Exercise 19 (b).
 
