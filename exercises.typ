@@ -1344,7 +1344,7 @@ If $E = A union B union {bold(0)}$, then $E$ is connected since $bold(0)$ is a l
         which implies that $bvec(p)(t)$ is a limit point of $B$. This means that $bvec(p)(t) in A inter closure(B)$. And similarly, it can be shown that $bvec(p)(t) in closure(A) inter B$ if $ t in closure(A_0) inter B_0$ is nonempty. But this is a contradiction since $A$ and $B$ are separated. \ \ ],
 
     enum.item[
-        Suppose not, then $bvec(p)(t) in A union B$ whenever $t in (0, 1)$. Since $A_0$ and $B_0$ are separated, the interval $(0, 1)$ belongs to either $A_0$ or $B_0$ exclusively. For otherwise, $(0, 1)$ would be a connected set that is also a union of two nonempty separated sets $(0,1) inter A_0$ and $(0,1) inter B_0$, which is absurd.
+        Suppose not, then $bvec(p)(t) in A union B$ whenever $t in (0, 1)$. Since $A_0$ and $B_0$ are separated, the interval $(0, 1)$ belongs to either $A_0$ or $B_0$ exclusively. For otherwise, $(0, 1)$ would be a connected set that is also a union of two nonempty separated sets $(0,1) inter A_0$ and $(0,1) inter B_0$ which is absurd.
 
         If we assume that the intersection $(0, 1) inter A_0$ is empty, then $(0, 1) subset B_0$. Since $0 in A_0$ and is a limit point of $(0, 1)$, we would get that $closure(A_0) inter B_0 eq.not emptyset$. But this is a contradiction since $A_0$ and $B_0$ are separated.
 
