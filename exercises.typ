@@ -1329,7 +1329,7 @@ If $E = A union B union {bold(0)}$, then $E$ is connected since $bold(0)$ is a l
 
 #enum(
     numbering: "(a)",
-    enum.item[Assume the opposite, then at least one of the intersections $A_0 inter closure(B_0)$ or $closure(A_0) inter B_0$ is nonempty. Assume that exists a point $t in A_0 inter closure(B_0)$. Since $t in A_0$ it follows that $bvec(p)(t) in A$. Hence, $bvec(p)(t) in.not B$ because $A$ and $B$ are separated, and we can conclude that $t in.not B_0$. It must be therefore true that $t$ is a limit point of $B_0$, that is $t in A_0 inter B'_0$.
+    enum.item[Assume the opposite, then at least one of the intersections $A_0 inter closure(B_0)$ or $closure(A_0) inter B_0$ is nonempty. Assume that there exists a point $t in A_0 inter closure(B_0)$. Since $t in A_0$ it follows that $bvec(p)(t) in A$. Hence, $bvec(p)(t) in.not B$ because $A$ and $B$ are separated, and we can conclude that $t in.not B_0$. It must be therefore true that $t$ is a limit point of $B_0$, that is $t in A_0 inter B'_0$.
 
         Let $N$ be a neighborhood around $bvec(p)(t)$ with radius $r > 0$. Since $t$ is a limit point of $B_0$, we can find a point $t' in B_0$ such that the distance $d(t, t') < r / abs(bvec(a) - bvec(b))$. As for the points $bvec(p)(t')$ and $bvec(p)(t)$, the distance between them is
 
