@@ -1303,11 +1303,7 @@ which follows from the fact that any neighborhood around a limit point of $E$ al
 
 We now turn our attention to interiors of connected sets and show by example that they are not always connected. Let $A = {(x, y) in R^2 | x > 0}$ and $B = {(x, y) in R^2 | x < 0}$. These are disjoint open sets and are separated by Exercise 19 (b).
 
-If $E = A union B union {bold(0)}$, then $E$ is connected. To see this, note that any partition of $E$ into two subsets $F$ and $G$ would contain points from $A$. The only way to make sure the intersections $F inter closure(G)$ and $closure(F) inter G$ are non-empty would be to ensure that $A inter F$ or $A inter G$ is empty. This is because $A$ is connected (the same applies for $B$). Therefore, assume without loss of generalization that $A subset F$ and $B subset G$.
-
-Finally, because $bold(0)$ is a limit point to both $A$ and $B$, no matter where we put this point in $F$ or $G$, we see that exactly one of the intersections $F inter closure(G)$ or $closure(F) inter G$ would be non-empty. And so, $E$ is connected.
-
-Now consider the interior of $E$. The point $bold(0)$ is not an interior point of $E$ and so $interior(E) = A union B$. As we know from before $A$ and $B$ are separated. Therefore, interiors of connected sets are not always connected.
+If $E = A union B union {bold(0)}$, then $E$ is connected since $bold(0)$ is a limit point to both $A$ and $B$. Consider the interior of $E$. The point $bold(0)$ is not an interior point of $E$ and so $interior(E) = A union B$. As we know from before $A$ and $B$ are separated. Therefore, interiors of connected sets are not always connected.
 
 #qed
 
