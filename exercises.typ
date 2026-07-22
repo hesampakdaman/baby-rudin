@@ -1346,17 +1346,17 @@ If $E = A union B union {bold(0)}$, then $E$ is connected since $bold(0)$ is a l
     enum.item[
         Suppose not, then $bvec(p)(t) in A union B$ whenever $t in (0, 1)$. Since $A_0$ and $B_0$ are separated, the interval $(0, 1)$ belongs to either $A_0$ or $B_0$ exclusively. For otherwise, $(0, 1)$ would be a connected set that is also a union of two nonempty separated sets $(0,1) inter A_0$ and $(0,1) inter B_0$ which is absurd.
 
-        If we assume that the intersection $(0, 1) inter A_0$ is empty, then $(0, 1) subset B_0$. Since $0 in A_0$ and is a limit point of $(0, 1)$, we would get that $closure(A_0) inter B_0 eq.not emptyset$. But this is a contradiction since $A_0$ and $B_0$ are separated.
+        If we assume that the intersection $(0, 1) inter A_0$ is empty, then $(0, 1) subset B_0$. Since $0 in A_0$ and is a limit point to $(0, 1)$, we would get that $A_0 inter closure(B_0) eq.not emptyset$. But this is a contradiction since $A_0$ and $B_0$ are separated.
 
-        If we assume that the intersection $(0, 1) inter B_0$ is empty, then similarly $A_0 inter closure(B_0) eq.not emptyset$ since $1 in B_0$ would be a limit point of $A_0$.
+        If we assume that the intersection $(0, 1) inter B_0$ is empty, then similarly $closure(A_0) inter B_0 eq.not emptyset$ since $1 in B_0$ would be a limit point to $A_0$.
 
         We have exhausted all possibilities and have seen that they lead to contradiction. Hence, our initial assumption must be wrong and therefore there must exist a $t_0 in (0, 1)$ such that $bvec(p)(t_0) in.not A union B$. \ \ ],
 
-    enum.item[Assume the opposite, and let $E$ be a convex subset of $RR^k$. Then there exists two nonempty separated sets $A$ and $B$ such that $E = A union B$. Take any two points $bvec(a) in A$ and $bvec(b) in B$, then put
+    enum.item[Assume the opposite, and let $E$ be a convex subset of $RR^k$ that is not connected. Then there exists two nonempty separated sets $A$ and $B$ such that $E = A union B$. Take any two points $bvec(a) in A$, $bvec(b) in B$ and put
 
-        $ bvec(p)(t) = (1-t) bvec(a) + t bvec(b). $
+                        $ bvec(p)(t) = (1-t) bvec(a) + t bvec(b). $
 
-        By the result in (b) we know that there is a number $t_0 in (0, 1)$ such that $bvec(p)(t_0) in.not A union B$, which means that $bvec(p)(t_0) in.not E$. But this is a contradiction since $E$ is supposed to be convex and no such $t_0$ should exist (see Definition 2.17). #qed
+        By the result in (b) we know that there is a number $t_0 in (0, 1)$ such that $bvec(p)(t_0) in.not A union B$ which means that $bvec(p)(t_0) in.not E$. But this is a contradiction since $E$ is supposed to be convex and no such $t_0$ should exist (see Definition 2.17). #qed
     ],
 )
 
