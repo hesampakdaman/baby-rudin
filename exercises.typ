@@ -1370,12 +1370,12 @@ That $rationals^k$ is countable follows from Theorem 2.13, simply put $A = ratio
 
 It remains to show that any point of $RR^k$ is a limit point of $rationals^k$. Fix $bvec(x) in RR^k$ and let $N$ be a neighborhood around $bvec(x)$ with some chosen radius $r > 0$. Since $rationals$ is dense in $RR$, for every coordinate $x_i in RR$ we can choose rational number $p_i in rationals$ such that the $abs(p_i - x_i) < r / sqrt(k)$. Having done so for $1 lt.eq i lt.eq k$, we can construct the rational number
 
-$ bvec(p) = (p_1, p_2, dots, p_k) in rationals^k. $
+                       $ bvec(p) = (p_1, p_2, dots, p_k) in rationals^k. $
 
 Consider now its distance to $bvec(x)$
 
 $ abs(bvec(p) - bvec(x))
-    &= sqrt(sum_(i=0)^k (p_i - x_i)^2)
+    &= sqrt(sum_(i=1)^k (p_i - x_i)^2)
     &lt.eq sqrt(sum_(i=0)^k abs(p_i - x_i)^2)
     & lt sqrt(k dot.c r^2/ k)
     &= r,
